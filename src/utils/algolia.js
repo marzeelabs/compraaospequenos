@@ -26,7 +26,6 @@ const queries = [
   {
     query: shopsQuery,
     transformer: ({ data }) => {
-      console.log(data.allGoogleSpreadsheetNegociosNegocios.edges);
       return flatten(data.allGoogleSpreadsheetNegociosNegocios.edges)
     },
     indexName: `shops`,
