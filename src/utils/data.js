@@ -4,6 +4,6 @@ export const FILTERS = {
 };
 
 export const FILTERS_LABELS = {
-  'LOCATION': 'Location',
-  'BUSINESS_TYPE': 'Type of Business',
+  'localiza__o__distrito_': 'Location',
+  'tipoDeNeg_cio': 'Type of Business',
 };
