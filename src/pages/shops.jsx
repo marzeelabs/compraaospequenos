@@ -4,9 +4,9 @@ import itemsjs from 'itemsjs';
 
 import Grid from '@material-ui/core/Grid';
 
-import Filters from '../components/Filters';
-import Layout from '../components/Layout';
-import ShopList from '../components/ShopList';
+import Layout from '../components/Layout/Layout';
+import ShopsFilters from '../components/Shops/Filters';
+import ShopsList from '../components/Shops/List';
 
 import { FILTERS, FILTERS_LABELS } from '../utils/data';
 
@@ -89,7 +89,7 @@ export default ({ data }) => {
 
           <Grid item xs={ 3 }>
             { Object.keys(CONFIGURATION.aggregations).map(filter => (
-              <Filters
+              <ShopsFilters
                 aggregations={ shops.data.aggregations[filter] }
                 filter={ filter }
                 handleChange={ handleChange }
@@ -101,7 +101,7 @@ export default ({ data }) => {
           </Grid>
 
           <Grid item xs={ 9 }>
-            <ShopList
+            <ShopsList
               shops={ shops }
             />
           </Grid>

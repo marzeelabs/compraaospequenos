@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ShopList = ({ shops }) => (
+const ShopsList = ({ shops }) => (
   <table>
     <thead>
       <tr>
@@ -23,4 +23,4 @@ const ShopList = ({ shops }) => (
   </table>
 );
 
-export default ShopList;
+export default ShopsList;

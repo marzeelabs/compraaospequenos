@@ -11,7 +11,7 @@ import {
 import Checkbox from '@material-ui/core/Checkbox';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 
-const Filters = ({
+const ShopsFilters = ({
   aggregations,
   filter,
   handleChange,
@@ -37,7 +37,7 @@ const Filters = ({
   </div>
 );
 
-Filters.propTypes = {
+ShopsFilters.propTypes = {
   aggregations: shape({
     buckets: arrayOf(shape({
       doc_count: number,
@@ -50,4 +50,4 @@ Filters.propTypes = {
   label: string.isRequired,
 };
 
-export default Filters;
+export default ShopsFilters;
