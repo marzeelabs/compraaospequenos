@@ -26,7 +26,6 @@ export default ({ data }) => {
 
   useEffect(() => {
     const flatData = data.allGoogleSpreadsheetNegociosNegocios.edges.map(({ node }) => node);
-
     const _store = itemsjs(flatData, CONFIGURATION);
     const _shops = _store.search({
       per_page: 1000,
@@ -35,11 +34,10 @@ export default ({ data }) => {
     // const _filters = {};
     // Object.keys(CONFIGURATION.aggregations).map(f => _filters[f] = []);
     // setFilters(_filters);
-
     setIsLoading(false);
     setShops(_shops);
     setStore(_store);
-  }, []);
+  }, [data]);
 
   /**
    * Handle filter change.

@@ -1,12 +1,10 @@
 import React from "react";
-import Layout from "../components/layout";
-import { InstantSearch, SearchBox } from 'react-instantsearch-dom';
+import { InstantSearch } from 'react-instantsearch-dom';
 import { ALGOLIA_SEARCH_CLIENT } from '../services/algolia';
 import Hits from "../components/search/Hits";
 import Filters from "../components/search/Filters";
 import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/core/styles';
-import Paper from '@material-ui/core/Paper';
 
 const useStyles = makeStyles(theme => ({
   root: {
