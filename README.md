@@ -1,6 +1,14 @@
 # #compraaospequenos
 > Covid-19 crisis: help local shops survive and thrive
 
+## Architecture
+
+This website is built using GatsbyJS and using Google Sheets as data source.
+
+- Google sheet data source: https://docs.google.com/spreadsheets/d/1VT6yvROk2V_Z438YdzBHkjeplqOeaTkAR4SfifBsMqg/edit?usp=sharing
+
+For Gatsby to have access to the google sheet, you need to setup a Google Cloud service user and add this user to the google sheet. For more info, check out the [plugin docs](https://www.gatsbyjs.org/packages/gatsby-source-google-sheets/).
+
 ## Local development
 
 Copy `.env.example` to `.env` and add configuration keys (ask @pvhee).
