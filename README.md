@@ -1,4 +1,4 @@
-# #compraaospequenos
+# #compraaospequenos [![Netlify Status](https://api.netlify.com/api/v1/badges/717cab9f-4cc8-4ba6-9ae4-090cad942aea/deploy-status)](https://app.netlify.com/sites/compraaospequenos/deploys)
 > Covid-19 crisis: help local shops survive and thrive
 
 ## Architecture

@@ -76,7 +76,7 @@ module.exports = {
         // credentials: GOOGLE_SERVICE_ACCOUNT_CREDENTIALS,
         credentials: {
           client_email: process.env.GOOGLE_CLOUD_CLIENT_EMAIL,
-          private_key: process.env.GOOGLE_CLOUD_PRIVATE_KEY,
+          private_key: process.env.GOOGLE_CLOUD_PRIVATE_KEY.replace(/\_/gm, '\n'),
         },
     
         // Simple node transformation during node sourcing can be achieved by implementing the following functions

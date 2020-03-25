@@ -71,3 +71,5 @@ yarn-error.log
 compraaospequenos.code-workspace
 
 marzeelabs-*.json
+# Local Netlify folder
+.netlify
