@@ -1,0 +1,58 @@
+{
+  "extends": [
+    "airbnb",
+    "airbnb/hooks"
+  ],
+
+  "globals": {
+    "document": true,
+    "window": true
+  },
+
+  "rules": {
+    "array-bracket-spacing": [
+      "error",
+      "always"
+    ],
+    "arrow-parens": [
+      "error",
+      "as-needed"
+    ],
+    "brace-style": [
+      "error",
+      "stroustrup",
+      {
+        "allowSingleLine": true
+      }
+    ],
+    "class-methods-use-this": 0,
+    "global-require": 0,
+    "jsx-a11y/alt-text": 0,
+    "jsx-a11y/label-has-associated-control": [ "error", {
+      "labelComponents": ["FormLabel"],
+      "labelAttributes": ["text"],
+      "controlComponents": [
+        "FormTextArea",
+        "FormTextInput",
+        "FormSelect"
+      ],
+      "depth": 3
+    }],
+    "no-continue": 0,
+    "no-param-reassign": 0,
+    "no-plusplus": 0,
+    "no-underscore-dangle": 0,
+    "no-useless-constructor": 0,
+    "react/jsx-curly-spacing": [
+      "error",
+      {"when": "always", "children": true}
+    ],
+    "react/jsx-props-no-spreading": 0,
+    "max-classes-per-file": 0,
+    "react/state-in-constructor": 0,
+    "react/prop-types": 0,
+    "wrap-iife": 0
+  },
+
+  "parser": "babel-eslint"
+}

@@ -19,7 +19,7 @@ To run the project locally
 
 ```bash
 yarn install
-yarn develop
+yarn start
 ```
 
 To create a production build into the `\.public` folder

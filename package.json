@@ -1,9 +1,10 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "compra-aos-pequenos",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "Covid-19 crisis: helping local shops survive and thrive.",
+  "homepage": "https://compraaospequenos.netlify.com/",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Marzee Labs <hello@marzeelabs.org>",
   "dependencies": {
     "@material-ui/core": "^4.9.7",
     "@material-ui/styles": "^4.9.6",
@@ -28,7 +29,13 @@
     "react-instantsearch-dom": "^6.4.0"
   },
   "devDependencies": {
-    "prettier": "^1.19.1"
+    "babel-eslint": "^10.1.0",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb": "^18.1.0",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.19.0",
+    "eslint-plugin-react-hooks": "^2.5.1"
   },
   "keywords": [
     "gatsby"
@@ -36,18 +43,17 @@
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
-    "dev": "gatsby develop",
+    "start": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
-    "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/marzeelabs/compraaospequenos"
   },
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/marzeelabs/compraaospequenos/issues"
   }
 }
