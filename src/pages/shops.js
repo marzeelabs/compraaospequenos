@@ -11,9 +11,11 @@ const CONFIGURATION = {
   aggregations: {
     [FILTERS.LOCATION]: {
       title: FILTERS_LABELS.LOCATION,
+      size: 100,
     },
     [FILTERS.BUSINESS_TYPE]: {
       title: FILTERS_LABELS.BUSINESS_TYPE,
+      size: 100,
     },
   },
 };

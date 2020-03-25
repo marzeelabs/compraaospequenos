@@ -89,7 +89,10 @@ module.exports = {
     
         // By implementing a `mapNode(node): node` function, you can provide your own node transformations directly
         // during node sourcing, the default implementation is to return the node as is:
-        mapNode: node => node
+        mapNode: node => ({ 
+          ...node, 
+          'localização (distrito)': node['localização (distrito)'].split(",") 
+        })
       }
     },
     // {
