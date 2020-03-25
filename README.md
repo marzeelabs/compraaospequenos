@@ -9,6 +9,8 @@ This website is built using GatsbyJS and using Google Sheets as data source.
 
 For Gatsby to have access to the google sheet, you need to setup a Google Cloud service user and add this user to the google sheet. For more info, check out the [plugin docs](https://www.gatsbyjs.org/packages/gatsby-source-google-sheets/).
 
+Warning, for GOOGLE_CLOUD_PRIVATE_KEY make sure to replace all `\n` with `_` to work around a known AWS limitation.
+
 ## Local development
 
 Copy `.env.example` to `.env` and add configuration keys (ask @pvhee).
