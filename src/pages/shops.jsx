@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { graphql } from 'gatsby';
 import itemsjs from 'itemsjs';
-import _ from 'lodash';
 
 import Grid from '@material-ui/core/Grid';
 
@@ -33,48 +32,28 @@ export default ({ data }) => {
   const [ filters, setFilters ] = useState({});
 
   useEffect(() => {
-    const flatData = data.allGoogleSpreadsheetNegociosNegocios.edges.map(({ node }) => node);
+    const flatData = data.allGoogleSpreadsheetNegociosNegocios.edges
+      .map(({ node }) => node)
+      .map(node => ({
+        ...node,
+        [FILTERS.LOCATION]: (node[FILTERS.LOCATION] || []).map(str => str.trim()),
+        [FILTERS.BUSINESS_TYPE]: (node[FILTERS.BUSINESS_TYPE] || '').trim(),
+      }));
+
     const _store = itemsjs(flatData, CONFIGURATION);
-    const _shops = _store.search({
-      per_page: MAX_ITEMS_PER_PAGE,
-    });
+
     setIsLoading(false);
-    setShops(_shops);
     setStore(_store);
   }, [ data ]);
 
-  /**
-   * Handle filter change.
-   *
-   * @param {*} filter
-   * @param {*} event
-   */
-  const handleChange = (filter, event) => {
-    if (event.target.checked) {
-      const customizer = (objValue, srcValue) => {
-        if (_.isArray(objValue)) {
-          return objValue.concat(srcValue);
-        }
-      };
-      const _filters = _.mergeWith(filters, { [filter]: [ event.target.name ] }, customizer);
-      setFilters(_filters);
-      setShops(store.search({
-        per_page: MAX_ITEMS_PER_PAGE,
-        filters: _filters,
-      }));
-    }
-    else {
-      const _filters = {
-        ...filters,
-        [filter]: filters[filter].filter(n => n !== event.target.name),
-      };
-      setFilters(_filters);
-      setShops(store.search({
-        per_page: MAX_ITEMS_PER_PAGE,
-        filters: _filters,
-      }));
-    }
-  };
+  useEffect(() => {
+    const _shops = store.search && store.search({
+      filters,
+      per_page: MAX_ITEMS_PER_PAGE,
+    });
+
+    setShops(_shops || {});
+  }, [ filters, store ]);
 
   if (isLoading) {
     return (
@@ -83,6 +62,32 @@ export default ({ data }) => {
       </Layout>
     );
   }
+
+  const total = (shops.pagination && shops.pagination.total) || 1;
+
+  /**
+   * Handle filter change.
+   *
+   * @param {*} filter
+   * @param {*} event
+   */
+  const handleChange = (filter, event) => {
+    const _filters = { ...filters };
+
+    if (event.target.checked) {
+      _filters[filter] = Array.isArray(filters[filter])
+        ? [ ...filters[filter] ].concat([ event.target.name ])
+        : [ event.target.name ];
+    }
+    else {
+      _filters[filter] = Array.isArray(filters[filter])
+        ? [ ...filters[filter] ].filter(n => n !== event.target.name)
+        : null;
+    }
+
+    setFilters(_filters);
+  };
+
 
   return (
     <Layout>
@@ -95,7 +100,7 @@ export default ({ data }) => {
           </Grid>
 
           <Grid item xs={ 3 }>
-            { Object.keys(CONFIGURATION.aggregations).map(filter => (
+            { shops.data && Object.keys(CONFIGURATION.aggregations).map(filter => (
               <ShopsFilters
                 aggregations={ shops.data.aggregations[filter] }
                 filter={ filter }
@@ -108,9 +113,11 @@ export default ({ data }) => {
           </Grid>
 
           <Grid item xs={ 9 }>
-            <ShopsList
-              shops={ shops }
-            />
+            { shops.data && (
+              <ShopsList
+                shops={ shops }
+              />
+            ) }
           </Grid>
         </Grid>
       </div>

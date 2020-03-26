@@ -1,8 +1,11 @@
 import React from 'react';
+
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
-import _ from 'lodash';
+
 import ShopsCard from './Card';
+
+import chunk from '../../utils/chunk';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -20,7 +23,7 @@ const ShopsList = ({ shops }) => {
 
   return (
     <div className={ classes.root }>
-      { _.chunk(shops.data.items, 3).map((row, idx) => (
+      { chunk(shops.data.items, 3).map((row, idx) => (
         // eslint-disable-next-line react/no-array-index-key
         <Grid key={ idx } container spacing={ 3 }>
           { row.map(shop => (
