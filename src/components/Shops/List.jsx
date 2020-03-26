@@ -1,6 +1,5 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import _ from 'lodash';
 import ShopsCard from './Card';
@@ -21,10 +20,11 @@ const ShopsList = ({ shops }) => {
 
   return (
     <div className={ classes.root }>
-      { _.chunk(shops.data.items, 3).map(row => (
-        <Grid container spacing={ 3 }>
+      { _.chunk(shops.data.items, 3).map((row, idx) => (
+        // eslint-disable-next-line react/no-array-index-key
+        <Grid key={ idx } container spacing={ 3 }>
           { row.map(shop => (
-            <Grid item xs>
+            <Grid key={ shop.id } item xs>
               <ShopsCard shop={ shop } />
             </Grid>
           )) }
@@ -35,24 +35,3 @@ const ShopsList = ({ shops }) => {
 };
 
 export default ShopsList;
-
-// {/* <table>
-//   <thead>
-//     <tr>
-//       <th>Name</th>
-//       <th>Location</th>
-//       <th>Type of shop</th>
-//       <th>Offer</th>
-//     </tr>
-//   </thead>
-//   <tbody>
-//     {shops.data.items.map(node => (
-//       <tr key={`shop-${node.nome}-${node.localiza__o__distrito_}`}>
-//         <td>{node.nome}</td>
-//         <td>{node.localiza__o__distrito_}</td>
-//         <td>{node.tipoDeNeg_cio}</td>
-//         <td>{node.oferta}</td>
-//       </tr>
-//     ))}
-//   </tbody>
-// </table> */ }

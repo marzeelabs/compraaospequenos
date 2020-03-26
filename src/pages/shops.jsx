@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { graphql } from 'gatsby';
 import itemsjs from 'itemsjs';
+import _ from 'lodash';
 
 import Grid from '@material-ui/core/Grid';
 
@@ -23,22 +24,20 @@ const CONFIGURATION = {
   },
 };
 
+const MAX_ITEMS_PER_PAGE = 1000;
+
 export default ({ data }) => {
   const [ isLoading, setIsLoading ] = useState(true);
   const [ store, setStore ] = useState({});
   const [ shops, setShops ] = useState([]);
-  // const [filters, setFilters] = useState({});
+  const [ filters, setFilters ] = useState({});
 
   useEffect(() => {
     const flatData = data.allGoogleSpreadsheetNegociosNegocios.edges.map(({ node }) => node);
     const _store = itemsjs(flatData, CONFIGURATION);
     const _shops = _store.search({
-      per_page: 1000,
+      per_page: MAX_ITEMS_PER_PAGE,
     });
-    console.log(_shops);
-    // const _filters = {};
-    // Object.keys(CONFIGURATION.aggregations).map(f => _filters[f] = []);
-    // setFilters(_filters);
     setIsLoading(false);
     setShops(_shops);
     setStore(_store);
@@ -46,25 +45,33 @@ export default ({ data }) => {
 
   /**
    * Handle filter change.
-   * @todo fix combination of filters to be kept
    *
    * @param {*} filter
    * @param {*} event
    */
   const handleChange = (filter, event) => {
     if (event.target.checked) {
-      const _shops = store.search({
-        per_page: 1000,
-        filters: {
-          [filter]: [ event.target.name ],
-        },
-      });
-      setShops(_shops);
+      const customizer = (objValue, srcValue) => {
+        if (_.isArray(objValue)) {
+          return objValue.concat(srcValue);
+        }
+      };
+      const _filters = _.mergeWith(filters, { [filter]: [ event.target.name ] }, customizer);
+      setFilters(_filters);
+      setShops(store.search({
+        per_page: MAX_ITEMS_PER_PAGE,
+        filters: _filters,
+      }));
     }
     else {
-      // @todo keep existing filter combination
+      const _filters = {
+        ...filters,
+        [filter]: _.remove(filters[filter], n => n === event.target.name) 
+      };
+      setFilters(_filters);
       setShops(store.search({
-        per_page: 1000,
+        per_page: MAX_ITEMS_PER_PAGE,
+        filters: _filters,
       }));
     }
   };
