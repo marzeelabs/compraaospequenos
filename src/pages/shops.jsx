@@ -56,7 +56,7 @@ export default ({ data }) => {
     });
 
     setShops(_shops || {});
-  }, [ filters, store ]);
+  }, [ filters, page, store ]);
 
   if (isLoading) {
     return (
@@ -100,7 +100,9 @@ export default ({ data }) => {
    * @param {*} filter
    * @param {*} event
    */
-  const handlePageChange = (event, chosenPage) => setPage(chosenPage);
+  const handlePageChange = (event, chosenPage) => {
+    setPage(chosenPage);
+  };
 
   return (
     <Layout>
