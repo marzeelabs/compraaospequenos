@@ -66,7 +66,7 @@ export default ({ data }) => {
     else {
       const _filters = {
         ...filters,
-        [filter]: _.remove(filters[filter], n => n === event.target.name) 
+        [filter]: filters[filter].filter(n => n !== event.target.name),
       };
       setFilters(_filters);
       setShops(store.search({
