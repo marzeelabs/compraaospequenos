@@ -3,6 +3,7 @@ import { graphql } from 'gatsby';
 import itemsjs from 'itemsjs';
 
 import Grid from '@material-ui/core/Grid';
+import Pagination from '@material-ui/lab/Pagination';
 
 import Layout from '../components/Layout/Layout';
 import ShopsFilters from '../components/Shops/Filters';
@@ -23,12 +24,13 @@ const CONFIGURATION = {
   },
 };
 
-const MAX_ITEMS_PER_PAGE = 1000;
+const MAX_ITEMS_PER_PAGE = 18;
 
 export default ({ data }) => {
   const [ isLoading, setIsLoading ] = useState(true);
+  const [ page, setPage ] = useState(1);
   const [ store, setStore ] = useState({});
-  const [ shops, setShops ] = useState([]);
+  const [ shops, setShops ] = useState({});
   const [ filters, setFilters ] = useState({});
 
   useEffect(() => {
@@ -49,6 +51,7 @@ export default ({ data }) => {
   useEffect(() => {
     const _shops = store.search && store.search({
       filters,
+      page,
       per_page: MAX_ITEMS_PER_PAGE,
     });
 
@@ -86,8 +89,18 @@ export default ({ data }) => {
     }
 
     setFilters(_filters);
+
+    // Reset to first page when switching filters
+    setPage(1);
   };
 
+  /**
+   * Handle pagination change.
+   *
+   * @param {*} filter
+   * @param {*} event
+   */
+  const handlePageChange = (event, chosenPage) => setPage(chosenPage);
 
   return (
     <Layout>
@@ -121,6 +134,12 @@ export default ({ data }) => {
           </Grid>
         </Grid>
       </div>
+
+      <Pagination
+        count={ Math.ceil(total / MAX_ITEMS_PER_PAGE) }
+        page={ page }
+        onChange={ handlePageChange }
+      />
     </Layout>
   );
 };
