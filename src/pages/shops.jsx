@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { graphql } from 'gatsby';
 import itemsjs from 'itemsjs';
 
@@ -32,6 +32,7 @@ export default ({ data }) => {
   const [ store, setStore ] = useState({});
   const [ shops, setShops ] = useState({});
   const [ filters, setFilters ] = useState({});
+  const containerRef = useRef(null);
 
   useEffect(() => {
     const flatData = data.allGoogleSpreadsheetNegociosNegocios.edges
@@ -68,6 +69,12 @@ export default ({ data }) => {
 
   const total = (shops.pagination && shops.pagination.total) || 1;
 
+  const scrollToTop = () => {
+    if (containerRef.current) {
+      containerRef.current.scrollIntoView();
+    }
+  };
+
   /**
    * Handle filter change.
    *
@@ -92,6 +99,9 @@ export default ({ data }) => {
 
     // Reset to first page when switching filters
     setPage(1);
+
+    // Scroll back to top when toggling filters pages
+    scrollToTop();
   };
 
   /**
@@ -102,11 +112,14 @@ export default ({ data }) => {
    */
   const handlePageChange = (event, chosenPage) => {
     setPage(chosenPage);
+
+    // Scroll back to top when changing pages
+    scrollToTop();
   };
 
   return (
     <Layout>
-      <div>
+      <div ref={ containerRef }>
         <Grid container spacing={ 3 }>
           <Grid item xs={ 12 }>
             <h1>
