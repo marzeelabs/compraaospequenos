@@ -108,7 +108,7 @@ export default ({ data }) => {
         <Grid container spacing={ 3 }>
           <Grid item xs={ 12 }>
             <h1>
-              { `All shops (${shops.pagination.total})` }
+              { `Shops that match criteria - ${total}` }
             </h1>
           </Grid>
 
