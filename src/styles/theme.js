@@ -10,6 +10,9 @@ export default createMuiTheme({
     secondary: {
       main: '#00FF00',
     },
+    white: {
+      main: '#FFFFFF',
+    },
     contrastThreshold: 3,
     tonalOffset: 0.5,
   },
