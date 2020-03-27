@@ -4,12 +4,17 @@ import { Link } from 'gatsby';
 
 import Layout from '../components/Layout/Layout';
 import SEO from '../components/SEO';
+import Hero from '../components/Layout/Hero';
+import Register from '../components/Layout/Register';
+import About from '../components/Layout/About';
 
 const IndexPage = () => (
-  <Layout>
+  <div>
     <SEO title="Home" />
-    <Link to="/shops/">Check out our shops</Link>
-  </Layout>
+    <Hero />
+    <About />
+    <Register />
+  </div>
 );
 
 export default IndexPage;
