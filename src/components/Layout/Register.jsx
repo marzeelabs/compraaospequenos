@@ -52,7 +52,8 @@ function Register(props) {
           variant="contained"
           className={ classes.button }
           component="a"
-          href="/sign-up/"
+          href="https://menos.typeform.com/to/zCesK3"
+          target="_blank"
         >
           Registra o teu Negócio
         </Button>
