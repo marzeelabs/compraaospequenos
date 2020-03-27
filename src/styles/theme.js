@@ -5,10 +5,13 @@ import {
 export default createMuiTheme({
   palette: {
     primary: {
-      main: '#FF0000',
+      main: '#2F5BEA',
+      dark: '#0F3963',
+      contrastText: '#FFFFFF',
     },
     secondary: {
-      main: '#00FF00',
+      main: '#00AFAD',
+      contrastText: '#FFFFFF',
     },
     white: {
       main: '#FFFFFF',
