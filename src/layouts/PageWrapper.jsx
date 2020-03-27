@@ -1,5 +1,5 @@
 /**
- * Layout component that queries for data
+ * PageWrapper component that queries for data
  * with Gatsby's useStaticQuery component
  *
  * See: https://www.gatsbyjs.org/docs/use-static-query/
@@ -9,11 +9,14 @@ import React from 'react';
 import { node } from 'prop-types';
 import { useStaticQuery, graphql } from 'gatsby';
 
-import Header from './Header';
+import CssBaseline from '@material-ui/core/CssBaseline';
 
-import './Layout.scss';
+import Header from 'Components/Header';
+import Footer from 'Components/Footer';
 
-const Layout = ({ children }) => {
+import withClasses from 'Styles/layouts/pageWrapper';
+
+const PageWrapper = ({ children, classes }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -26,20 +29,16 @@ const Layout = ({ children }) => {
 
   return (
     <>
+      <CssBaseline />
       <Header siteTitle={ data.site.siteMetadata.title } />
-      <div className="main-layout">
-        <main>{ children }</main>
-        <footer>
-          { `${new Date().getFullYear()}, by ` }
-          <a href="https://marzeelabs.org">Marzee Labs</a>
-        </footer>
-      </div>
+      <main className={ classes.root }>{ children }</main>
+      <Footer />
     </>
   );
 };
 
-Layout.propTypes = {
+PageWrapper.propTypes = {
   children: node.isRequired,
 };
 
-export default Layout;
+export default withClasses(PageWrapper);

@@ -9,6 +9,20 @@ module.exports = {
   },
   plugins: [
     {
+      resolve: 'gatsby-plugin-alias-imports',
+      options: {
+        alias: {
+          Assets: 'src/assets',
+          Components: 'src/components',
+          Layouts: 'src/layouts',
+          Pages: 'src/pages',
+          Polyfills: 'src/polyfills',
+          Styles: 'src/styles',
+          Utils: 'src/utils',
+        },
+      },
+    },
+    {
       resolve: 'gatsby-plugin-material-ui',
       // If you want to use styled components you should change the injection order.
       options: {

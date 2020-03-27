@@ -1,20 +1,20 @@
 import React from 'react';
 
-import { Link } from 'gatsby';
+import SEO from 'Components/SEO';
 
-import Layout from '../components/Layout/Layout';
-import SEO from '../components/SEO';
-import Hero from '../components/Layout/Hero';
-import Register from '../components/Layout/Register';
-import About from '../components/Layout/About';
+import About from 'Components/About';
+import Hero from 'Components/Hero';
+import Register from 'Components/Register';
+
+import PageWrapper from 'Layouts/PageWrapper';
 
 const IndexPage = () => (
-  <div>
+  <PageWrapper>
     <SEO title="Home" />
     <Hero />
     <About />
     <Register />
-  </div>
+  </PageWrapper>
 );
 
 export default IndexPage;
