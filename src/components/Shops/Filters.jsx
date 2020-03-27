@@ -1,5 +1,5 @@
 // For IE
-import '../../utils/polyfill-string-normalize';
+import 'Polyfills/string-normalize';
 
 import React from 'react';
 import {

@@ -54,5 +54,26 @@
     "wrap-iife": 0
   },
 
-  "parser": "babel-eslint"
+  "parser": "babel-eslint",
+
+  "settings": {
+    "import/resolver": {
+      "alias": {
+        "map": [
+          ["Assets", "./src/assets"],
+          ["Components", "./src/components"],
+          ["Layouts", "./src/layouts"],
+          ["Pages", "./src/pages"],
+          ["Polyfills", "./src/polyfills"],
+          ["Styles", "./src/styles"],
+          ["Utils", "./src/utils"]
+        ],
+        "extensions": [
+          ".js",
+          ".jsx",
+          ".json"
+        ]
+      }
+    }
+  }
 }

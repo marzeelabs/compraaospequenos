@@ -1,15 +1,20 @@
 import React from 'react';
 
-import { Link } from 'gatsby';
+import SEO from 'Components/SEO';
 
-import Layout from '../components/Layout/Layout';
-import SEO from '../components/SEO';
+import About from 'Components/About';
+import Hero from 'Components/Hero';
+import Register from 'Components/Register';
+
+import PageWrapper from 'Layouts/PageWrapper';
 
 const IndexPage = () => (
-  <Layout>
+  <PageWrapper>
     <SEO title="Home" />
-    <Link to="/shops/">Check out our shops</Link>
-  </Layout>
+    <Hero />
+    <About />
+    <Register />
+  </PageWrapper>
 );
 
 export default IndexPage;

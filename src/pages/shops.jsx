@@ -5,11 +5,13 @@ import itemsjs from 'itemsjs';
 import Grid from '@material-ui/core/Grid';
 import Pagination from '@material-ui/lab/Pagination';
 
-import Layout from '../components/Layout/Layout';
-import ShopsFilters from '../components/Shops/Filters';
-import ShopsList from '../components/Shops/List';
+import ShopsFilters from 'Components/Shops/Filters';
+import ShopsList from 'Components/Shops/List';
 
-import { FILTERS, FILTERS_LABELS } from '../utils/data';
+import PageWrapper from 'Layouts/PageWrapper';
+import Section from 'Layouts/Section';
+
+import { FILTERS, FILTERS_LABELS } from 'Utils/data';
 
 const CONFIGURATION = {
   aggregations: {
@@ -61,9 +63,11 @@ export default ({ data }) => {
 
   if (isLoading) {
     return (
-      <Layout>
-        <div>Initializing...</div>
-      </Layout>
+      <PageWrapper>
+        <Section>
+          <div>Initializing...</div>
+        </Section>
+      </PageWrapper>
     );
   }
 
@@ -118,44 +122,48 @@ export default ({ data }) => {
   };
 
   return (
-    <Layout>
-      <div ref={ containerRef }>
-        <Grid container spacing={ 3 }>
-          <Grid item xs={ 12 }>
-            <h1>
-              { `Shops that match criteria - ${total}` }
-            </h1>
-          </Grid>
+    <PageWrapper>
+      <Section>
+        <div ref={ containerRef }>
+          <Grid container spacing={ 3 }>
+            <Grid item xs={ 12 }>
+              <h1>
+                { `Shops that match criteria - ${total}` }
+              </h1>
+            </Grid>
 
-          <Grid item xs={ 3 }>
-            { shops.data && Object.keys(CONFIGURATION.aggregations).map(filter => (
-              <ShopsFilters
-                aggregations={ shops.data.aggregations[filter] }
-                filter={ filter }
-                handleChange={ handleChange }
-                key={ `filter-${filter}` }
-                label={ FILTERS_LABELS[filter] }
-                shops={ shops }
-              />
-            )) }
-          </Grid>
+            <Grid item xs={ 3 }>
+              { shops.data && Object.keys(CONFIGURATION.aggregations).map(filter => (
+                <ShopsFilters
+                  aggregations={ shops.data.aggregations[filter] }
+                  filter={ filter }
+                  handleChange={ handleChange }
+                  key={ `filter-${filter}` }
+                  label={ FILTERS_LABELS[filter] }
+                  shops={ shops }
+                />
+              )) }
+            </Grid>
 
-          <Grid item xs={ 9 }>
-            { shops.data && (
-              <ShopsList
-                shops={ shops }
-              />
-            ) }
+            <Grid item xs={ 9 }>
+              { shops.data && (
+                <ShopsList
+                  shops={ shops }
+                />
+              ) }
+            </Grid>
           </Grid>
-        </Grid>
-      </div>
+        </div>
+      </Section>
 
-      <Pagination
-        count={ Math.ceil(total / MAX_ITEMS_PER_PAGE) }
-        page={ page }
-        onChange={ handlePageChange }
-      />
-    </Layout>
+      <Section>
+        <Pagination
+          count={ Math.ceil(total / MAX_ITEMS_PER_PAGE) }
+          page={ page }
+          onChange={ handlePageChange }
+        />
+      </Section>
+    </PageWrapper>
   );
 };
 
