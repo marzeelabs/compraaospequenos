@@ -64,7 +64,9 @@ export default ({ data }) => {
   if (isLoading) {
     return (
       <PageWrapper>
-        <div>Initializing...</div>
+        <Section>
+          <div>Initializing...</div>
+        </Section>
       </PageWrapper>
     );
   }

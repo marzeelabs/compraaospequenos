@@ -10,7 +10,6 @@ import { node } from 'prop-types';
 import { useStaticQuery, graphql } from 'gatsby';
 
 import {
-  createMuiTheme,
   ThemeProvider,
 } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -18,18 +17,7 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import Header from 'Components/Header';
 import Footer from 'Components/Footer';
 
-const theme = createMuiTheme({
-  palette: {
-    primary: {
-      main: '#FF0000',
-    },
-    secondary: {
-      main: '#00FF00',
-    },
-    contrastThreshold: 3,
-    tonalOffset: 0.5,
-  },
-});
+import theme from 'Styles/theme';
 
 const PageWrapper = ({ children }) => {
   const data = useStaticQuery(graphql`
