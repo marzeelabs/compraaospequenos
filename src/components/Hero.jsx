@@ -3,10 +3,11 @@ import React from 'react';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 
+import MenosLogo from 'Components/MenosLogo';
+
 import Section from 'Layouts/Section';
 
 import withClasses from 'Styles/components/hero';
-
 
 import './Hero.scss';
 
@@ -20,8 +21,9 @@ const Hero = ({ classes }) => (
       <Typography color="inherit" align="center" variant="h5" className={ classes.h5 }>
         An initiative from
       </Typography>
+
       <div>
-        <img src="" />
+        <MenosLogo />
       </div>
 
       <Button

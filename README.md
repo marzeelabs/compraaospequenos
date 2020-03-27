@@ -22,7 +22,7 @@ yarn install
 yarn start
 ```
 
-To create a production build into the `\.public` folder
+To create a production build into the `./public` folder
 
 ```bash
 yarn build
