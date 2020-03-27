@@ -12,7 +12,7 @@ import withClasses from 'Styles/components/about';
 
 const About = ({ classes }) => (
   <Section extraClasses={ classes }>
-    <Typography variant="h4" marked="center" className={ classes.title } component="h2">
+    <Typography variant="h4" marked="center" className={ classes.mainTitle } component="h2">
       O que é esta iniciativa?
     </Typography>
 
@@ -25,7 +25,7 @@ const About = ({ classes }) => (
               Pequenos negócios com soluções inovadoras*
             </Typography>
             <Typography variant="body1">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas leo nis.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas dolor sit amet, consectetur adipiscing leo nis.
             </Typography>
           </div>
         </Grid>
@@ -37,7 +37,7 @@ const About = ({ classes }) => (
               Clientes limitados ao isolamento
             </Typography>
             <Typography variant="body1">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas leo nis.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit consectetur adipiscing elit. Maecenas leo nis.
             </Typography>
           </div>
         </Grid>

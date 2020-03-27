@@ -5,6 +5,8 @@ const styles = theme => ({
     display: 'flex',
     overflow: 'hidden',
     backgroundColor: theme.palette.secondary,
+    marginTop: theme.spacing(2),
+    marginBottom: theme.spacing(2),
   },
 
   container: {
@@ -21,11 +23,23 @@ const styles = theme => ({
     flexDirection: 'column',
     alignItems: 'center',
     padding: theme.spacing(0, 5),
+    textAlign: 'center',
+    marginTop: theme.spacing(5),
+    marginBottom: theme.spacing(10),
+  },
+
+  mainTitle: {
+    marginBottom: theme.spacing(5),
   },
 
   title: {
     marginTop: theme.spacing(5),
-    marginBottom: theme.spacing(5),
+    marginBottom: theme.spacing(2),
+  },
+
+  button: {
+    padding: '20px 40px;',
+    borderRadius: '60px',
   },
 });
 

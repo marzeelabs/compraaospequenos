@@ -1,5 +1,5 @@
 import React from 'react';
-import { node, shape } from 'prop-types';
+import { node, shape, string } from 'prop-types';
 import clsx from 'clsx';
 
 import Container from '@material-ui/core/Container';
@@ -10,10 +10,14 @@ const Section = ({
   children,
   classes,
   extraClasses,
+  innerContainerClassName,
+  outerContainerClassName,
   WrapperComponent,
 }) => (
-  <WrapperComponent className={ clsx(classes.root, extraClasses.root) }>
-    <Container className={ clsx(classes.container, extraClasses.container) }>
+  <WrapperComponent className={ clsx(classes.root, extraClasses.root, outerContainerClassName) }>
+    <Container
+      className={ clsx(classes.container, extraClasses.container, innerContainerClassName) }
+    >
       { children }
     </Container>
   </WrapperComponent>
@@ -21,11 +25,15 @@ const Section = ({
 
 Section.propTypes = {
   extraClasses: shape({}),
+  innerContainerClassName: string,
+  outerContainerClassName: string,
   WrapperComponent: node,
 };
 
 Section.defaultProps = {
   extraClasses: {},
+  innerContainerClassName: '',
+  outerContainerClassName: '',
   WrapperComponent: 'section',
 };
 

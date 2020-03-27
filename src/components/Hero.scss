@@ -1,0 +1,57 @@
+.hero-image__wrapper {
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+  text-align: center;
+
+  @media (min-width: 600px) {
+    height: 80vh;
+    max-height: 1300px;
+    min-height: 500px;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(119.21deg, #2F5BEA 0%, #00AFAD 96.67%);
+    background-blend-mode: screen, normal;
+    z-index: 5;
+    opacity: .75;
+  }
+
+  h2 {
+    font-weight: 900;
+  }
+
+  h5 {
+    margin: 40px auto;
+  }
+}
+
+.hero-image__content {
+  position: relative;
+  z-index: 10;
+}
+
+.hero-image__button.MuiButton-containedSizeLarge {
+  border-radius: 60px;
+  padding: 20px 40px;
+}
+
+.hero-image__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  filter: grayscale(100%) brightness(.8);
+}
