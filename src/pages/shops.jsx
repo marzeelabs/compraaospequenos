@@ -1,6 +1,22 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { graphql } from 'gatsby';
 import itemsjs from 'itemsjs';
+import { makeStyles, useTheme } from '@material-ui/core/styles';
+
+import AppBar from '@material-ui/core/AppBar';
+import CssBaseline from '@material-ui/core/CssBaseline';
+import Drawer from '@material-ui/core/Drawer';
+import Hidden from '@material-ui/core/Hidden';
+import IconButton from '@material-ui/core/IconButton';
+import InboxIcon from '@material-ui/icons/MoveToInbox';
+import List from '@material-ui/core/List';
+import ListItem from '@material-ui/core/ListItem';
+import ListItemIcon from '@material-ui/core/ListItemIcon';
+import ListItemText from '@material-ui/core/ListItemText';
+import MailIcon from '@material-ui/icons/Mail';
+import MenuIcon from '@material-ui/icons/Menu';
+import Toolbar from '@material-ui/core/Toolbar';
+import Typography from '@material-ui/core/Typography';
 
 import Grid from '@material-ui/core/Grid';
 import Pagination from '@material-ui/lab/Pagination';
@@ -28,13 +44,58 @@ const CONFIGURATION = {
 
 const MAX_ITEMS_PER_PAGE = 18;
 
+const drawerWidth = 240;
+
+const useStyles = makeStyles(theme => ({
+  root: {
+    display: 'flex',
+  },
+  drawer: {
+    [theme.breakpoints.up('sm')]: {
+      width: drawerWidth,
+      flexShrink: 0,
+    },
+  },
+  appBar: {
+    [theme.breakpoints.up('sm')]: {
+      width: `calc(100% - ${drawerWidth}px)`,
+      marginLeft: drawerWidth,
+    },
+  },
+  menuButton: {
+    marginRight: theme.spacing(2),
+    [theme.breakpoints.up('sm')]: {
+      display: 'none',
+    },
+  },
+  // necessary for content to be below app bar
+  toolbar: theme.mixins.toolbar,
+  drawerPaper: {
+    width: drawerWidth,
+  },
+  content: {
+    flexGrow: 1,
+    padding: theme.spacing(3),
+  },
+}));
+
+
 export default ({ data }) => {
+  const classes = useStyles();
+  const theme = useTheme();
+
   const [ isLoading, setIsLoading ] = useState(true);
   const [ page, setPage ] = useState(1);
   const [ store, setStore ] = useState({});
   const [ shops, setShops ] = useState({});
   const [ filters, setFilters ] = useState({});
+  const [ mobileOpen, setMobileOpen ] = useState(false);
+
   const containerRef = useRef(null);
+
+  const handleDrawerToggle = () => {
+    setMobileOpen(!mobileOpen);
+  };
 
   useEffect(() => {
     const flatData = data.allGoogleSpreadsheetNegocios.edges
@@ -123,36 +184,82 @@ export default ({ data }) => {
 
   return (
     <PageWrapper>
+
+      <CssBaseline />
+
+      <AppBar position="fixed" className={ classes.appBar }>
+        <Toolbar>
+          <IconButton
+            color="inherit"
+            aria-label="open drawer"
+            edge="start"
+            onClick={ handleDrawerToggle }
+            className={ classes.menuButton }
+          >
+            <MenuIcon />
+          </IconButton>
+          <Typography variant="h6" noWrap>
+            { `Shops that match criteria - ${total}` }
+          </Typography>
+        </Toolbar>
+      </AppBar>
+
+      <div className={ classes.drawer } aria-label="filters">
+        <Hidden smUp implementation="css">
+          <Drawer
+            variant="temporary"
+            anchor={ theme.direction === 'rtl' ? 'right' : 'left' }
+            open={ mobileOpen }
+            onClose={ handleDrawerToggle }
+            classes={ {
+              paper: classes.drawerPaper,
+            } }
+            ModalProps={ {
+              keepMounted: true, // Better open performance on mobile.
+            } }
+          >
+            { shops.data && Object.keys(CONFIGURATION.aggregations).map(filter => (
+              <ShopsFilters
+                aggregations={ shops.data.aggregations[filter] }
+                filter={ filter }
+                handleChange={ handleChange }
+                key={ `filter-${filter}` }
+                label={ FILTERS_LABELS[filter] }
+                shops={ shops }
+              />
+            )) }
+          </Drawer>
+        </Hidden>
+        <Hidden xsDown implementation="css">
+          <Drawer
+            classes={{
+              paper: classes.drawerPaper,
+            }}
+            variant="permanent"
+            open
+          >
+            { shops.data && Object.keys(CONFIGURATION.aggregations).map(filter => (
+              <ShopsFilters
+                aggregations={ shops.data.aggregations[filter] }
+                filter={ filter }
+                handleChange={ handleChange }
+                key={ `filter-${filter}` }
+                label={ FILTERS_LABELS[filter] }
+                shops={ shops }
+              />
+            )) }
+          </Drawer>
+        </Hidden>
+      </div>
+
       <Section>
         <div ref={ containerRef }>
-          <Grid container spacing={ 3 }>
-            <Grid item xs={ 12 }>
-              <h1>
-                { `Shops that match criteria - ${total}` }
-              </h1>
-            </Grid>
 
-            <Grid item xs={ 3 }>
-              { shops.data && Object.keys(CONFIGURATION.aggregations).map(filter => (
-                <ShopsFilters
-                  aggregations={ shops.data.aggregations[filter] }
-                  filter={ filter }
-                  handleChange={ handleChange }
-                  key={ `filter-${filter}` }
-                  label={ FILTERS_LABELS[filter] }
-                  shops={ shops }
-                />
-              )) }
-            </Grid>
-
-            <Grid item xs={ 9 }>
-              { shops.data && (
-                <ShopsList
-                  shops={ shops }
-                />
-              ) }
-            </Grid>
-          </Grid>
+          { shops.data && (
+            <ShopsList
+              shops={ shops }
+            />
+          ) }
         </div>
       </Section>
 
