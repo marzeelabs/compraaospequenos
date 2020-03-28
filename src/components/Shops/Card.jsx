@@ -1,9 +1,7 @@
 import React from 'react';
 
-import Button from '@material-ui/core/Button';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
-import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
 
@@ -17,18 +15,22 @@ const ShopsCard = ({ classes, shop }) => (
           { shop.nome }
         </Typography>
         <Typography variant="body2" color="textSecondary" component="p">
+          { shop.localiza__o__distrito_.join(', ') }
+        </Typography>
+        <Typography gutterBottom variant="h6" component="h5" color="textSecondary">
+          { shop.tipoDeOferta.join(', ') }
+        </Typography>
+        <Typography variant="body2" color="textSecondary" component="p">
           { shop.oferta }
+        </Typography>
+        <Typography variant="body2" color="textSecondary" component="p">
+          <a href={ shop.redesSociais } target="_blank">Social network</a>
+        </Typography>
+        <Typography variant="body2" color="textSecondary" component="p">
+          <a href={ shop.site } target="_blank">Website</a>
         </Typography>
       </CardContent>
     </CardActionArea>
-    <CardActions>
-      <Button size="small" color="primary">
-        { shop.localiza__o__distrito_ }
-      </Button>
-      <Button size="small" color="primary">
-        Learn More
-      </Button>
-    </CardActions>
   </Card>
 );
 
