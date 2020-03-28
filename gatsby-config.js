@@ -58,17 +58,15 @@ module.exports = {
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
     {
-      resolve: 'gatsby-source-google-spreadsheet',
+      resolve: 'gatsby-source-google-spreadsheet-cap',
       options: {
         // The `spreadsheetId` is required, it is found in the url of your document:
         // https://docs.google.com/spreadsheets/d/<spreadsheetId>/edit#gid=0
-        spreadsheetId: '18aa2jtoNLeebymORRigaNleTB2tbIJBWIC1RwfJPYxc',
+        spreadsheetId: '1VT6yvROk2V_Z438YdzBHkjeplqOeaTkAR4SfifBsMqg',
 
-        // The `spreadsheetName` is recommended, but optional
-        // It is used as part of the id's during the node creation, as well as in the generated
-        // GraphQL-schema. If you are sourcing multiple sheets, you can set this to distringuish
-        // between the source data.
-        spreadsheetName: 'Negocios',
+        // If set, the `spreadsheetSheet`  is the only sheet to be considered for mapping.
+        // This is an adaptation to how the original plugin works.
+        spreadsheetSheet: 'Negócios',
 
         // The `typePrefix` is optional, default value is "GoogleSpreadsheet"
         // It is used as part of the id's during the node creation, as well as in the generated
@@ -109,6 +107,7 @@ module.exports = {
         // the node as is:
         mapNode: node => ({
           ...node,
+          // Shops can have multiple locations separated by ","
           'localização (distrito)': node['localização (distrito)'].split(','),
         }),
       },

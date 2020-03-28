@@ -1,0 +1,10 @@
+{
+  "name": "gatsby-source-google-spreadsheet-cap",
+  "version": "2.0.0",
+  "description": "Adapted Gatsby source plugin for all sheets in a Google Spreadsheet",
+  "dependencies": {
+    "camelcase": "^5.0.0",
+    "gatsby-node-helpers": "^0.3.0",
+    "node-sheets": "^1.0.0"
+  }
+}

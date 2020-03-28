@@ -37,7 +37,7 @@ export default ({ data }) => {
   const containerRef = useRef(null);
 
   useEffect(() => {
-    const flatData = data.allGoogleSpreadsheetNegociosNegocios.edges
+    const flatData = data.allGoogleSpreadsheetNegocios.edges
       .map(({ node }) => node)
       .map(node => ({
         ...node,
@@ -169,7 +169,7 @@ export default ({ data }) => {
 
 export const query = graphql`
   query {
-    allGoogleSpreadsheetNegociosNegocios {
+    allGoogleSpreadsheetNegocios {
       edges {
         node {
           id
