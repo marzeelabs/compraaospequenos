@@ -121,6 +121,12 @@ module.exports = {
         },
       },
     },
+    {
+      resolve: 'gatsby-plugin-google-analytics',
+      options: {
+        trackingId: 'UA-162021632-1',
+      },
+    },
     // {
     //   resolve: `gatsby-plugin-algolia`,
     //   options: {
