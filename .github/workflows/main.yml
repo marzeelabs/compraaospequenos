@@ -3,7 +3,7 @@ name: Netlify
 on:
   schedule:
     # Runs every hour
-    - cron: '* * * * *'
+    - cron: '0 * * * *'
 
 jobs:
   build:
