@@ -173,13 +173,15 @@ export const query = graphql`
       edges {
         node {
           id
+          localiza__o__distrito_
           nome
           oferta
-          outraFormaDeContacto
-          localiza__o__distrito_
+          produtoOuServi_o
+          redesSociais
+          site
           tipoDeNeg_cio
           tipoDeOferta
-          redesSociais
+          outraFormaDeContacto
         }
       }
     }

@@ -108,7 +108,8 @@ module.exports = {
         mapNode: node => ({
           ...node,
           // Shops can have multiple locations separated by ","
-          'localização (distrito)': node['localização (distrito)'].split(','),
+          'localização (distrito)': node['localização (distrito)'].split(',').map(n => n.trim()),
+          tipoDeOferta: node.tipoDeOferta.split(',').map(n => n.trim()),
         }),
       },
     },
