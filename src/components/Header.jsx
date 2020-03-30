@@ -3,13 +3,15 @@ import { string } from 'prop-types';
 
 import { Link } from 'gatsby';
 
+import Section from 'Layouts/Section';
+
 import useStyles from 'Styles/components/header';
 
 const Header = ({ siteTitle }) => {
   const classes = useStyles();
 
   return (
-    <div className={ classes.wrapper }>
+    <Section extraClasses={ classes }>
       <Link className={ classes.title } to="/">
         { siteTitle }
       </Link>
@@ -19,7 +21,7 @@ const Header = ({ siteTitle }) => {
       <Link className={ classes.navigation } to="/shops">
         Portfolio
       </Link>
-    </div>
+    </Section>
   );
 };
 
