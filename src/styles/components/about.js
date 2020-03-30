@@ -5,8 +5,6 @@ export default makeStyles(theme => ({
     display: 'flex',
     overflow: 'hidden',
     backgroundColor: theme.palette.secondary,
-    marginTop: theme.spacing(2),
-    marginBottom: theme.spacing(2),
   },
 
   container: {
@@ -15,8 +13,34 @@ export default makeStyles(theme => ({
     alignItems: 'center',
     position: 'relative',
     maxWidth: 800,
-    marginTop: theme.spacing(10),
-    marginBottom: theme.spacing(15),
+    marginTop: theme.spacing(6.25),
+    marginBottom: theme.spacing(12.5),
+  },
+
+  title: {
+    marginBottom: theme.spacing(5),
+    fontSize: '34px',
+    lineHeight: '46px',
+    letterSpacing: '2px',
+    textAlign: 'center',
+    fontWeight: 'bold',
+    color: theme.palette.primary.main,
+  },
+
+  descriptionWrapper: {
+    marginBottom: theme.spacing(5),
+  },
+
+  description: {
+    fontSize: '16px',
+    lineHeight: '32px',
+    letterSpacing: '2px',
+    textAlign: 'center',
+    marginBottom: theme.spacing(1.5),
+
+    '&:nth-child(n+4)': {
+      marginBottom: theme.spacing(0),
+    },
   },
 
   itemsWrapper: {
@@ -30,7 +54,6 @@ export default makeStyles(theme => ({
     alignItems: 'center',
     padding: theme.spacing(0, 5),
     textAlign: 'center',
-    marginTop: theme.spacing(5),
     marginBottom: theme.spacing(10),
   },
 
@@ -39,29 +62,40 @@ export default makeStyles(theme => ({
     height: 100,
   },
 
-  title: {
-    marginBottom: theme.spacing(5),
-  },
-
-  description: {
-    marginBottom: '1rem',
-    textAlign: 'center',
-  },
-
   sectionHeading: {
     marginTop: theme.spacing(5),
-    marginBottom: theme.spacing(2),
+    marginBottom: theme.spacing(0.5),
+    fontWeight: 'bold',
+    fontSize: '24px',
+    lineHeight: '34px',
+  },
+
+  sectionDescription: {
+    fontSize: '16px',
+    lineHeight: '32px',
+    letterSpacing: '2px',
   },
 
   arrows: {
     position: 'absolute',
-    top: 50,
+    top: '40px',
     left: '50%',
-    transform: 'translateY(-50%)',
+    transform: 'translateX(-50%)',
+
+    '@media(max-width: 959px)': {
+      transform: 'translateX(-50%) rotate(90deg)',
+      top: '255px',
+    },
   },
 
   button: {
-    padding: '20px 40px;',
+    padding: '20px 40px',
     borderRadius: '60px',
+    fontSize: '34px',
+    lineHeight: '40px',
+    letterSpacing: '2px',
+    fontWeight: 'bold',
+    textAlign: 'center',
+    textTransform: 'none',
   },
 }));

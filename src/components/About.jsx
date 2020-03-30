@@ -21,7 +21,7 @@ const About = () => {
         O que é esta iniciativa?
       </Typography>
 
-      <Grid container spacing={ 5 }>
+      <div className={ classes.descriptionWrapper }>
         <Typography className={ classes.description } variant="body1">
           A maior parte dos pequenos negócios, devido à situação actual, enfrentam enormes desafios
           para sobreviver.
@@ -43,33 +43,31 @@ const About = () => {
           criámos um diretório onde mapeamos os pequenos negócios que têm ofertas adaptadas à nossa
           situação de isolamento.
         </Typography>
-      </Grid>
+      </div>
 
-      <div className={ classes.itemsWrapper }>
-        <Grid container spacing={ 5 }>
-          <Grid className={ classes.item } item xs={ 12 } md={ 6 }>
-            <ShopsIcon className={ classes.icon } />
-            <Typography variant="h5" className={ classes.sectionHeading }>
-              Pequenos negócios
-            </Typography>
-            <Typography variant="body1">
-              com soluções adaptadas
-            </Typography>
-          </Grid>
-
-          <Grid className={ classes.item } item xs={ 12 } md={ 6 }>
-            <ClientsIcon className={ classes.icon } />
-            <Typography variant="h5" className={ classes.sectionHeading }>
-              Clientes
-            </Typography>
-            <Typography variant="body1">
-              limitados ao isolamento
-            </Typography>
-          </Grid>
+      <Grid container spacing={ 5 } className={ classes.itemsWrapper }>
+        <Grid className={ classes.item } item xs={ 12 } md={ 6 }>
+          <ShopsIcon className={ classes.icon } />
+          <Typography variant="h5" className={ classes.sectionHeading }>
+            Pequenos negócios
+          </Typography>
+          <Typography variant="body1" className={ classes.sectionDescription }>
+            com soluções adaptadas
+          </Typography>
         </Grid>
 
         <ArrowsIcon className={ classes.arrows } />
-      </div>
+
+        <Grid className={ classes.item } item xs={ 12 } md={ 6 }>
+          <ClientsIcon className={ classes.icon } />
+          <Typography variant="h5" className={ classes.sectionHeading }>
+            Clientes
+          </Typography>
+          <Typography variant="body1" className={ classes.sectionDescription }>
+            limitados ao isolamento
+          </Typography>
+        </Grid>
+      </Grid>
 
 
       <Button
@@ -78,7 +76,7 @@ const About = () => {
         size="large"
         className={ classes.button }
         component="a"
-        href="/shops"
+        href="/shops/"
       >
         Lista de Negócios
       </Button>
