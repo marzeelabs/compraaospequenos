@@ -28,4 +28,16 @@ export default makeStyles(theme => ({
   ul: {
     justifyContent: 'center',
   },
+
+  listSection: {
+    marginTop: theme.spacing(5),
+  },
+
+  shopsTotal: {
+    textAlign: 'center',
+    fontSize: '14px',
+    lineHeight: '24px',
+    letterSpacing: '2px',
+    marginBottom: theme.spacing(2),
+  },
 }));

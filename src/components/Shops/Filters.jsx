@@ -94,7 +94,7 @@ const ShopsFilters = ({
       <ExpansionPanelSummary
         expandIcon={ mb && <ExpandMoreIcon /> }
       >
-        { summary }
+        <span className={ classes.summary }>{ summary }</span>
       </ExpansionPanelSummary>
 
       <ExpansionPanelDetails className={ classes.items }>

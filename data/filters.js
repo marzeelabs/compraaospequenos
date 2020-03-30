@@ -1,19 +1,19 @@
 module.exports = {
   location: {
     all: 'Todo o País',
-    label: 'Location',
+    label: 'Localização',
     field: 'localização (distrito)',
     size: 100,
   },
 
   businessType: {
-    label: 'Type of Business',
+    label: 'Área de Negócio',
     field: 'tipoDeNegócio',
     size: 100,
   },
 
   offerType: {
-    label: 'Type of Offer',
+    label: 'Tipo de Oferta',
     field: 'tipoDeOferta',
     size: 100,
   },
