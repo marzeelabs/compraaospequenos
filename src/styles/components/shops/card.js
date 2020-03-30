@@ -5,6 +5,8 @@ export default makeStyles(theme => ({
     flexGrow: 1,
     width: '100%',
     margin: 15,
+    boxShadow: '0 10px 35px rgba(0, 0, 0, 0.1)',
+    borderRadius: '10px',
 
     [theme.breakpoints.up('md')]: {
       width: 'auto',
@@ -15,5 +17,9 @@ export default makeStyles(theme => ({
       width: 'auto',
       maxWidth: 'calc(33% - 30px)',
     },
+  },
+
+  title: {
+    color: theme.palette.primary.main,
   },
 }));

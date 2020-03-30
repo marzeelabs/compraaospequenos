@@ -1,6 +1,12 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,700&display=swap');
+
 // Every typography element is displayed overflown in IE.
-@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) { // sass-lint:disable-line no-vendor-prefixes
-  .MuiTypography-root { // sass-lint:disable-line class-name-format
+@media screen and (-ms-high-contrast: active),
+(-ms-high-contrast: none) {
+
+  // sass-lint:disable-line no-vendor-prefixes
+  .MuiTypography-root {
+    // sass-lint:disable-line class-name-format
     max-width: 100%;
   }
 }

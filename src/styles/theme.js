@@ -4,6 +4,7 @@ import {
 
 export default createMuiTheme({
   palette: {
+    background: '#FFFFFF',
     primary: {
       main: '#2F5BEA',
       dark: '#0F3963',
@@ -15,5 +16,15 @@ export default createMuiTheme({
     },
     contrastThreshold: 3,
     tonalOffset: 0.5,
+  },
+
+  typography: {
+    fontFamily: [
+      'Open Sans',
+      'Roboto',
+      '"Helvetica Neue"',
+      'Arial',
+      'sans-serif',
+    ].join(','),
   },
 });

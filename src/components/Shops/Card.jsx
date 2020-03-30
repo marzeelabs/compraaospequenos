@@ -14,7 +14,7 @@ const ShopsCard = ({ shop }) => {
     <Card className={ classes.card }>
       <CardActionArea>
         <CardContent>
-          <Typography gutterBottom variant="h5" component="h2">
+          <Typography gutterBottom variant="h5" component="h2" className={ classes.title }>
             { shop.nome }
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
@@ -27,10 +27,10 @@ const ShopsCard = ({ shop }) => {
             { shop.oferta }
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
-            <a href={ shop.redesSociais } target="_blank">Social network</a>
+            <a href={ shop.redesSociais } target="_blank" rel="noopener noreferrer">Social network</a>
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
-            <a href={ shop.site } target="_blank">Website</a>
+            <a href={ shop.site } target="_blank" rel="noopener noreferrer">Website</a>
           </Typography>
         </CardContent>
       </CardActionArea>
