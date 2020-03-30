@@ -161,7 +161,7 @@ const Shops = () => {
 
       <Section>
         <Pagination
-          classes={ classes }
+          classes={ { ul: classes.ul } }
           count={ Math.ceil(total / MAX_ITEMS_PER_PAGE) }
           page={ page }
           onChange={ handlePageChange }
