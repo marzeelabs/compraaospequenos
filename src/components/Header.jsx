@@ -3,6 +3,8 @@ import { string } from 'prop-types';
 
 import { Link } from 'gatsby';
 
+import Section from 'Layouts/Section';
+
 import useStyles from 'Styles/components/header';
 
 const Header = ({ siteTitle }) => {
