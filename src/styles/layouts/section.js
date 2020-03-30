@@ -7,6 +7,6 @@ export default makeStyles(theme => ({
   },
 
   container: {
-    maxWidth: 1120,
+    maxWidth: 1280,
   },
 }));
