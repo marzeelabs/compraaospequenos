@@ -49,7 +49,6 @@ const Shops = () => {
             oferta
             produtoOuServi_o
             site
-            outraFormaDeContacto
             location
             businessType
             offerType
