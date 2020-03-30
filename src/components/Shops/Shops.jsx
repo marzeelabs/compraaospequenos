@@ -48,7 +48,6 @@ const Shops = () => {
             nome
             oferta
             produtoOuServi_o
-            redesSociais
             site
             outraFormaDeContacto
             location
