@@ -57,9 +57,17 @@ export default makeStyles(theme => ({
     '&:nth-child(n+2)': {
       marginLeft: '16px',
     },
+
+    '&:hover': {
+      backgroundColor: theme.palette.secondary.dark,
+    },
   },
 
   icon: {
     color: theme.palette.secondary.main,
+
+    'a:hover &': {
+      color: theme.palette.secondary.contrastText,
+    },
   },
 }));
