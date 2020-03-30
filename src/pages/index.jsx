@@ -15,7 +15,6 @@ const IndexPage = () => (
     <Hero />
     <About />
     <Register />
-    <Initiative />
   </PageWrapper>
 );
 
