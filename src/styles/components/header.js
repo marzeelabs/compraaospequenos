@@ -1,19 +1,24 @@
 import { makeStyles } from '@material-ui/core/styles';
 
 export default makeStyles(theme => ({
-  wrapper: {
-    background: 'transparent',
-    position: 'relative',
-    width: '100%',
-    minHeight: '40px',
-    left: '44.64px',
-    top: '10px',
+  root: {
+    position: 'absolute',
+    top: 0,
+    left: 0,
     zIndex: '15',
+    width: '100%',
+    background: 'transparent',
+  },
+
+  container: {
+    width: '100%',
+    minHeight: '60px',
     display: 'flex',
+    alignItems: 'center',
   },
 
   title: {
-    color: '#ffffff',
+    color: theme.palette.primary.contrastText,
     textDecoration: 'none',
 
     fontWeight: '800',
