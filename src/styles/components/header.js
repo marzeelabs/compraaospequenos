@@ -24,11 +24,38 @@ export default makeStyles(theme => ({
     fontWeight: '800',
     fontSize: '20px',
     lineHeight: '27px',
-    textAlign: 'center',
     letterSpacing: '1px',
 
     '&:hover': {
       textDecoration: 'underline',
     },
+  },
+
+  navigation: {
+    position: 'absolute',
+    right: '40px',
+  },
+
+  navigationLink: {
+    color: theme.palette.primary.contrastText,
+    textDecoration: 'none',
+    fontWeight: '500',
+    fontSize: '16px',
+    lineHeight: '22px',
+    letterSpacing: '1px',
+    marginLeft: '20px',
+
+    '&:hover, &:focus': {
+      textDecoration: 'underline',
+    },
+  },
+
+  activeLink: {
+    color: theme.palette.secondary.main,
+    background: theme.palette.primary.contrastText,
+    border: '1px',
+    boderColor: theme.palette.primary.contrastText,
+    borderRadius: '50px',
+    padding: '10px 20px',
   },
 }));

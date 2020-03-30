@@ -10,17 +10,21 @@ import useStyles from 'Styles/components/header';
 const Header = ({ siteTitle }) => {
   const classes = useStyles();
 
+  const isActiveLink = ({ isCurrent }) => (isCurrent ? { className: classes.activeLink } : {});
+
   return (
     <Section extraClasses={ classes }>
       <Link className={ classes.title } to="/">
         { siteTitle }
       </Link>
-      <Link className={ classes.navigation } to="/">
-        Início
-      </Link>
-      <Link className={ classes.navigation } to="/shops">
-        Portfolio
-      </Link>
+      <nav className={ classes.navigation }>
+        <Link to="/" className={ classes.navigationLink } getProps={ isActiveLink }>
+          Início
+        </Link>
+        <Link to="/shops" className={ classes.navigationLink } getProps={ isActiveLink }>
+          Portfolio
+        </Link>
+      </nav>
     </Section>
   );
 };
