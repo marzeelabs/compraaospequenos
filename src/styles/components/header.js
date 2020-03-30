@@ -53,6 +53,8 @@ export default makeStyles(theme => ({
   activeLink: {
     color: theme.palette.secondary.main,
     background: theme.palette.primary.contrastText,
+    fontSize: '16px',
+    textDecoration: 'none',
     border: '1px',
     boderColor: theme.palette.primary.contrastText,
     borderRadius: '50px',
