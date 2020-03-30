@@ -1,5 +1,7 @@
 require('dotenv').config();
 
+const FILTERS = require('./data/filters');
+
 module.exports = {
   siteMetadata: {
     title: '#compraaospequenos',
@@ -13,6 +15,7 @@ module.exports = {
         alias: {
           Assets: 'src/assets',
           Components: 'src/components',
+          Data: 'data',
           Layouts: 'src/layouts',
           Pages: 'src/pages',
           Polyfills: 'src/polyfills',
@@ -104,12 +107,18 @@ module.exports = {
         // By implementing a `mapNode(node): node` function, you can provide your own node
         // transformations directly during node sourcing, the default implementation is to return
         // the node as is:
-        mapNode: node => ({
-          ...node,
-          // Shops can have multiple locations separated by ","
-          'localização (distrito)': node['localização (distrito)'].split(',').map(n => n.trim()),
-          tipoDeOferta: node.tipoDeOferta.split(',').map(n => n.trim()),
-        }),
+        // Map based on the fields settings.
+        mapNode: node => Object.keys(FILTERS).reduce((acc, cur) => ({
+          // Keep existing fields unchanged.
+          ...acc,
+
+          // Map new fields for filters based on the data settings for them.
+          // Each filter will be an array of possible values.
+          // NOTE: if the desired filter column has the same name as the
+          // original field, the original will be overwritten; this should be
+          // fine for most cases though.
+          [cur]: node[FILTERS[cur].field].split(',').map(n => n.trim()),
+        }), node),
       },
     },
     {

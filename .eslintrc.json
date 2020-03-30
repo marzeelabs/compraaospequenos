@@ -62,6 +62,7 @@
         "map": [
           ["Assets", "./src/assets"],
           ["Components", "./src/components"],
+          ["Data", "./data"],
           ["Layouts", "./src/layouts"],
           ["Pages", "./src/pages"],
           ["Polyfills", "./src/polyfills"],
