@@ -1,7 +1,6 @@
-import wrapStyles from 'Styles/wrapStyles';
+import { makeStyles } from '@material-ui/core/styles';
 
-const styles = () => ({
-
+export default makeStyles(theme => ({
   wrapper: {
     background: 'transparent',
     position: 'relative',
@@ -27,6 +26,4 @@ const styles = () => ({
       textDecoration: 'underline',
     },
   },
-});
-
-export default component => wrapStyles(styles, component);
+}));

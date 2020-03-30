@@ -1,6 +1,6 @@
-import wrapStyles from 'Styles/wrapStyles';
+import { makeStyles } from '@material-ui/core/styles';
 
-const styles = theme => ({
+export default makeStyles(theme => ({
   root: {
     display: 'flex',
     overflow: 'hidden',
@@ -30,6 +30,4 @@ const styles = theme => ({
   button: {
     marginTop: theme.spacing(8),
   },
-});
-
-export default component => wrapStyles(styles, component);
+}));

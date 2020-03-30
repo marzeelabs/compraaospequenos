@@ -1,15 +1,9 @@
-import wrapStyles from 'Styles/wrapStyles';
+import { makeStyles } from '@material-ui/core/styles';
 
-const styles = theme => ({
-  root: {
+export default makeStyles({
+  list: {
+    display: 'flex',
     flexGrow: 1,
-  },
-
-  paper: {
-    padding: theme.spacing(2),
-    color: theme.palette.text.secondary,
-    textAlign: 'center',
+    flexWrap: 'wrap',
   },
 });
-
-export default component => wrapStyles(styles, component);

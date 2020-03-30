@@ -1,8 +1,8 @@
-import wrapStyles from 'Styles/wrapStyles';
+import { makeStyles } from '@material-ui/core/styles';
 
 const backgroundImage = 'https://images.unsplash.com/photo-1516594798947-e65505dbb29d?auto=format&fit=crop&w=1400&q=80';
 
-const styles = theme => ({
+export default makeStyles(theme => ({
   root: {
     color: theme.palette.common.white,
   },
@@ -10,6 +10,4 @@ const styles = theme => ({
   background: {
     backgroundImage: `url(${backgroundImage})`,
   },
-});
-
-export default component => wrapStyles(styles, component);
+}));

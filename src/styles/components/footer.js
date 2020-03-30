@@ -1,6 +1,6 @@
-import wrapStyles from 'Styles/wrapStyles';
+import { makeStyles } from '@material-ui/core/styles';
 
-const styles = theme => ({
+export default makeStyles(theme => ({
   root: {
     backgroundColor: theme.palette.primary.dark,
   },
@@ -23,9 +23,11 @@ const styles = theme => ({
     },
   },
 
+  link: {
+    backgroundColor: theme.palette.primary.contrastText,
+  },
+
   icon: {
     color: theme.palette.primary.dark,
   },
-});
-
-export default component => wrapStyles(styles, component);
+}));
