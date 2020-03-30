@@ -16,6 +16,7 @@ export default makeStyles(theme => ({
   title: {
     color: theme.palette.primary.contrastText,
     fontSize: '14px',
+    fontWeight: 600,
     lineHeight: '19px',
     letterSpacing: '1px',
     textTransform: 'uppercase',
@@ -27,11 +28,11 @@ export default makeStyles(theme => ({
     alignItems: 'center',
     color: theme.palette.primary.contrastText,
     textDecoration: 'none',
-    marginTop: theme.spacing(2.5),
+    marginTop: theme.spacing(2),
     fontSize: '16px',
     lineHeight: '22px',
     letterSpacing: '1px',
-    fontWeight: 800,
+    fontWeight: 700,
 
     '&:hover': {
       textDecoration: 'underline',
@@ -39,18 +40,16 @@ export default makeStyles(theme => ({
   },
 
   mzLogo: {
-    height: '50px',
+    height: '64px',
     width: '100%',
-    marginBottom: theme.spacing(2.5),
+    marginBottom: theme.spacing(2),
   },
 
   link: {
     backgroundColor: theme.palette.primary.contrastText,
-    width: '20px',
-    height: 0,
     minHeight: '20px',
     boxShadow: 'none',
-    marginTop: theme.spacing(2.5),
+    marginTop: theme.spacing(2),
 
     '&:nth-child(n+2)': {
       marginLeft: '16px',
@@ -59,6 +58,5 @@ export default makeStyles(theme => ({
 
   icon: {
     color: theme.palette.primary.dark,
-    fontSize: '14px',
   },
 }));

@@ -20,7 +20,7 @@ export default makeStyles(theme => ({
     fontSize: '20px',
     lineHeight: '27px',
     letterSpacing: '1px',
-    fontWeight: '800',
+    fontWeight: 700,
     marginBottom: theme.spacing(2.5),
     color: theme.palette.secondary.contrastText,
   },
@@ -33,8 +33,6 @@ export default makeStyles(theme => ({
 
   link: {
     backgroundColor: theme.palette.secondary.contrastText,
-    width: '20px',
-    height: 0,
     minHeight: '20px',
     boxShadow: 'none',
 
@@ -45,6 +43,5 @@ export default makeStyles(theme => ({
 
   icon: {
     color: theme.palette.secondary.main,
-    fontSize: '14px',
   },
 }));
