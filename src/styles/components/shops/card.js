@@ -32,14 +32,14 @@ export default makeStyles(theme => ({
     fontSize: '16px',
     lineHeight: '22px',
     letterSpacing: '2px',
-    color: '#2C2E30',
+    color: theme.palette.text.primary,
   },
 
   location: {
     fontSize: '16px',
     lineHeight: '22px',
     letterSpacing: '2px',
-    color: '#2C2E30',
+    color: theme.palette.text.primary,
     fontWeight: 'bold',
   },
 

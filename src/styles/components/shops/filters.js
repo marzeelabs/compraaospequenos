@@ -25,6 +25,6 @@ export default makeStyles(theme => ({
     fontSize: '18px',
     lineHeight: '25px',
     letterSpacing: '2px',
-    color: '#2C2E30',
+    color: theme.palette.text.primary,
   },
 }));
