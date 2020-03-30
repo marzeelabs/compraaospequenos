@@ -13,9 +13,6 @@ export default createMuiTheme({
       main: '#00AFAD',
       contrastText: '#FFFFFF',
     },
-    white: {
-      main: '#FFFFFF',
-    },
     contrastThreshold: 3,
     tonalOffset: 0.5,
   },

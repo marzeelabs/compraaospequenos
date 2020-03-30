@@ -20,6 +20,10 @@ export default makeStyles(theme => ({
     marginBottom: theme.spacing(14),
   },
 
+  link: {
+    backgroundColor: theme.palette.secondary.contrastText,
+  },
+
   icon: {
     color: theme.palette.secondary.main,
   },

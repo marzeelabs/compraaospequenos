@@ -23,6 +23,10 @@ export default makeStyles(theme => ({
     },
   },
 
+  link: {
+    backgroundColor: theme.palette.primary.contrastText,
+  },
+
   icon: {
     color: theme.palette.primary.dark,
   },
