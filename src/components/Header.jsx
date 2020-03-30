@@ -11,8 +11,10 @@ import useStyles from 'Styles/components/header';
 const Header = ({ siteTitle }) => {
   const classes = useStyles();
 
-  const isActiveLink = ({ isCurrent }) => clsx(classes.navigationLink, {
-    [classes.activeLink]: isCurrent,
+  const isActiveLink = ({ isCurrent }) => ({
+    className: clsx(classes.navigationLink, {
+      [classes.activeLink]: isCurrent,
+    }),
   });
 
   return (

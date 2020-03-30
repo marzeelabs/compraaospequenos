@@ -5,14 +5,15 @@ export default makeStyles(theme => ({
     position: 'absolute',
     top: 0,
     left: 0,
-    zIndex: '15',
+    zIndex: 15,
     width: '100%',
     background: 'transparent',
   },
 
   container: {
+    position: 'relative',
     width: '100%',
-    minHeight: '60px',
+    minHeight: 60,
     display: 'flex',
     alignItems: 'center',
   },
@@ -21,10 +22,10 @@ export default makeStyles(theme => ({
     color: theme.palette.primary.contrastText,
     textDecoration: 'none',
 
-    fontWeight: '800',
-    fontSize: '20px',
+    fontWeight: 700,
+    fontSize: 20,
     lineHeight: '27px',
-    letterSpacing: '1px',
+    letterSpacing: 1,
 
     '&:hover': {
       textDecoration: 'underline',
@@ -39,11 +40,11 @@ export default makeStyles(theme => ({
   navigationLink: {
     color: theme.palette.primary.contrastText,
     textDecoration: 'none',
-    fontWeight: '500',
-    fontSize: '16px',
+    fontWeight: 500,
+    fontSize: 16,
     lineHeight: '22px',
-    letterSpacing: '1px',
-    marginLeft: '20px',
+    letterSpacing: 1,
+    marginLeft: 20,
 
     '&:hover, &:focus': {
       textDecoration: 'underline',
@@ -53,11 +54,11 @@ export default makeStyles(theme => ({
   activeLink: {
     color: theme.palette.secondary.main,
     background: theme.palette.primary.contrastText,
-    fontSize: '16px',
+    fontSize: 16,
     textDecoration: 'none',
-    border: '1px',
+    border: 1,
     boderColor: theme.palette.primary.contrastText,
-    borderRadius: '50px',
+    borderRadius: 50,
     padding: '10px 20px',
   },
 }));
