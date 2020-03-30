@@ -8,6 +8,12 @@ export default makeStyles(theme => ({
     zIndex: 15,
     width: '100%',
     background: 'transparent',
+
+    // We're hiding the whole header for now on mobile, which looks redundant with teh hero block.
+    // We can implement in the future a proper mobile menu.
+    [theme.breakpoints.down('sm')]: {
+      display: 'none',
+    },
   },
 
   container: {
@@ -19,6 +25,7 @@ export default makeStyles(theme => ({
   },
 
   title: {
+    flex: '1 1 auto',
     color: theme.palette.primary.contrastText,
     textDecoration: 'none',
 
@@ -30,11 +37,6 @@ export default makeStyles(theme => ({
     '&:hover': {
       textDecoration: 'underline',
     },
-  },
-
-  navigation: {
-    position: 'absolute',
-    right: '40px',
   },
 
   navigationLink: {
