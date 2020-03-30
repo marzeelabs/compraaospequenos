@@ -18,8 +18,8 @@ const Initiative = () => {
         #compraaospequenos
       </Typography>
 
-      <Typography variant="body1" color="textSecondary" component="p">
-        uma iniciative
+      <Typography variant="body1" color="textSecondary" component="p" className={ classes.subtitle }>
+        Uma iniciativa
       </Typography>
 
       <MenosLogo />

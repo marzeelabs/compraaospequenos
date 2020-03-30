@@ -15,6 +15,7 @@ import {
 import CssBaseline from '@material-ui/core/CssBaseline';
 
 import Header from 'Components/Header';
+import Initiative from 'Components/Initiative';
 import Footer from 'Components/Footer';
 
 import theme from 'Styles/theme';
@@ -38,6 +39,7 @@ const PageWrapper = ({ children }) => {
       <CssBaseline />
       <Header siteTitle={ data.site.siteMetadata.title } />
       { children }
+      <Initiative />
       <Footer />
     </ThemeProvider>
   );
