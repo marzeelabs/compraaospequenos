@@ -1,6 +1,6 @@
-import wrapStyles from 'Styles/wrapStyles';
+import { makeStyles } from '@material-ui/core/styles';
 
-const styles = theme => ({
+export default makeStyles(theme => ({
   root: {
     margin: '0 auto',
     padding: theme.spacing(1.5, 2),
@@ -9,6 +9,4 @@ const styles = theme => ({
   container: {
     maxWidth: 1120,
   },
-});
-
-export default component => wrapStyles(styles, component);
+}));

@@ -1,7 +1,7 @@
-import wrapStyles from 'Styles/wrapStyles';
+import { makeStyles } from '@material-ui/core/styles';
 
-const styles = theme => ({
   root: {
+export default makeStyles({
     flexGrow: 1,
   },
 
@@ -11,5 +11,3 @@ const styles = theme => ({
     textAlign: 'center',
   },
 });
-
-export default component => wrapStyles(styles, component);

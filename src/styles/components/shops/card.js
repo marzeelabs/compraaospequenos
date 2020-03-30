@@ -1,9 +1,9 @@
-import wrapStyles from 'Styles/wrapStyles';
+import { makeStyles } from '@material-ui/core/styles';
 
-const styles = {
-  root: {
+export default makeStyles(theme => ({
+  card: {
     flexGrow: 1,
   },
 };
 
-export default component => wrapStyles(styles, component);
+}));

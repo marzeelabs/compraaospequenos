@@ -8,53 +8,51 @@ import Typography from '@material-ui/core//Typography';
 
 import Section from 'Layouts/Section';
 
-import withClasses from 'Styles/components/about';
+import useStyles from 'Styles/components/about';
 
-const About = ({ classes }) => (
-  <Section extraClasses={ classes }>
-    <Typography variant="h4" marked="center" className={ classes.mainTitle } component="h2">
-      O que é esta iniciativa?
-    </Typography>
+const About = () => {
+  const classes = useStyles();
 
-    <div>
+  return (
+    <Section extraClasses={ classes }>
+      <Typography variant="h4" marked="center" className={ classes.mainTitle } component="h2">
+        O que é esta iniciativa?
+      </Typography>
+
       <Grid container spacing={ 5 }>
-        <Grid item xs={ 12 } md={ 6 }>
-          <div className={ classes.item }>
-            <ShopIcon />
-            <Typography variant="h5" className={ classes.title }>
-              Pequenos negócios com soluções inovadoras*
-            </Typography>
-            <Typography variant="body1">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas dolor sit amet, consectetur adipiscing leo nis.
-            </Typography>
-          </div>
+        <Grid className={ classes.item } item xs={ 12 } md={ 6 }>
+          <ShopIcon />
+          <Typography variant="h5" className={ classes.title }>
+            Pequenos negócios com soluções inovadoras*
+          </Typography>
+          <Typography variant="body1">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas dolor sit amet, consectetur adipiscing leo nis.
+          </Typography>
         </Grid>
 
-        <Grid item xs={ 12 } md={ 6 }>
-          <div className={ classes.item }>
-            <ShopIcon />
-            <Typography variant="h5" className={ classes.title }>
-              Clientes limitados ao isolamento
-            </Typography>
-            <Typography variant="body1">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit consectetur adipiscing elit. Maecenas leo nis.
-            </Typography>
-          </div>
+        <Grid className={ classes.item } item xs={ 12 } md={ 6 }>
+          <ShopIcon />
+          <Typography variant="h5" className={ classes.title }>
+            Clientes limitados ao isolamento
+          </Typography>
+          <Typography variant="body1">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit consectetur adipiscing elit. Maecenas leo nis.
+          </Typography>
         </Grid>
       </Grid>
-    </div>
 
-    <Button
-      color="secondary"
-      variant="contained"
-      size="large"
-      className={ classes.button }
-      component="a"
-      href="/shops"
-    >
-      List of shops
-    </Button>
-  </Section>
-);
+      <Button
+        color="secondary"
+        variant="contained"
+        size="large"
+        className={ classes.button }
+        component="a"
+        href="/shops"
+      >
+        List of shops
+      </Button>
+    </Section>
+  );
+};
 
-export default withClasses(About);
+export default About;

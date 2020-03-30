@@ -1,6 +1,6 @@
-import wrapStyles from 'Styles/wrapStyles';
+import { makeStyles } from '@material-ui/core/styles';
 
-const styles = theme => ({
+export default makeStyles(theme => ({
   root: {
     display: 'flex',
     overflow: 'hidden',
@@ -23,6 +23,4 @@ const styles = theme => ({
   icon: {
     color: theme.palette.secondary.main,
   },
-});
-
-export default component => wrapStyles(styles, component);
+}));
