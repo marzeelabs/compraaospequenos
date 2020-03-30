@@ -43,13 +43,20 @@ const SEO = ({
           content: metaDescription,
         },
         {
+          name: 'twitter:title',
           property: 'og:title',
           content: title,
         },
         {
+          name: 'twitter:description',
           property: 'og:description',
           content: metaDescription,
         },
+        // {
+        //   name: 'twitter:image',
+        //   property: 'og:image',
+        //   content: '/assets/default.jpg',
+        // },
         {
           property: 'og:type',
           content: 'website',
@@ -61,14 +68,6 @@ const SEO = ({
         {
           name: 'twitter:creator',
           content: site.siteMetadata.author,
-        },
-        {
-          name: 'twitter:title',
-          content: title,
-        },
-        {
-          name: 'twitter:description',
-          content: metaDescription,
         },
       ].concat(meta) }
     />
