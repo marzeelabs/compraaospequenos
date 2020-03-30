@@ -19,7 +19,7 @@ const Initiative = () => {
       </Typography>
 
       <Typography variant="body1" color="textSecondary" component="p">
-        uma iniciative
+        uma iniciativa
       </Typography>
 
       <MenosLogo />

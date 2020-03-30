@@ -14,6 +14,7 @@ export default makeStyles(theme => ({
     flexDirection: 'column',
     alignItems: 'center',
     position: 'relative',
+    maxWidth: 800,
     marginTop: theme.spacing(10),
     marginBottom: theme.spacing(15),
   },
@@ -28,11 +29,16 @@ export default makeStyles(theme => ({
     marginBottom: theme.spacing(10),
   },
 
-  mainTitle: {
+  title: {
     marginBottom: theme.spacing(5),
   },
 
-  title: {
+  description: {
+    marginBottom: '1rem',
+    textAlign: 'center',
+  },
+
+  sectionHeading: {
     marginTop: theme.spacing(5),
     marginBottom: theme.spacing(2),
   },

@@ -22,7 +22,7 @@ const Hero = () => {
         </Typography>
 
         <Typography color="inherit" align="center" variant="h5" className={ classes.h5 }>
-          An initiative from
+          uma iniciativa
         </Typography>
 
         <div>
@@ -36,7 +36,7 @@ const Hero = () => {
           component="a"
           href="/shops"
         >
-          List of shops
+          Lista de Negócios
         </Button>
 
       </div>

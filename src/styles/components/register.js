@@ -12,19 +12,21 @@ export default makeStyles(theme => ({
     flexDirection: 'column',
     alignItems: 'center',
     position: 'relative',
+    maxWidth: 800,
     marginTop: theme.spacing(10),
     marginBottom: theme.spacing(15),
   },
 
-  item: {
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    padding: theme.spacing(0, 5),
-  },
-
   title: {
     marginBottom: theme.spacing(14),
+  },
+
+  content: {
+    textAlign: 'center',
+  },
+
+  list: {
+    textAlign: 'left',
   },
 
   button: {

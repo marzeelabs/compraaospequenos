@@ -13,13 +13,30 @@ const Register = () => {
   return (
     <Section extraClasses={ classes }>
       <Typography variant="h4" marked="center" className={ classes.title }>
-        How it works
+        Como funciona?
       </Typography>
 
-      <Typography variant="body1" color="textSecondary">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas leo nisl, lobortis vitae mi at, condimentum tempor quam. Donec iaculis rhoncus dapibus. Etiam quis enim id augue cursus blandit nec sit amet ex. Nam ornare rhoncus convallis.
-        Vestibulum eu quam luctus, rhoncus sapien eget, ultrices lacus. Nulla ullamcorper turpis erat, vel lobortis purus venenatis in.
-      </Typography>
+      <div>
+        <Typography variant="body1" color="textSecondary" className={ classes.content }>
+          Qualquer pequeno negócio, ou um seu apoiante, pode submeter uma candidatura desde que
+          cumpra os dois requisitos seguintes:
+        </Typography>
+
+        <ol className={ classes.list }>
+          <Typography component="span" color="textSecondary">
+            <li>
+              Ser um micro ou pequeno negócio
+            </li>
+          </Typography>
+          <Typography component="span" color="textSecondary">
+            <li>
+
+              Ter uma oferta (produtos ou serviços) que, de alguma forma, se adapta à situação
+              actual
+            </li>
+          </Typography>
+        </ol>
+      </div>
 
       <Button
         color="secondary"
