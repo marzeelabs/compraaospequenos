@@ -1,5 +1,6 @@
 import React from 'react';
 
+import ArrowsIcon from 'Assets/arrows.svg';
 import ClientsIcon from 'Assets/clients.svg';
 import ShopsIcon from 'Assets/shops.svg';
 
@@ -44,27 +45,32 @@ const About = () => {
         </Typography>
       </Grid>
 
-      <Grid container spacing={ 5 }>
-        <Grid className={ classes.item } item xs={ 12 } md={ 6 }>
-          <ShopsIcon />
-          <Typography variant="h5" className={ classes.sectionHeading }>
-            Pequenos negócios
-          </Typography>
-          <Typography variant="body1">
-            com soluções adaptadas
-          </Typography>
+      <div className={ classes.itemsWrapper }>
+        <Grid container spacing={ 5 }>
+          <Grid className={ classes.item } item xs={ 12 } md={ 6 }>
+            <ShopsIcon className={ classes.icon } />
+            <Typography variant="h5" className={ classes.sectionHeading }>
+              Pequenos negócios
+            </Typography>
+            <Typography variant="body1">
+              com soluções adaptadas
+            </Typography>
+          </Grid>
+
+          <Grid className={ classes.item } item xs={ 12 } md={ 6 }>
+            <ClientsIcon className={ classes.icon } />
+            <Typography variant="h5" className={ classes.sectionHeading }>
+              Clientes
+            </Typography>
+            <Typography variant="body1">
+              limitados ao isolamento
+            </Typography>
+          </Grid>
         </Grid>
 
-        <Grid className={ classes.item } item xs={ 12 } md={ 6 }>
-          <ClientsIcon />
-          <Typography variant="h5" className={ classes.sectionHeading }>
-            Clientes
-          </Typography>
-          <Typography variant="body1">
-            limitados ao isolamento
-          </Typography>
-        </Grid>
-      </Grid>
+        <ArrowsIcon className={ classes.arrows } />
+      </div>
+
 
       <Button
         color="secondary"

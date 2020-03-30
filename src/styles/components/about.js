@@ -19,6 +19,11 @@ export default makeStyles(theme => ({
     marginBottom: theme.spacing(15),
   },
 
+  itemsWrapper: {
+    position: 'relative',
+    width: '100%',
+  },
+
   item: {
     display: 'flex',
     flexDirection: 'column',
@@ -27,6 +32,11 @@ export default makeStyles(theme => ({
     textAlign: 'center',
     marginTop: theme.spacing(5),
     marginBottom: theme.spacing(10),
+  },
+
+  icon: {
+    width: 100,
+    height: 100,
   },
 
   title: {
@@ -41,6 +51,13 @@ export default makeStyles(theme => ({
   sectionHeading: {
     marginTop: theme.spacing(5),
     marginBottom: theme.spacing(2),
+  },
+
+  arrows: {
+    position: 'absolute',
+    top: 50,
+    left: '50%',
+    transform: 'translateY(-50%)',
   },
 
   button: {
