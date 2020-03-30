@@ -13,7 +13,7 @@ const Footer = () => {
 
   return (
     <Section WrapperComponent="footer" extraClasses={ classes }>
-      Este website foi desenvolvido com orgulho por
+      <span className={ classes.title }>Este website foi desenvolvido com orgulho por</span>
       <a
         className={ classes.mainLink }
         href="https://marzeelabs.org"
@@ -21,7 +21,7 @@ const Footer = () => {
         rel="noopener noreferrer"
         title="Marzee Labs"
       >
-        <MarzeeLabsLogo />
+        <MarzeeLabsLogo className={ classes.mzLogo } />
         marzeelabs.org
       </a>
 
