@@ -1,7 +1,7 @@
 import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 
-import Img from 'gatsby-image';
+import Img from 'gatsby-image/withIEPolyfill';
 
 /*
  * This component is built using `gatsby-image` to automatically serve optimized
@@ -19,8 +19,8 @@ const MenosLogo = () => {
     query {
       file(relativePath: { eq: "menos.png" }) {
         childImageSharp {
-          fixed(width: 300) {
-            ...GatsbyImageSharpFixed
+          fluid(maxWidth: 300) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
@@ -28,7 +28,7 @@ const MenosLogo = () => {
   `);
 
   return (
-    <Img fixed={ data.file.childImageSharp.fixed } />
+    <Img fluid={ data.file.childImageSharp.fluid } className="menos-logo" objectFit="contain" />
   );
 };
 

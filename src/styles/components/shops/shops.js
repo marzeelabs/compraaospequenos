@@ -24,4 +24,8 @@ export default makeStyles(theme => ({
     flexGrow: 3,
     width: '100%',
   },
+
+  ul: {
+    justifyContent: 'center',
+  },
 }));
