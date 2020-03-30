@@ -1,0 +1,6 @@
+// Every typography element is displayed overflown in IE.
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) { // sass-lint:disable-line no-vendor-prefixes
+  .MuiTypography-root { // sass-lint:disable-line class-name-format
+    max-width: 100%;
+  }
+}

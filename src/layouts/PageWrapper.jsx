@@ -19,6 +19,9 @@ import Footer from 'Components/Footer';
 
 import theme from 'Styles/theme';
 
+// Include general styles to be applied throughout the website.
+import './PageWrapper.scss';
+
 const PageWrapper = ({ children }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
