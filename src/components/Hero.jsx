@@ -1,27 +1,31 @@
 import React from 'react';
+import { shape, string } from 'prop-types';
 
-import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
+import Typography from '@material-ui/core/Typography';
 
 import MenosLogo from 'Components/MenosLogo';
 
 import Section from 'Layouts/Section';
+import SectionBackground from 'Layouts/SectionBackground';
 
 import useStyles from 'Styles/components/hero';
 
-import './Hero.scss';
-
-const Hero = () => {
+const Hero = ({
+  background,
+  callToAction,
+  className,
+}) => {
   const classes = useStyles();
 
   return (
-    <Section extraClasses={ classes } outerContainerClassName="hero-image__wrapper">
-      <div className="hero-image__content">
-        <Typography color="inherit" variant="h2">
+    <Section className={ className } extraClasses={ classes }>
+      <div className={ classes.content }>
+        <Typography color="inherit" variant="h2" className={ classes.title }>
           #compraaospequenos
         </Typography>
 
-        <Typography color="inherit" align="center" variant="h5" className={ classes.h5 }>
+        <Typography color="inherit" variant="h5" className={ classes.subtitle }>
           uma iniciativa
         </Typography>
 
@@ -29,21 +33,42 @@ const Hero = () => {
           <MenosLogo />
         </div>
 
-        <Button
-          variant="contained"
-          size="large"
-          className={ `${classes.button} hero-image__button` }
-          component="a"
-          href="/shops"
-        >
-          Lista de Negócios
-        </Button>
-
+        { callToAction && (
+          <Button
+            variant="contained"
+            size="large"
+            className={ classes.button }
+            component="a"
+            href={ callToAction.to }
+          >
+            { callToAction.label }
+          </Button>
+        ) }
       </div>
 
-      <div className={ `${classes.background} hero-image__image` } />
+      <div className={ classes.fold }>
+        <div className={ classes.innerFold }>
+          Vamos fazer diferença
+        </div>
+      </div>
+
+      <SectionBackground image={ background } />
     </Section>
   );
+};
+
+Hero.propTypes = {
+  background: string.isRequired,
+  callToAction: shape({
+    label: string,
+    to: string,
+  }),
+  className: string,
+};
+
+Hero.defaultProps = {
+  callToAction: null,
+  className: '',
 };
 
 export default Hero;

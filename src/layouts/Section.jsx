@@ -7,19 +7,16 @@ import Container from '@material-ui/core/Container';
 import useStyles from 'Styles/layouts/section';
 
 const Section = ({
+  className,
   children,
   extraClasses,
-  innerContainerClassName,
-  outerContainerClassName,
   WrapperComponent,
 }) => {
   const classes = useStyles();
 
   return (
-    <WrapperComponent className={ clsx(classes.root, extraClasses.root, outerContainerClassName) }>
-      <Container
-        className={ clsx(classes.container, extraClasses.container, innerContainerClassName) }
-      >
+    <WrapperComponent className={ clsx(classes.root, extraClasses.root, className) }>
+      <Container className={ clsx(classes.container, extraClasses.container) }>
         { children }
       </Container>
     </WrapperComponent>
@@ -27,16 +24,14 @@ const Section = ({
 };
 
 Section.propTypes = {
+  className: string,
   extraClasses: shape({}),
-  innerContainerClassName: string,
-  outerContainerClassName: string,
   WrapperComponent: node,
 };
 
 Section.defaultProps = {
+  className: '',
   extraClasses: {},
-  innerContainerClassName: '',
-  outerContainerClassName: '',
   WrapperComponent: 'section',
 };
 
