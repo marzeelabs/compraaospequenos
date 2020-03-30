@@ -31,6 +31,24 @@ export default makeStyles(theme => ({
     color: theme.palette.secondary.contrastText,
   },
 
+  menosLink: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    marginBottom: theme.spacing(2.5),
+    color: theme.palette.primary.contrastText,
+    textDecoration: 'none',
+    fontSize: '16px',
+    lineHeight: '22px',
+    letterSpacing: '1px',
+    fontWeight: 700,
+
+    '&:hover': {
+      background: 'none',
+      textDecoration: 'underline',
+    },
+  },
+
   link: {
     backgroundColor: theme.palette.secondary.contrastText,
     minHeight: '20px',

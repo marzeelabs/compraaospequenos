@@ -3,6 +3,8 @@ import { graphql, useStaticQuery } from 'gatsby';
 
 import Img from 'gatsby-image/withIEPolyfill';
 
+import useStyles from 'Styles/components/menosLogo';
+
 /*
  * This component is built using `gatsby-image` to automatically serve optimized
  * images with lazy loading and reduced file sizes. The image is loaded using a
@@ -15,6 +17,7 @@ import Img from 'gatsby-image/withIEPolyfill';
  */
 
 const MenosLogo = () => {
+  const classes = useStyles();
   const data = useStaticQuery(graphql`
     query {
       file(relativePath: { eq: "menos.png" }) {
@@ -28,7 +31,7 @@ const MenosLogo = () => {
   `);
 
   return (
-    <Img fluid={ data.file.childImageSharp.fluid } className="menos-logo" objectFit="contain" />
+    <Img fluid={ data.file.childImageSharp.fluid } className={ classes.img } objectFit="contain" />
   );
 };
 

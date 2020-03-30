@@ -22,7 +22,16 @@ const Initiative = () => {
         uma iniciativa
       </Typography>
 
-      <MenosLogo />
+      <a
+        className={ classes.menosLink }
+        href="https://menoshub.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+        title="MenosHub"
+      >
+        <MenosLogo />
+        menoshub.com
+      </a>
 
       <div>
         <SocialIcon
