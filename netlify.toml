@@ -1,0 +1,20 @@
+# Global settings applied to the whole site.
+[build]
+  base    = ""
+  publish = "public"
+  command = "yarn build"
+
+# Production context: All deploys to the main
+# repository branch will inherit these settings.
+[context.production.environment]
+  YARN_VERSION = "1.21.1"
+
+# Deploy Preview context: All Deploy Previews
+# will inherit these settings.
+[context.deploy-preview.environment]
+  YARN_VERSION = "1.21.1"
+
+# Branch Deploy context: All Branch Deploys
+# will inherit these settings.
+[context.branch-deploy.environment]
+  YARN_VERSION = "1.21.1"
