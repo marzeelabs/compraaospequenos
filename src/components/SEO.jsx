@@ -83,7 +83,6 @@ const SEO = ({
           name: 'twitter:image',
           content: ogImage,
         },
-
         {
           name: 'twitter:card',
           content: 'summary_large_image',
