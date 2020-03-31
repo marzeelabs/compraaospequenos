@@ -16,7 +16,7 @@ const SEO = ({
   meta,
   title,
 }) => {
-  const { site, ogImageDefault } = useStaticQuery(
+  const { site, metaImageDefault } = useStaticQuery(
     graphql`
       query {
         site {
@@ -24,11 +24,11 @@ const SEO = ({
             title
             description
             author
-            url
+            siteUrl
           }
         }
         # automatically optimise image for use in OG
-        ogImageDefault: file(absolutePath: { regex: "/assets/og-image/" }) {
+        metaImageDefault: file(absolutePath: { regex: "/assets/og-image/" }) {
           childImageSharp {
             fixed(height: 630, width: 1200) {
               src
@@ -43,7 +43,7 @@ const SEO = ({
 
   // the image url has to be an absolute url with http:// or https://
   // relative links do not work
-  const ogImage = site.siteMetadata.url.concat(ogImageDefault.childImageSharp.fixed.src);
+  const metaImage = site.siteMetadata.siteUrl.concat(metaImageDefault.childImageSharp.fixed.src);
 
   return (
     <Helmet
@@ -56,32 +56,23 @@ const SEO = ({
           content: metaDescription,
         },
         {
-          property: 'og:title',
-          content: title,
-        },
-        {
           property: 'og:description',
-          content: metaDescription,
-        },
-        {
-          property: 'og:image',
-          content: ogImage,
-        },
-        {
-          property: 'og:type',
-          content: 'website',
-        },
-        {
-          name: 'twitter:title',
-          content: title,
-        },
-        {
           name: 'twitter:description',
           content: metaDescription,
         },
         {
+          property: 'og:title',
+          name: 'twitter:title',
+          content: title,
+        },
+        {
+          property: 'og:image',
           name: 'twitter:image',
-          content: ogImage,
+          content: metaImage,
+        },
+        {
+          property: 'og:type',
+          content: 'website',
         },
         {
           name: 'twitter:card',

@@ -46,7 +46,7 @@ const Register = () => {
           component="a"
           href="https://menos.typeform.com/to/zCesK3"
           target="_blank"
-          rel="noopener"
+          rel="noopener noreferrer"
         >
           Regista o teu Negócio
         </Button>
