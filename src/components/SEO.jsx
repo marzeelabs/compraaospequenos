@@ -39,18 +39,11 @@ const SEO = ({
     `,
   );
 
-  console.log(site);
-  console.log(ogImageDefault);
-
   const metaDescription = description || site.siteMetadata.description;
 
   // the image url has to be an absolute url with http:// or https://
   // relative links do not work
-  // const ogImage = ogImageProp || site.siteMetadata.siteUrl.concat(ogImageDefault.childImageSharp.fixed.src);
   const ogImage = site.siteMetadata.url.concat(ogImageDefault.childImageSharp.fixed.src);
-  // const ogImage = site.siteMetadata.url.concat('assets/default.jpg');
-  // const ogTitle = title || site.siteMetadata.title;
-  console.log(ogImage);
 
   return (
     <Helmet
@@ -67,7 +60,7 @@ const SEO = ({
           content: title,
         },
         {
-          property: 'og:description',
+          name: 'og:description',
           content: metaDescription,
         },
         {
@@ -75,17 +68,15 @@ const SEO = ({
           content: ogImage,
         },
         {
-          property: 'og:type',
+          name: 'og:type',
           content: 'website',
         },
         {
           name: 'twitter:title',
-          property: 'og:title',
           content: title,
         },
         {
           name: 'twitter:description',
-          property: 'og:description',
           content: metaDescription,
         },
         {

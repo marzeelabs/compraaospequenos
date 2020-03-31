@@ -15,7 +15,7 @@ const IndexPage = () => {
 
   return (
     <PageWrapper>
-      <SEO title="Home" />
+      <SEO title="Compra aos pequeneos" />
       <Hero
         background="homeBg"
         callToAction={ {
