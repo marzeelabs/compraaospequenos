@@ -16,7 +16,7 @@ export default makeStyles(theme => ({
 
     [theme.breakpoints.up('md')]: {
       maxHeight: 1300,
-      minHeight: 500,
+      minHeight: 650,
     },
 
     '&::after': {
