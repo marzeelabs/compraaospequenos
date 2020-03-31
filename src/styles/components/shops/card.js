@@ -20,6 +20,23 @@ export default makeStyles(theme => ({
     },
   },
 
+  actionArea: {
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'start',
+    height: '100%',
+  },
+
+  focusHighlight: {
+    backgroundColor: theme.palette.primary.main,
+  },
+
+  content: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+  },
+
   title: {
     color: theme.palette.primary.main,
     fontSize: '18px',
@@ -44,6 +61,7 @@ export default makeStyles(theme => ({
   },
 
   offer: {
+    marginBottom: theme.spacing(1),
     fontSize: '14px',
     lineHeight: '24px',
     letterSpacing: '2px',

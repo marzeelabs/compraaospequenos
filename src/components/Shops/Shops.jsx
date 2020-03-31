@@ -48,6 +48,11 @@ const Shops = () => {
             nome
             oferta
             produtoOuServi_o
+            facebook
+            instagram
+            whatsApp
+            outroContacto__eMail_
+            outroContacto__telefone_
             site
             location
             businessType

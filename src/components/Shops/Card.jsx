@@ -5,6 +5,12 @@ import CardActionArea from '@material-ui/core/CardActionArea';
 import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
 
+import ShopsEmail from 'Components/Shops/Email';
+import ShopsPhones from 'Components/Shops/Phones';
+import ShopsSocialLinks from 'Components/Shops/SocialLinks';
+import ShopsWebsite from 'Components/Shops/Website';
+import ShopsWhatsApp from 'Components/Shops/WhatsApp';
+
 import useStyles from 'Styles/components/shops/card';
 
 const ShopsCard = ({ shop }) => {
@@ -12,8 +18,11 @@ const ShopsCard = ({ shop }) => {
 
   return (
     <Card className={ classes.card }>
-      <CardActionArea>
-        <CardContent>
+      <CardActionArea
+        className={ classes.actionArea }
+        classes={ { focusHighlight: classes.focusHighlight } }
+      >
+        <CardContent className={ classes.content }>
           <Typography gutterBottom variant="h5" component="h2" className={ classes.title }>
             { shop.nome }
           </Typography>
@@ -26,12 +35,16 @@ const ShopsCard = ({ shop }) => {
           <Typography variant="body2" color="textSecondary" component="p" className={ classes.offer }>
             { shop.oferta }
           </Typography>
-          <Typography variant="body2" color="textSecondary" component="p">
-            <a href={ shop.redesSociais } target="_blank" rel="noopener noreferrer">Social network</a>
-          </Typography>
-          <Typography variant="body2" color="textSecondary" component="p">
-            <a href={ shop.site } target="_blank" rel="noopener noreferrer">Website</a>
-          </Typography>
+
+          <ShopsPhones phones={ shop.outroContacto__telefone_ } />
+          <ShopsWhatsApp contact={ shop.whatsApp } />
+          <ShopsEmail address={ shop.outroContacto__eMail_ } />
+          <ShopsWebsite url={ shop.site } />
+          <ShopsSocialLinks
+            name={ shop.nome }
+            facebook={ shop.facebook }
+            instagram={ shop.instagram }
+          />
         </CardContent>
       </CardActionArea>
     </Card>
