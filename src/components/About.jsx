@@ -28,9 +28,8 @@ const About = () => {
         </Typography>
 
         <Typography className={ classes.description } variant="body1">
-          Muitos destes negócios estão a reinventar-se e começaram a desenvolver produtos digitais,
-          a vender vouchers, a entregar ao domicílio, a oferecer masterclasses ou a prestar
-          serviços remotamente para se adaptarem às nossas necessidades.
+          Muitos destes negócios estão a reinventar-se e começaram a mudar a sua forma de funcionar
+          para se adaptarem às nossas necessidades.
         </Typography>
 
         <Typography className={ classes.description } variant="body1">
@@ -64,7 +63,7 @@ const About = () => {
 
         <Typography className={ classes.description } variant="body1">
           Como sabemos que, às vezes, o desafio é saber onde estão, o que oferecem e como apoiar,
-          criámos um diretório onde mapeamos os pequenos negócios que têm ofertas adaptadas à nossa
+          criámos uma lista onde mapeamos os pequenos negócios que têm ofertas adaptadas à nossa
           situação de isolamento.
         </Typography>
       </div>
