@@ -19,6 +19,7 @@ export default makeStyles(theme => ({
     fontWeight: 600,
     lineHeight: '19px',
     letterSpacing: '1px',
+    textAlign: 'center',
     textTransform: 'uppercase',
   },
 

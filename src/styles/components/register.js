@@ -64,6 +64,11 @@ export default makeStyles(theme => ({
     textAlign: 'center',
     textTransform: 'none',
 
+    [theme.breakpoints.down('sm')]: {
+      padding: '12px 24px',
+      fontSize: 22,
+    },
+
     '&:hover': {
       color: theme.palette.secondary.contrastText,
       backgroundColor: theme.palette.secondary.dark,

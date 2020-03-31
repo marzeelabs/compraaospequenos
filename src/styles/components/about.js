@@ -115,6 +115,11 @@ export default makeStyles(theme => ({
       box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
       border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;`,
 
+    [theme.breakpoints.down('sm')]: {
+      padding: '12px 24px',
+      fontSize: 22,
+    },
+
     '&:hover': {
       backgroundColor: theme.palette.secondary.dark,
       boxShadow: `

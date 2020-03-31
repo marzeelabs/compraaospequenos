@@ -4,6 +4,9 @@
 
 // Every typography element is displayed overflown in IE.
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .ie-fix,
+  .MuiContainer-root > *,
+  .MuiCardContent-root,
   .MuiTypography-root {
     max-width: 100%;
   }

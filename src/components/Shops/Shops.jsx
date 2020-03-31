@@ -148,14 +148,12 @@ const Shops = () => {
             )) }
           </div>
 
-          <div className={ classes.listSection }>
-            <div className={ classes.list }>
-              { shops.data && (
+          <div className={ classes.list }>
+            { shops.data && (
               <ShopsList
                 shops={ shops }
               />
-              ) }
-            </div>
+            ) }
           </div>
         </div>
       </Section>

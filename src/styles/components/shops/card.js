@@ -23,7 +23,7 @@ export default makeStyles(theme => ({
   actionArea: {
     display: 'flex',
     flexDirection: 'column',
-    justifyContent: 'start',
+    justifyContent: 'flex-start',
     height: '100%',
   },
 

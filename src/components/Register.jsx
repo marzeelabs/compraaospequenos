@@ -1,4 +1,5 @@
 import React from 'react';
+import clsx from 'clsx';
 
 import Button from '@material-ui/core//Button';
 import Typography from '@material-ui/core/Typography';
@@ -18,7 +19,7 @@ const Register = () => {
           Como funciona?
         </Typography>
 
-        <div className={ classes.description }>
+        <div className={ clsx(classes.description, 'ie-fix') }>
           <Typography variant="body1">
             Qualquer pequeno negócio, ou um seu apoiante, pode submeter uma candidatura desde que
             cumpra os dois requisitos seguintes:
