@@ -33,6 +33,7 @@ export default makeStyles(theme => ({
     marginLeft: 'auto',
     marginRight: 'auto',
     color: theme.palette.primary.contrastText,
+    letterSpacing: '2px',
     textAlign: 'center',
   },
 
