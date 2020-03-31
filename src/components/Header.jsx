@@ -27,7 +27,7 @@ const Header = ({ siteTitle }) => {
           Início
         </Link>
         <Link to="/shops/" getProps={ isActiveLink }>
-          Portfolio
+          Lista
         </Link>
       </nav>
     </Section>

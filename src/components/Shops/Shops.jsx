@@ -149,10 +149,6 @@ const Shops = () => {
           </div>
 
           <div className={ classes.listSection }>
-            <Typography variant="h6" noWrap className={ classes.shopsTotal }>
-              { `Negócios que correspondem aos critérios: ${total}` }
-            </Typography>
-
             <div className={ classes.list }>
               { shops.data && (
               <ShopsList

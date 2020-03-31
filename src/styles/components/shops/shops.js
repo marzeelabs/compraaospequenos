@@ -3,6 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 export default makeStyles(theme => ({
   content: {
     display: 'flex',
+    paddingTop: theme.spacing(5),
 
     [theme.breakpoints.down('sm')]: {
       flexDirection: 'column',
@@ -27,17 +28,5 @@ export default makeStyles(theme => ({
 
   ul: {
     justifyContent: 'center',
-  },
-
-  listSection: {
-    marginTop: theme.spacing(5),
-  },
-
-  shopsTotal: {
-    textAlign: 'center',
-    fontSize: '14px',
-    lineHeight: '24px',
-    letterSpacing: '2px',
-    marginBottom: theme.spacing(2),
   },
 }));

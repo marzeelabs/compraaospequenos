@@ -38,37 +38,36 @@ const About = () => {
           #compraaospequenos, como um apelo a todos.
         </Typography>
 
+        <Grid container spacing={ 5 } className={ classes.itemsWrapper }>
+          <Grid className={ classes.item } item xs={ 12 } md={ 6 }>
+            <ShopsIcon className={ classes.icon } />
+            <Typography variant="h5" className={ classes.sectionHeading }>
+              Pequenos negócios
+            </Typography>
+            <Typography variant="body1" className={ classes.sectionDescription }>
+              com soluções adaptadas
+            </Typography>
+          </Grid>
+
+          <ArrowsIcon className={ classes.arrows } />
+
+          <Grid className={ classes.item } item xs={ 12 } md={ 6 }>
+            <ClientsIcon className={ classes.icon } />
+            <Typography variant="h5" className={ classes.sectionHeading }>
+              Clientes
+            </Typography>
+            <Typography variant="body1" className={ classes.sectionDescription }>
+              limitados ao isolamento
+            </Typography>
+          </Grid>
+        </Grid>
+
         <Typography className={ classes.description } variant="body1">
           Como sabemos que, às vezes, o desafio é saber onde estão, o que oferecem e como apoiar,
           criámos um diretório onde mapeamos os pequenos negócios que têm ofertas adaptadas à nossa
           situação de isolamento.
         </Typography>
       </div>
-
-      <Grid container spacing={ 5 } className={ classes.itemsWrapper }>
-        <Grid className={ classes.item } item xs={ 12 } md={ 6 }>
-          <ShopsIcon className={ classes.icon } />
-          <Typography variant="h5" className={ classes.sectionHeading }>
-            Pequenos negócios
-          </Typography>
-          <Typography variant="body1" className={ classes.sectionDescription }>
-            com soluções adaptadas
-          </Typography>
-        </Grid>
-
-        <ArrowsIcon className={ classes.arrows } />
-
-        <Grid className={ classes.item } item xs={ 12 } md={ 6 }>
-          <ClientsIcon className={ classes.icon } />
-          <Typography variant="h5" className={ classes.sectionHeading }>
-            Clientes
-          </Typography>
-          <Typography variant="body1" className={ classes.sectionDescription }>
-            limitados ao isolamento
-          </Typography>
-        </Grid>
-      </Grid>
-
 
       <Link
         className={ classes.button }
