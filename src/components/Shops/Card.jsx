@@ -17,13 +17,13 @@ const ShopsCard = ({ shop }) => {
           <Typography gutterBottom variant="h5" component="h2" className={ classes.title }>
             { shop.nome }
           </Typography>
-          <Typography variant="body2" color="textSecondary" component="p">
+          <Typography variant="body2" color="textSecondary" component="p" className={ classes.location }>
             { shop.location.join(', ') }
           </Typography>
-          <Typography gutterBottom variant="h6" component="h5" color="textSecondary">
+          <Typography gutterBottom variant="h6" component="h5" color="textSecondary" className={ classes.offerType }>
             { shop.offerType.join(', ') }
           </Typography>
-          <Typography variant="body2" color="textSecondary" component="p">
+          <Typography variant="body2" color="textSecondary" component="p" className={ classes.offer }>
             { shop.oferta }
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">

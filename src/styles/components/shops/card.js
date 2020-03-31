@@ -7,6 +7,7 @@ export default makeStyles(theme => ({
     margin: 15,
     boxShadow: '0 10px 35px rgba(0, 0, 0, 0.1)',
     borderRadius: '10px',
+    textAlign: 'center',
 
     [theme.breakpoints.up('md')]: {
       width: 'auto',
@@ -21,5 +22,30 @@ export default makeStyles(theme => ({
 
   title: {
     color: theme.palette.primary.main,
+    fontSize: '18px',
+    lineHeight: '25px',
+    letterSpacing: '2px',
+    fontWeight: 'bold',
+  },
+
+  offerType: {
+    fontSize: '16px',
+    lineHeight: '22px',
+    letterSpacing: '2px',
+    color: theme.palette.text.primary,
+  },
+
+  location: {
+    fontSize: '16px',
+    lineHeight: '22px',
+    letterSpacing: '2px',
+    color: theme.palette.text.primary,
+    fontWeight: 'bold',
+  },
+
+  offer: {
+    fontSize: '14px',
+    lineHeight: '24px',
+    letterSpacing: '2px',
   },
 }));

@@ -8,13 +8,26 @@ import Register from 'Components/Register';
 
 import PageWrapper from 'Layouts/PageWrapper';
 
-const IndexPage = () => (
-  <PageWrapper>
-    <SEO title="Home" />
-    <Hero />
-    <About />
-    <Register />
-  </PageWrapper>
-);
+import useStyles from 'Styles/pages/home';
+
+const IndexPage = () => {
+  const classes = useStyles();
+
+  return (
+    <PageWrapper>
+      <SEO title="Home" />
+      <Hero
+        background="homeBg"
+        callToAction={ {
+          label: 'Lista de Negócios',
+          to: '/shops/',
+        } }
+        className={ classes.hero }
+      />
+      <About />
+      <Register />
+    </PageWrapper>
+  );
+};
 
 export default IndexPage;

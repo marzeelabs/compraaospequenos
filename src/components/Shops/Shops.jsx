@@ -49,7 +49,6 @@ const Shops = () => {
             oferta
             produtoOuServi_o
             site
-            outraFormaDeContacto
             location
             businessType
             offerType
@@ -131,14 +130,6 @@ const Shops = () => {
   return (
     <>
       <Section>
-        <div ref={ containerRef }>
-          <Typography variant="h6" noWrap>
-            { `Shops that match criteria - ${total}` }
-          </Typography>
-        </div>
-      </Section>
-
-      <Section>
         <div className={ classes.content }>
           <div className={ classes.filters }>
             { shops.data && Object.keys(FILTERS).map(filter => (
@@ -152,19 +143,25 @@ const Shops = () => {
             )) }
           </div>
 
-          <div className={ classes.list }>
-            { shops.data && (
+          <div className={ classes.listSection }>
+            <Typography variant="h6" noWrap className={ classes.shopsTotal }>
+              { `Negócios que correspondem aos critérios: ${total}` }
+            </Typography>
+
+            <div className={ classes.list }>
+              { shops.data && (
               <ShopsList
                 shops={ shops }
               />
-            ) }
+              ) }
+            </div>
           </div>
         </div>
       </Section>
 
       <Section>
         <Pagination
-          classes={ classes }
+          classes={ { ul: classes.ul } }
           count={ Math.ceil(total / MAX_ITEMS_PER_PAGE) }
           page={ page }
           onChange={ handlePageChange }

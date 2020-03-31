@@ -19,10 +19,19 @@ const Initiative = () => {
       </Typography>
 
       <Typography variant="body1" color="textSecondary" component="p" className={ classes.subtitle }>
-        Uma iniciativa
+        uma iniciativa
       </Typography>
 
-      <MenosLogo />
+      <a
+        className={ classes.menosLink }
+        href="https://menoshub.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+        title="MenosHub"
+      >
+        <MenosLogo />
+        menoshub.com
+      </a>
 
       <div>
         <SocialIcon

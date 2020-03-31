@@ -19,4 +19,12 @@ export default makeStyles(theme => ({
       display: 'inline-block',
     },
   },
+
+  summary: {
+    fontWeight: 'bold',
+    fontSize: '18px',
+    lineHeight: '25px',
+    letterSpacing: '2px',
+    color: theme.palette.text.primary,
+  },
 }));

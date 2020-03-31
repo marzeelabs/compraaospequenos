@@ -4,6 +4,7 @@ import Button from '@material-ui/core//Button';
 import Typography from '@material-ui/core/Typography';
 
 import Section from 'Layouts/Section';
+import SectionBackground from 'Layouts/SectionBackground';
 
 import useStyles from 'Styles/components/register';
 
@@ -12,26 +13,46 @@ const Register = () => {
 
   return (
     <Section extraClasses={ classes }>
-      <Typography variant="h4" marked="center" className={ classes.title }>
-        How it works
-      </Typography>
+      <div className={ classes.content }>
+        <Typography variant="h4" marked="center" className={ classes.title }>
+          Como funciona?
+        </Typography>
 
-      <Typography variant="body1" color="textSecondary">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas leo nisl, lobortis vitae mi at, condimentum tempor quam. Donec iaculis rhoncus dapibus. Etiam quis enim id augue cursus blandit nec sit amet ex. Nam ornare rhoncus convallis.
-        Vestibulum eu quam luctus, rhoncus sapien eget, ultrices lacus. Nulla ullamcorper turpis erat, vel lobortis purus venenatis in.
-      </Typography>
+        <div className={ classes.description }>
+          <Typography variant="body1">
+            Qualquer pequeno negócio, ou um seu apoiante, pode submeter uma candidatura desde que
+            cumpra os dois requisitos seguintes:
+          </Typography>
 
-      <Button
-        color="secondary"
-        size="large"
-        variant="contained"
-        className={ classes.button }
-        component="a"
-        href="https://menos.typeform.com/to/zCesK3"
-        target="_blank"
-      >
-        Registra o teu Negócio
-      </Button>
+          <ol className={ classes.list }>
+            <Typography component="span">
+              <li>
+                Ser um micro ou pequeno negócio
+              </li>
+            </Typography>
+            <Typography component="span">
+              <li>
+
+                Ter uma oferta (produtos ou serviços) que, de alguma forma, se adapta à situação
+                actual
+              </li>
+            </Typography>
+          </ol>
+        </div>
+
+        <Button
+          size="large"
+          variant="contained"
+          className={ classes.button }
+          component="a"
+          href="https://menos.typeform.com/to/zCesK3"
+          target="_blank"
+        >
+          Regista o teu Negócio
+        </Button>
+      </div>
+
+      <SectionBackground image="registerBg" />
     </Section>
   );
 };

@@ -1,5 +1,6 @@
 import React from 'react';
 import { string } from 'prop-types';
+import clsx from 'clsx';
 
 import { Link } from 'gatsby';
 
@@ -10,7 +11,11 @@ import useStyles from 'Styles/components/header';
 const Header = ({ siteTitle }) => {
   const classes = useStyles();
 
-  const isActiveLink = ({ isCurrent }) => (isCurrent ? { className: classes.activeLink } : {});
+  const isActiveLink = ({ isCurrent }) => ({
+    className: clsx(classes.navigationLink, {
+      [classes.activeLink]: isCurrent,
+    }),
+  });
 
   return (
     <Section extraClasses={ classes }>
@@ -18,10 +23,10 @@ const Header = ({ siteTitle }) => {
         { siteTitle }
       </Link>
       <nav className={ classes.navigation }>
-        <Link to="/" className={ classes.navigationLink } getProps={ isActiveLink }>
+        <Link to="/" getProps={ isActiveLink }>
           Início
         </Link>
-        <Link to="/shops" className={ classes.navigationLink } getProps={ isActiveLink }>
+        <Link to="/shops/" getProps={ isActiveLink }>
           Portfolio
         </Link>
       </nav>
