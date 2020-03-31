@@ -29,6 +29,9 @@ const ShopsCard = ({ shop }) => {
           <Typography variant="body2" color="textSecondary" component="p" className={ classes.location }>
             { shop.location.join(', ') }
           </Typography>
+          <Typography variant="body2" color="textSecondary" component="p" className={ classes.businessType }>
+            { shop.businessType.join(', ') }
+          </Typography>
           <Typography gutterBottom variant="h6" component="h5" color="textSecondary" className={ classes.offerType }>
             { shop.offerType.join(', ') }
           </Typography>
