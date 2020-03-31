@@ -75,8 +75,11 @@ export default makeStyles(theme => ({
       display: 'block',
       width: 24,
       height: 1,
-      margin: '16px auto 8px',
-      backgroundColor: `${theme.palette.text.hint}`,
+      marginTop: theme.spacing(2),
+      marginBottom: theme.spacing(1),
+      marginLeft: 'auto',
+      marginRight: 'auto',
+      backgroundColor: theme.palette.text.hint,
     },
   },
 
