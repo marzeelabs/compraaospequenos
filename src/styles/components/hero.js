@@ -15,6 +15,7 @@ export default makeStyles(theme => ({
     },
 
     [theme.breakpoints.up('md')]: {
+      height: 1, // For IE to center align the flexbox
       maxHeight: 1300,
       minHeight: 650,
     },
