@@ -55,6 +55,12 @@ export default makeStyles(theme => ({
     alignItems: 'center',
     padding: theme.spacing(0, 5),
     textAlign: 'center',
+
+    [theme.breakpoints.down('sm')]: {
+      '&:first-child': {
+        marginBottom: theme.spacing(10),
+      },
+    },
   },
 
   icon: {
