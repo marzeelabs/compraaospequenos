@@ -8,7 +8,7 @@ const siteUrl = URL.getBaseUrl();
 module.exports = {
   siteMetadata: {
     title: '#compraaospequenos',
-    description: 'Covid-19 crisis: helping local shops survive and thrive.',
+    description: 'A ajudar lojas locais a sobreviver e prosperar durante a crise do Covid-19.',
     author: '@marzeelabs',
     siteUrl,
   },
