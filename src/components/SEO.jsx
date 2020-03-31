@@ -53,11 +53,11 @@ const SEO = ({
       meta={ [
         {
           name: 'description',
-          content: metaDescription,
+          property: metaDescription,
         },
         {
           name: 'og:title',
-          content: title,
+          property: title,
         },
         {
           name: 'og:description',
@@ -65,11 +65,11 @@ const SEO = ({
         },
         {
           name: 'og:image',
-          content: ogImage,
+          property: ogImage,
         },
         {
           name: 'og:type',
-          content: 'website',
+          property: 'website',
         },
         {
           name: 'twitter:title',
