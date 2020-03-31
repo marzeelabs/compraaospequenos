@@ -91,11 +91,30 @@ export default makeStyles(theme => ({
   button: {
     padding: '20px 40px',
     borderRadius: '60px',
+    backgroundColor: theme.palette.secondary.main,
+    boxShadow: `
+      0px 3px 1px -2px rgba(0,0,0,0.2),
+      0px 2px 2px 0px rgba(0,0,0,0.14),
+      0px 1px 5px 0px rgba(0,0,0,0.12)`,
+    color: theme.palette.secondary.contrastText,
     fontSize: '34px',
+    fontWeight: 'bold',
     lineHeight: '40px',
     letterSpacing: '2px',
-    fontWeight: 'bold',
     textAlign: 'center',
+    textDecoration: 'none',
     textTransform: 'none',
+    transition: `
+      background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+      box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+      border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;`,
+
+    '&:hover': {
+      backgroundColor: theme.palette.secondary.dark,
+      boxShadow: `
+        0px 2px 4px -1px rgba(0,0,0,0.2),
+        0px 4px 5px 0px rgba(0,0,0,0.14),
+        0px 1px 10px 0px rgba(0,0,0,0.12)`,
+    },
   },
 }));

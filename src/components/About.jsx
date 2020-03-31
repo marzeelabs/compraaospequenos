@@ -4,8 +4,8 @@ import ArrowsIcon from 'Assets/arrows.svg';
 import ClientsIcon from 'Assets/clients.svg';
 import ShopsIcon from 'Assets/shops.svg';
 
-import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
+import { Link } from 'gatsby';
 import Typography from '@material-ui/core//Typography';
 
 import Section from 'Layouts/Section';
@@ -70,16 +70,12 @@ const About = () => {
       </Grid>
 
 
-      <Button
-        color="secondary"
-        variant="contained"
-        size="large"
+      <Link
         className={ classes.button }
-        component="a"
-        href="/shops/"
+        to="/shops/"
       >
         Lista de Negócios
-      </Button>
+      </Link>
     </Section>
   );
 };

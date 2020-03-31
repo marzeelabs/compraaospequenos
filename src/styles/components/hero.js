@@ -39,13 +39,25 @@ export default makeStyles(theme => ({
   },
 
   button: {
+    display: 'inline-block',
     marginTop: 40,
     padding: '20px 40px',
-    backgroundColor: theme.palette.primary.contrastText,
     borderRadius: 60,
+    backgroundColor: theme.palette.primary.contrastText,
+    boxShadow: `
+      0px 3px 1px -2px rgba(0,0,0,0.2),
+      0px 2px 2px 0px rgba(0,0,0,0.14),
+      0px 1px 5px 0px rgba(0,0,0,0.12)`,
     color: theme.palette.primary.dark,
     fontSize: 24,
     fontWeight: 700,
+    lineHeight: 1.75,
+    textDecoration: 'none',
+    textTransform: 'uppercase',
+    transition: `
+      background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+      box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+      border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;`,
 
     [theme.breakpoints.down('sm')]: {
       padding: '12px 24px',
@@ -54,6 +66,10 @@ export default makeStyles(theme => ({
 
     '&:hover': {
       backgroundColor: theme.palette.primary.main,
+      boxShadow: `
+        0px 2px 4px -1px rgba(0,0,0,0.2),
+        0px 4px 5px 0px rgba(0,0,0,0.14),
+        0px 1px 10px 0px rgba(0,0,0,0.12)`,
       color: theme.palette.primary.contrastText,
     },
   },

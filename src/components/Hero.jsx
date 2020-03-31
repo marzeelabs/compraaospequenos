@@ -1,7 +1,7 @@
 import React from 'react';
 import { shape, string } from 'prop-types';
 
-import Button from '@material-ui/core/Button';
+import { Link } from 'gatsby';
 import Typography from '@material-ui/core/Typography';
 
 import MenosLogo from 'Components/MenosLogo';
@@ -34,15 +34,12 @@ const Hero = ({
         </div>
 
         { callToAction && (
-          <Button
-            variant="contained"
-            size="large"
+          <Link
             className={ classes.button }
-            component="a"
-            href={ callToAction.to }
+            to={ callToAction.to }
           >
             { callToAction.label }
-          </Button>
+          </Link>
         ) }
       </div>
 
