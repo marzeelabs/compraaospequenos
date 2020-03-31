@@ -1,3 +1,1 @@
-# Netlify build file, see https://docs.netlify.com/configure-builds/file-based-configuratio
-plugins:
-  - type: netlify-plugin-checklinks
+# Netlify build file, see https://docs.netlify.com/configure-builds/file-based-configuration
