@@ -38,7 +38,7 @@ export default makeStyles(theme => ({
   },
 
   title: {
-    marginBottom: theme.spacing(2.5),
+    marginBottom: theme.spacing(1),
     color: theme.palette.primary.main,
     fontSize: '18px',
     lineHeight: '25px',
@@ -47,7 +47,7 @@ export default makeStyles(theme => ({
   },
 
   offerType: {
-    marginBottom: theme.spacing(2.5),
+    marginBottom: theme.spacing(1),
     fontSize: '16px',
     lineHeight: '22px',
     letterSpacing: '2px',
@@ -55,7 +55,7 @@ export default makeStyles(theme => ({
   },
 
   location: {
-    marginBottom: theme.spacing(2),
+    marginBottom: theme.spacing(1),
     fontSize: '16px',
     lineHeight: '22px',
     letterSpacing: '2px',
@@ -64,7 +64,7 @@ export default makeStyles(theme => ({
   },
 
   businessType: {
-    marginBottom: theme.spacing(1.5),
+    marginBottom: theme.spacing(1),
     fontSize: '16px',
     lineHeight: '22px',
     letterSpacing: '2px',
@@ -74,15 +74,14 @@ export default makeStyles(theme => ({
       content: '""',
       display: 'block',
       width: 24,
-      marginTop: theme.spacing(2),
-      marginBottom: 0,
-      marginLeft: 'auto',
-      marginRight: 'auto',
-      borderBottom: `1px solid ${theme.palette.text.hint}`,
+      height: 1,
+      margin: '16px auto 8px',
+      backgroundColor: `${theme.palette.text.hint}`,
     },
   },
 
   offer: {
+    margintop: theme.spacing(1.5),
     marginBottom: theme.spacing(1.5),
     fontSize: '14px',
     lineHeight: '24px',
