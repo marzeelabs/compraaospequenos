@@ -16,12 +16,12 @@ export default createMuiTheme({
     },
     contrastThreshold: 3,
     tonalOffset: 0.5,
-  },
 
-  text: {
-    primary: '#2C2E30',
-    secondary: '#54565A',
-    hint: '#7E8085',
+    text: {
+      primary: '#2C2E30',
+      secondary: '#54565A',
+      hint: '#7E8085',
+    },
   },
 
   typography: {

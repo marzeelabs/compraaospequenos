@@ -54,7 +54,7 @@ export default makeStyles(theme => ({
   },
 
   activeLink: {
-    color: theme.palette.secondary.main,
+    color: theme.palette.secondary.dark,
     background: theme.palette.primary.contrastText,
     fontSize: 16,
     textDecoration: 'none',

@@ -24,19 +24,17 @@ const Register = () => {
             cumpra os dois requisitos seguintes:
           </Typography>
 
-          <ol className={ classes.list }>
-            <Typography component="span">
+          <Typography component="span">
+            <ol className={ classes.list }>
               <li>
                 Ser um micro ou pequeno negócio
               </li>
-            </Typography>
-            <Typography component="span">
               <li>
                 Ter uma oferta (produtos ou serviços) que, de alguma forma, se adapta à situação
                 actual
               </li>
-            </Typography>
-          </ol>
+            </ol>
+          </Typography>
         </div>
 
         <Button
