@@ -16,7 +16,7 @@ const SEO = ({
   meta,
   title,
 }) => {
-  const { site } = useStaticQuery(
+  const { site, ogImageDefault } = useStaticQuery(
     graphql`
       query {
         site {
@@ -24,13 +24,33 @@ const SEO = ({
             title
             description
             author
+            url
+          }
+        }
+        # automatically optimise image for use in OG
+        ogImageDefault: file(absolutePath: { regex: "/assets/og-image/" }) {
+          childImageSharp {
+            fixed(height: 630, width: 1200) {
+              src
+            }
           }
         }
       }
     `,
   );
 
+  console.log(site);
+  console.log(ogImageDefault);
+
   const metaDescription = description || site.siteMetadata.description;
+
+  // the image url has to be an absolute url with http:// or https://
+  // relative links do not work
+  // const ogImage = ogImageProp || site.siteMetadata.siteUrl.concat(ogImageDefault.childImageSharp.fixed.src);
+  const ogImage = site.siteMetadata.url.concat(ogImageDefault.childImageSharp.fixed.src);
+  // const ogImage = site.siteMetadata.url.concat('assets/default.jpg');
+  // const ogTitle = title || site.siteMetadata.title;
+  console.log(ogImage);
 
   return (
     <Helmet
@@ -43,6 +63,22 @@ const SEO = ({
           content: metaDescription,
         },
         {
+          name: 'og:title',
+          content: title,
+        },
+        {
+          property: 'og:description',
+          content: metaDescription,
+        },
+        {
+          name: 'og:image',
+          content: ogImage,
+        },
+        {
+          property: 'og:type',
+          content: 'website',
+        },
+        {
           name: 'twitter:title',
           property: 'og:title',
           content: title,
@@ -52,18 +88,14 @@ const SEO = ({
           property: 'og:description',
           content: metaDescription,
         },
-        // {
-        //   name: 'twitter:image',
-        //   property: 'og:image',
-        //   content: '/assets/default.jpg',
-        // },
         {
-          property: 'og:type',
-          content: 'website',
+          name: 'twitter:image',
+          content: ogImage,
         },
+
         {
           name: 'twitter:card',
-          content: 'summary',
+          content: 'summary_large_image',
         },
         {
           name: 'twitter:creator',
