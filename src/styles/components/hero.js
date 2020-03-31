@@ -36,11 +36,16 @@ export default makeStyles(theme => ({
   content: {
     position: 'relative',
     zIndex: 10,
+    marginBottom: theme.spacing(5),
+
+    [theme.breakpoints.down('sm')]: {
+      marginBottom: theme.spacing(0),
+    },
   },
 
   button: {
     display: 'inline-block',
-    marginTop: 40,
+    marginTop: theme.spacing(7.5),
     padding: '20px 40px',
     borderRadius: 60,
     backgroundColor: theme.palette.primary.contrastText,
@@ -60,6 +65,7 @@ export default makeStyles(theme => ({
       border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;`,
 
     [theme.breakpoints.down('sm')]: {
+      marginTop: theme.spacing(5),
       padding: '12px 24px',
       fontSize: 18,
     },

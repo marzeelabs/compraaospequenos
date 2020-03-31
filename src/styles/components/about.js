@@ -46,6 +46,7 @@ export default makeStyles(theme => ({
   itemsWrapper: {
     position: 'relative',
     width: '100%',
+    margin: theme.spacing(5, 0),
   },
 
   item: {
@@ -54,7 +55,6 @@ export default makeStyles(theme => ({
     alignItems: 'center',
     padding: theme.spacing(0, 5),
     textAlign: 'center',
-    marginBottom: theme.spacing(10),
   },
 
   icon: {
