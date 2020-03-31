@@ -11,19 +11,17 @@ const ShopsSocialLinks = ({ name, facebook, instagram }) => {
   const classes = useStyles();
 
   const linkFacebook = facebook && facebook.trim()
-    .toLowerCase()
-    .replace(/^(http:\/\/)?/, '')
-    .replace(/^(https:\/\/)?/, '')
-    .replace(/^(www\.)?/, '')
-    .replace(/^facebook\.com/, '')
+    .replace(/^(http:\/\/)?/i, '')
+    .replace(/^(https:\/\/)?/i, '')
+    .replace(/^(www\.)?/i, '')
+    .replace(/^facebook\.com/i, '')
     .replace(/^\//, '');
 
   const linkInstagram = instagram && instagram.trim()
-    .toLowerCase()
-    .replace(/^(http:\/\/)?/, '')
-    .replace(/^(https:\/\/)?/, '')
-    .replace(/^(www\.)?/, '')
-    .replace(/^instagram\.com/, '')
+    .replace(/^(http:\/\/)?/i, '')
+    .replace(/^(https:\/\/)?/i, '')
+    .replace(/^(www\.)?/i, '')
+    .replace(/^instagram\.com/i, '')
     .replace(/^\//, '');
 
   const hasFacebook = !!linkFacebook;
