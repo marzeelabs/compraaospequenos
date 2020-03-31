@@ -1,14 +1,22 @@
 require('dotenv').config();
 
 const FILTERS = require('./data/filters');
+const URL = require('./data/url');
 
 module.exports = {
   siteMetadata: {
     title: '#compraaospequenos',
     description: 'Covid-19 crisis: helping local shops survive and thrive.',
     author: '@marzeelabs',
+    url: URL.getNetlifyBaseUrl() || 'http://localhost:8000',
   },
   plugins: [
+    {
+      resolve: 'gatsby-plugin-canonical-urls',
+      options: {
+        siteUrl: URL.getNetlifyBaseUrl() || 'http://localhost:8000',
+      },
+    },
     {
       resolve: 'gatsby-plugin-alias-imports',
       options: {
