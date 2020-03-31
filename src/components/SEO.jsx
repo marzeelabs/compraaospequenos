@@ -53,23 +53,23 @@ const SEO = ({
       meta={ [
         {
           name: 'description',
-          property: metaDescription,
-        },
-        {
-          name: 'og:title',
-          property: title,
-        },
-        {
-          name: 'og:description',
           content: metaDescription,
         },
         {
-          name: 'og:image',
-          property: ogImage,
+          property: 'og:title',
+          content: title,
         },
         {
-          name: 'og:type',
-          property: 'website',
+          property: 'og:description',
+          content: metaDescription,
+        },
+        {
+          property: 'og:image',
+          content: ogImage,
+        },
+        {
+          property: 'og:type',
+          content: 'website',
         },
         {
           name: 'twitter:title',
