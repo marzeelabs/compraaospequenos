@@ -32,7 +32,6 @@ const Register = () => {
             </Typography>
             <Typography component="span">
               <li>
-
                 Ter uma oferta (produtos ou serviços) que, de alguma forma, se adapta à situação
                 actual
               </li>
@@ -47,6 +46,7 @@ const Register = () => {
           component="a"
           href="https://menos.typeform.com/to/zCesK3"
           target="_blank"
+          rel="noopener"
         >
           Regista o teu Negócio
         </Button>
