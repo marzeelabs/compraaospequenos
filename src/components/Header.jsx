@@ -29,6 +29,9 @@ const Header = ({ siteTitle }) => {
         <Link to="/shops/" getProps={ isActiveLink }>
           Lista
         </Link>
+        <Link to="#survivalkit" getProps={ isActiveLink }>
+          Kit de sobrevivência
+        </Link>
       </nav>
     </Section>
   );
