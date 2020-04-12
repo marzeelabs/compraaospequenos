@@ -3,10 +3,10 @@ import { graphql, useStaticQuery } from 'gatsby';
 import itemsjs from 'itemsjs';
 
 import Pagination from '@material-ui/lab/Pagination';
-import Typography from '@material-ui/core/Typography';
 
 import ShopsFilters from 'Components/Shops/Filters';
 import ShopsList from 'Components/Shops/List';
+import ShopsSearch from 'Components/Shops/Search';
 
 import Section from 'Layouts/Section';
 
@@ -25,6 +25,10 @@ const CONFIGURATION = {
       title: FILTERS[cur].label,
     },
   }), {}),
+  searchableFields: [
+    'nome',
+    'produtoOuServi_o',
+  ],
 };
 
 const MAX_ITEMS_PER_PAGE = 18;
@@ -38,6 +42,8 @@ const Shops = () => {
   const [ store, setStore ] = useState({});
   const [ shops, setShops ] = useState({});
   const [ filters, setFilters ] = useState({});
+  // const [ query, setQuery ] = useState('River Grill');
+  const [ query, setQuery ] = useState('');
 
   const data = useStaticQuery(graphql`
     query {
@@ -78,10 +84,11 @@ const Shops = () => {
       filters,
       page,
       per_page: MAX_ITEMS_PER_PAGE,
+      query,
     });
 
     setShops(_shops || {});
-  }, [ filters, page, store ]);
+  }, [ filters, page, store, query ]);
 
   if (isLoading) {
     return (
@@ -124,6 +131,11 @@ const Shops = () => {
     scrollToTop();
   };
 
+  // Handle search
+  const handleSearchChange = event => {
+    setQuery(event.target.value);
+  };
+
   // Handle pagination change.
   const handlePageChange = (event, chosenPage) => {
     setPage(chosenPage);
@@ -136,7 +148,11 @@ const Shops = () => {
     <>
       <Section>
         <div className={ classes.content }>
+
           <div className={ classes.filters }>
+            { shops.data && (
+            <ShopsSearch onChange={ handleSearchChange } />
+            ) }
             { shops.data && Object.keys(FILTERS).map(filter => (
               <ShopsFilters
                 activeFilters={ filters[filter] }
