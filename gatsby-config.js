@@ -14,12 +14,6 @@ module.exports = {
   },
   plugins: [
     {
-      resolve: 'gatsby-plugin-canonical-urls',
-      options: {
-        siteUrl,
-      },
-    },
-    {
       resolve: 'gatsby-plugin-alias-imports',
       options: {
         alias: {
