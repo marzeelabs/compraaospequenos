@@ -6,14 +6,15 @@
  */
 
 import React from 'react';
-import { arrayOf, object, string } from 'prop-types';
+import { node, string } from 'prop-types';
 import Helmet from 'react-helmet';
 import { useStaticQuery, graphql } from 'gatsby';
 
 const SEO = ({
+  children,
   description,
   lang,
-  meta,
+  location,
   title,
 }) => {
   const { site, metaImageDefault } = useStaticQuery(
@@ -41,63 +42,41 @@ const SEO = ({
 
   const metaDescription = description || site.siteMetadata.description;
 
-  // the image url has to be an absolute url with http:// or https://
-  // relative links do not work
-  const metaImage = site.siteMetadata.siteUrl.concat(metaImageDefault.childImageSharp.fixed.src);
+  const canonical = `${site.siteMetadata.siteUrl}${location.pathname}`;
+  const metaImage = `${site.siteMetadata.siteUrl}${metaImageDefault.childImageSharp.fixed.src}`;
 
   return (
-    <Helmet
-      htmlAttributes={ { lang } }
-      title={ title }
-      titleTemplate={ `%s | ${site.siteMetadata.title}` }
-      meta={ [
-        {
-          name: 'description',
-          content: metaDescription,
-        },
-        {
-          property: 'og:description',
-          name: 'twitter:description',
-          content: metaDescription,
-        },
-        {
-          property: 'og:title',
-          name: 'twitter:title',
-          content: title,
-        },
-        {
-          property: 'og:image',
-          name: 'twitter:image',
-          content: metaImage,
-        },
-        {
-          property: 'og:type',
-          content: 'website',
-        },
-        {
-          name: 'twitter:card',
-          content: 'summary_large_image',
-        },
-        {
-          name: 'twitter:creator',
-          content: site.siteMetadata.author,
-        },
-      ].concat(meta) }
-    />
+    <Helmet titleTemplate={ `%s | ${site.siteMetadata.title}` }>
+      <html lang={ lang } />
+      <link rel="canonical" href={ canonical } />
+      <meta property="og:url" content={ canonical } />
+      <title>{ title }</title>
+      <meta property="og:title" content={ title } />
+      <meta name="twitter:title" content={ title } />
+      <meta name="description" content={ metaDescription } />
+      <meta property="og:description" content={ metaDescription } />
+      <meta name="twitter:description" content={ metaDescription } />
+      <meta property="og:image" content={ metaImage } />
+      <meta name="twitter:image" content={ metaImage } />
+      <meta property="og:type" content="website" />
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:creator" content={ site.siteMetadata.author } />
+      { children }
+    </Helmet>
   );
 };
 
-SEO.defaultProps = {
-  lang: 'en',
-  meta: [],
-  description: '',
-};
-
 SEO.propTypes = {
+  children: node,
   description: string,
   lang: string,
-  meta: arrayOf(object),
   title: string.isRequired,
+};
+
+SEO.defaultProps = {
+  children: null,
+  lang: 'pt',
+  description: '',
 };
 
 export default SEO;
