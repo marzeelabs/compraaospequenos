@@ -57,16 +57,25 @@ const SEO = ({
         },
         {
           property: 'og:description',
+          content: metaDescription,
+        },
+        {
           name: 'twitter:description',
           content: metaDescription,
         },
         {
           property: 'og:title',
+          content: title,
+        },
+        {
           name: 'twitter:title',
           content: title,
         },
         {
           property: 'og:image',
+          content: metaImage,
+        },
+        {
           name: 'twitter:image',
           content: metaImage,
         },
