@@ -1,6 +1,5 @@
 import React from 'react';
 
-import { Link } from 'gatsby';
 import Typography from '@material-ui/core/Typography';
 
 import Section from 'Layouts/Section';
@@ -12,8 +11,9 @@ const SurvivalKit = () => {
 
   return (
     <>
-      <Link href="/" name="survivalkit" />
-      <Section extraClasses={ classes } id="survivalkit">
+      { /* eslint-disable-next-line jsx-a11y/anchor-has-content, jsx-a11y/anchor-is-valid */ }
+      <a name="survivalkit" id="survivalkit" />
+      <Section extraClasses={ classes }>
         <Typography variant="h4" marked="center" className={ classes.title }>
           Reinventa o teu negócio
         </Typography>
@@ -29,13 +29,9 @@ const SurvivalKit = () => {
           </Typography>
         </div>
 
-        <Link
-          className={ classes.button }
-          to="/"
-          download
-        >
+        <a href="http://eepurl.com/gZOf9n" className={ classes.button } rel="noopener noreferrer" target="_blank">
           Kit de Sobrevivência
-        </Link>
+        </a>
       </Section>
     </>
   );

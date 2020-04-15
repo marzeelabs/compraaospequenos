@@ -32,7 +32,7 @@ export default makeStyles(theme => ({
     lineHeight: '32px',
     letterSpacing: '2px',
     textAlign: 'center',
-    marginBottom: theme.spacing(3),
+    marginBottom: theme.spacing(6),
   },
 
   description: {
