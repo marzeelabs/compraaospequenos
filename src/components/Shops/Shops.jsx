@@ -150,9 +150,6 @@ const Shops = () => {
         <div className={ classes.content }>
 
           <div className={ classes.filters }>
-            { shops.data && (
-            <ShopsSearch onChange={ handleSearchChange } />
-            ) }
             { shops.data && Object.keys(FILTERS).map(filter => (
               <ShopsFilters
                 activeFilters={ filters[filter] }
@@ -166,9 +163,12 @@ const Shops = () => {
 
           <div className={ classes.list }>
             { shops.data && (
-              <ShopsList
-                shops={ shops }
-              />
+              <>
+                <ShopsSearch onChange={ handleSearchChange } />
+                <ShopsList
+                  shops={ shops }
+                />
+              </>
             ) }
           </div>
         </div>

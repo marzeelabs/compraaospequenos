@@ -24,6 +24,7 @@ export default makeStyles(theme => ({
   list: {
     flexGrow: 3,
     width: '100%',
+    textAlign: 'center',
   },
 
   ul: {
