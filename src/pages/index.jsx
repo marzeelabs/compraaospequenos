@@ -10,12 +10,12 @@ import PageWrapper from 'Layouts/PageWrapper';
 
 import useStyles from 'Styles/pages/home';
 
-const IndexPage = () => {
+const IndexPage = ({ location }) => {
   const classes = useStyles();
 
   return (
     <PageWrapper>
-      <SEO title="Compra aos pequenos" />
+      <SEO title="Compra aos pequenos" location={ location } />
       <Hero
         background="homeBg"
         callToAction={ {
