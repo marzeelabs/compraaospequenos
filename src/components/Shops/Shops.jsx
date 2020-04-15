@@ -2,6 +2,8 @@ import React, { useEffect, useRef, useState } from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import itemsjs from 'itemsjs';
 
+import debounce from 'lodash/debounce';
+
 import Pagination from '@material-ui/lab/Pagination';
 
 import ShopsFilters from 'Components/Shops/Filters';
@@ -42,7 +44,6 @@ const Shops = () => {
   const [ store, setStore ] = useState({});
   const [ shops, setShops ] = useState({});
   const [ filters, setFilters ] = useState({});
-  // const [ query, setQuery ] = useState('River Grill');
   const [ query, setQuery ] = useState('');
 
   const data = useStaticQuery(graphql`
@@ -131,9 +132,13 @@ const Shops = () => {
     scrollToTop();
   };
 
+  const setQueryDebounced = debounce(value => {
+    setQuery(value);
+  }, 200);
+
   // Handle search
   const handleSearchChange = event => {
-    setQuery(event.target.value);
+    setQueryDebounced(event.target.value);
   };
 
   // Handle pagination change.
