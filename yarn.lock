@@ -2864,6 +2864,11 @@ camelcase@^5.0.0, camelcase@^5.3.1:
   resolved "https://registry.yarnpkg.com/camelcase/-/camelcase-5.3.1.tgz#e3c9b31569e106811df242f715725a1f4c494320"
   integrity sha512-L28STB170nwWS63UjtlEOE3dldQApaJXZkOI1uMFfzf3rRuPegHaHesyee+YxQ+W6SvRDQV6UrdOdRiR153wJg==
 
+camelcase@^6.0.0:
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/camelcase/-/camelcase-6.0.0.tgz#5259f7c30e35e278f1bdc2a4d91230b37cad981e"
+  integrity sha512-8KMDF1Vz2gzOq54ONPJS65IvTUaB1cHJ2DMM7MbPmLZljDH1qpzzLsWdiN9pHh6qvkRVDTi/07+eNGch/oLU4w==
+
 caniuse-api@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/caniuse-api/-/caniuse-api-3.0.0.tgz#5e4d90e2274961d46291997df599e3ed008ee4c0"
@@ -5756,15 +5761,6 @@ gatsby-source-filesystem@^2.1.56:
     read-chunk "^3.2.0"
     valid-url "^1.0.9"
     xstate "^4.8.0"
-
-gatsby-source-google-spreadsheet@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/gatsby-source-google-spreadsheet/-/gatsby-source-google-spreadsheet-2.0.0.tgz#cfecef0c17e0861ca3bf536bbf2b57a42dfc4f4a"
-  integrity sha512-2drn2+HG9ZIXSDlYtPkPTun7Q7FXvfg1YbXT9qwV55ggMKa0c5r4iLb9jj5HxA/aA0f9pr7rxIef5ad9oIxgtQ==
-  dependencies:
-    camelcase "^5.0.0"
-    gatsby-node-helpers "^0.3.0"
-    node-sheets "^1.0.0"
 
 gatsby-telemetry@^1.1.56:
   version "1.1.56"
@@ -8842,7 +8838,7 @@ node-sass@^4.13.1:
     stdout-stream "^1.4.0"
     "true-case-path" "^1.0.2"
 
-node-sheets@^1.0.0:
+node-sheets@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/node-sheets/-/node-sheets-1.1.0.tgz#f7973329580f2f1778e7cbc94719d7acda460708"
   integrity sha512-2459FBfEL+vCwg+kiuB2/BZLyq9iFV1XRDbNhSnDgrTkb7BEBUy8Q1785P40FtpPkCX5LGFGfIBtTvEIq8r+8g==
@@ -12691,9 +12687,9 @@ uuid@3.4.0, uuid@^3.0.0, uuid@^3.0.1, uuid@^3.3.2, uuid@^3.4.0:
   integrity sha512-HjSDRw6gZE5JMggctHBcjVak08+KEVhSIiDzFnT9S9aegmp85S/bReBVTb4QTFaRNptJ9kuYaNhnbNEOkbKb/A==
 
 uuid@^7.0.0:
-  version "7.0.2"
-  resolved "https://registry.yarnpkg.com/uuid/-/uuid-7.0.2.tgz#7ff5c203467e91f5e0d85cfcbaaf7d2ebbca9be6"
-  integrity sha512-vy9V/+pKG+5ZTYKf+VcphF5Oc6EFiu3W8Nv3P3zIh0EqVI80ZxOzuPfe9EHjkFNvf8+xuTHVeei4Drydlx4zjw==
+  version "7.0.3"
+  resolved "https://registry.yarnpkg.com/uuid/-/uuid-7.0.3.tgz#c5c9f2c8cf25dc0a372c4df1441c41f5bd0c680b"
+  integrity sha512-DPSke0pXhTZgoF/d+WSt2QaKMCFSfx7QegxEWT+JOuHF5aWrKEn0G+ztjuJg/gG8/ItK+rbPCD/yNv8yyih6Cg==
 
 v8-compile-cache@^1.1.2:
   version "1.1.2"
