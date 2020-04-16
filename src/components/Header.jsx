@@ -8,6 +8,8 @@ import Section from 'Layouts/Section';
 
 import useStyles from 'Styles/components/header';
 
+import smoothScroll from 'Utils/smoothScroll';
+
 const Header = ({ siteTitle }) => {
   const classes = useStyles();
 
@@ -28,6 +30,9 @@ const Header = ({ siteTitle }) => {
         </Link>
         <Link to="/shops/" getProps={ isActiveLink }>
           Lista
+        </Link>
+        <Link to="/#survivalkit" getProps={ isActiveLink } onClick={ event => smoothScroll(event, 'survivalkit') }>
+          Kit de sobrevivência
         </Link>
       </nav>
     </Section>

@@ -5,6 +5,7 @@ import SEO from 'Components/SEO';
 import About from 'Components/About';
 import Hero from 'Components/Hero';
 import Register from 'Components/Register';
+import SurvivalKit from 'Components/SurvivalKit';
 
 import PageWrapper from 'Layouts/PageWrapper';
 
@@ -26,6 +27,7 @@ const IndexPage = ({ location }) => {
       />
       <About />
       <Register />
+      <SurvivalKit />
     </PageWrapper>
   );
 };
