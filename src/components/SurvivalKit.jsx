@@ -25,7 +25,7 @@ const SurvivalKit = () => {
         </Typography>
         <Typography variant="body1" className={ classes.description }>
           Para ajudar nesta adaptação, em parceria com as Mulheres à Obra e o Cacoal Studio,
-          criámos um kit de sobrevivência para pequenos negócios que podes receber no teu e-mail.
+          criámos um kit de sobrevivência para pequenos negócios que podes descarregar neste link.
         </Typography>
       </div>
 
