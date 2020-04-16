@@ -20,12 +20,12 @@ const SurvivalKit = () => {
 
       <div className={ classes.descriptionWrapper }>
         <Typography variant="body1" className={ classes.description }>
-          Vivemos tempos de enormes desafios, e de uma necessidade critica de reinventarmos
+          Vivemos tempos de enormes desafios, e de uma necessidade crítica de reinventarmos
           o nosso negócio – ou fechar as portas.
         </Typography>
         <Typography variant="body1" className={ classes.description }>
-          Para ajudar nesta adaptação, em parceria com as Mulheres à Obra, e com ajuda
-          de especialistas, trazemos-te um kit de sobrevivência para pequenos negócios.
+          Para ajudar nesta adaptação, em parceria com as Mulheres à Obra e o Cacoal Studio,
+          criámos um kit de sobrevivência para pequenos negócios que podes receber no teu e-mail.
         </Typography>
       </div>
 
