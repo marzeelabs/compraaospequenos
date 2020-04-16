@@ -1,13 +1,13 @@
 import { makeStyles } from '@material-ui/core/styles';
 
-export default makeStyles(theme => ({
+export default makeStyles({
   root: {
     width: '85%',
     maxWidth: 350,
-    margin: '0 15px 30px',
+    margin: '0 24px 30px',
 
     '& .MuiInput-underline::before': {
-      borderBottomWidth: 2,
+      borderBottomColor: '#ddd',
     },
   },
 
@@ -15,6 +15,6 @@ export default makeStyles(theme => ({
     fontWeight: 'bold',
     fontSize: '18px',
     letterSpacing: '2px',
-    color: theme.palette.text.primary,
+    color: '#999',
   },
-}));
+});
