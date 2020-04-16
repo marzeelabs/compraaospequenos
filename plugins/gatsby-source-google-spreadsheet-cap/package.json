@@ -5,6 +5,7 @@
   "dependencies": {
     "camelcase": "^5.0.0",
     "gatsby-node-helpers": "^0.3.0",
+    "lodash": "^4.17.15",
     "node-sheets": "^1.0.0"
   }
 }

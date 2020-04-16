@@ -3,6 +3,7 @@
 const Sheets = require('node-sheets').default;
 const createNodeHelpers = require('gatsby-node-helpers').default;
 const camelCase = require('camelcase');
+const { shuffle } = require('lodash');
 
 const toNode = row => Object.entries(row).reduce((obj, [ key, cell ]) => {
   if (key === undefined || key === 'undefined') {
@@ -19,15 +20,6 @@ const toNode = row => Object.entries(row).reduce((obj, [ key, cell ]) => {
 
   return obj;
 }, {});
-
-const shuffle = arr => {
-  for (let i = arr.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    const temp = arr[i];
-    arr[i] = arr[j];
-    arr[j] = temp;
-  }
-};
 
 exports.sourceNodes = async ({ actions, createNodeId }, pluginOptions) => {
   const { createNode } = actions;
@@ -64,8 +56,7 @@ exports.sourceNodes = async ({ actions, createNodeId }, pluginOptions) => {
       camelCase(`${spreadsheetName} ${sheetTitle}`),
     );
 
-    shuffle(rows);
-    rows
+    shuffle(rows)
       .map(toNode)
       .filter(filterNode)
       .map(mapNode)
