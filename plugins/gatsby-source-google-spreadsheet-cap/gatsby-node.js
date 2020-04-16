@@ -1,6 +1,33 @@
+// This plugin is based on https://github.com/sondrele/gatsby-source-google-spreadsheet
+
 const Sheets = require('node-sheets').default;
 const createNodeHelpers = require('gatsby-node-helpers').default;
 const camelCase = require('camelcase');
+
+const toNode = row => Object.entries(row).reduce((obj, [ key, cell ]) => {
+  if (key === undefined || key === 'undefined') {
+    return obj;
+  }
+
+  // `node-sheets` adds default values for missing numbers and dates, by checking
+  // for the presence of `stringValue` (the formatted value), we can ensure that
+  // the value actually exists.
+  const value = typeof cell === 'object' && cell.stringValue !== undefined
+    ? cell.value
+    : null;
+  obj[camelCase(key)] = value;
+
+  return obj;
+}, {});
+
+const shuffle = arr => {
+  for (let i = arr.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    const temp = arr[i];
+    arr[i] = arr[j];
+    arr[j] = temp;
+  }
+};
 
 exports.sourceNodes = async ({ actions, createNodeId }, pluginOptions) => {
   const { createNode } = actions;
@@ -26,15 +53,18 @@ exports.sourceNodes = async ({ actions, createNodeId }, pluginOptions) => {
 
   const promises = (await gs.getSheetsNames()).map(async sheetTitle => {
     // Adaptation: only consider sheets configured
-    if (spreadsheetSheet !== '' && sheetTitle !== spreadsheetSheet) return;
+    if (spreadsheetSheet !== '' && sheetTitle !== spreadsheetSheet) {
+      return;
+    }
 
     const tables = await gs.tables(sheetTitle);
-
     const { rows } = tables;
 
     const buildNode = createNodeFactory(
       camelCase(`${spreadsheetName} ${sheetTitle}`),
     );
+
+    shuffle(rows);
     rows
       .map(toNode)
       .filter(filterNode)
@@ -53,21 +83,3 @@ exports.sourceNodes = async ({ actions, createNodeId }, pluginOptions) => {
   });
   return Promise.all(promises);
 };
-
-function toNode(row) {
-  return Object.entries(row).reduce((obj, [ key, cell ]) => {
-    if (key === undefined || key === 'undefined') {
-      return obj;
-    }
-
-    // `node-sheets` adds default values for missing numbers and dates, by checking
-    // for the precense of `stringValue` (the formatted value), we can ensure that
-    // the value actually exists.
-    const value = typeof cell === 'object' && cell.stringValue !== undefined
-      ? cell.value
-      : null;
-    obj[camelCase(key)] = value;
-
-    return obj;
-  }, {});
-}
