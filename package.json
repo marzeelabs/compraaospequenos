@@ -24,6 +24,7 @@
     "gatsby-plugin-google-analytics": "^2.2.2",
     "gatsby-plugin-manifest": "^2.2.48",
     "gatsby-plugin-material-ui": "^2.1.6",
+    "gatsby-plugin-netlify-cms": "^4.2.4",
     "gatsby-plugin-offline": "^3.0.41",
     "gatsby-plugin-react-helmet": "^3.1.24",
     "gatsby-plugin-react-svg": "^3.0.0",
@@ -36,6 +37,7 @@
     "gatsby-transformer-sharp": "^2.3.19",
     "itemsjs": "^1.0.49",
     "lodash": "^4.17.15",
+    "netlify-cms-app": "^2.12.10",
     "node-sass": "^4.13.1",
     "node-sheets": "^1.1.0",
     "prop-types": "^15.7.2",
@@ -63,7 +65,8 @@
     "start": "gatsby develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
+    "local-git": "npx netlify-cms-proxy-server"
   },
   "browserslist": [
     "> 1%",

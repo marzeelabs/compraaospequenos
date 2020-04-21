@@ -1,0 +1,33 @@
+backend:
+  name: git-gateway
+  branch: master
+  commit_messages:
+    create: 'Create {{collection}} “{{slug}}”'
+    update: 'Update {{collection}} “{{slug}}”'
+    delete: 'Delete {{collection}} “{{slug}}”'
+    uploadMedia: '[skip ci] Upload “{{path}}”'
+    deleteMedia: '[skip ci] Delete “{{path}}”'
+
+media_folder: content/img
+public_folder: ../../img
+
+slug:
+  encoding: "ascii"
+  clean_accents: true
+  sanitize_replacement: "-"
+
+collections:
+  - name: pages
+    label: Page
+    folder: content/pages
+    create: true
+    slug: "{{title}}"
+    editor:
+      preview: false
+    fields:
+      - { name: "templateKey", label: "Template Key", widget: "hidden", default: "article" }
+      - { name: title, label: Title, widget: "string" }
+      - { name: date, label: Date, widget: "datetime" }
+      - { name: image, label: Image, widget: image }
+      - { name: tags, label: Tags, widget: "list", required: false }
+      - { name: body, label: Body,  widget: "markdown", required: false}

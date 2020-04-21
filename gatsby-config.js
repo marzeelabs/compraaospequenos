@@ -180,5 +180,12 @@ module.exports = {
         trackingId: 'UA-162021632-1',
       },
     },
+    {
+      resolve: 'gatsby-plugin-netlify-cms',
+      options: {
+        modulePath: process.env.NETLIFY_CMS_LOCAL_GIT === 'true' ? `${__dirname}/src/cms/cms-with-local-git.js` : `${__dirname}/src/cms/cms.js`,
+        manualInit: true,
+      },
+    },
   ],
 };
