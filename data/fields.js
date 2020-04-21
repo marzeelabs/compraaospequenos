@@ -1,28 +1,19 @@
 const lang = process.env.GOOGLE_DOC_LANG || 'en';
 
-if (lang === 'pt') {
-  module.exports = {
-    name: {
-      field: 'nome',
-    },
-    product: {
-      field: 'produtoOuServiço',
-    },
-    offer: {
-      field: 'oferta',
-    },
-    telephone: {
-      field: 'outroContacto (telefone)',
-    },
-    email: {
-      field: 'outroContacto (eMail)',
-    },
+let configuredFields = {};
 
-  };
+if (lang === 'pt') {
+  configuredFields = require('../config/fields.pt.json');
 }
 else if (lang === 'en') {
-  module.exports = {};
+  configuredFields = require('../config/fields.en.json');
 }
 else {
   throw new Error(`Environment variable GOOGLE_DOC_LANG has unrecognised language: ${lang}`);
 }
+
+module.exports = {
+  fields: {},
+  filters: {},
+  ...configuredFields,
+};
