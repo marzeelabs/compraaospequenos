@@ -69,7 +69,7 @@ module.exports = {
       options: {
         // The `spreadsheetId` is required, it is found in the url of your document:
         // https://docs.google.com/spreadsheets/d/<spreadsheetId>/edit#gid=0
-        spreadsheetId: process.env.GOOGLE_DOC_SPREADSHEET_ID || '1i6mNf0uqnBUSiebSWB7YUKAdvokQZpGq-o7rFxbc7Gs',
+        spreadsheetId: process.env.GOOGLE_DOC_SPREADSHEET_ID || '1VT6yvROk2V_Z438YdzBHkjeplqOeaTkAR4SfifBsMqg',
 
         // If set, the `spreadsheetSheet`  is the only sheet to be considered for mapping.
         // This is an adaptation to how the original plugin works.

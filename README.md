@@ -13,9 +13,25 @@ Warning, for GOOGLE_CLOUD_PRIVATE_KEY make sure to replace all `\n` with `_` to 
 
 ## Local development
 
-Copy `.env.example` to `.env` and add configuration keys (ask @pvhee).
+Copy `.env.example` to `.env` and add the Google service user keys (see above).
 
-To run the project locally
+You need to run `npm install` or `yarn install` to setup your dependencies, after which you can run the Gatsby commands:
+
+To develop the site:
+
+```bash
+gatsby develop
+```
+
+To create a production build:
+
+```bash
+gatsby build
+```
+
+### Using Yarn
+
+If you use Yarn, you can run the project locally using
 
 ```bash
 yarn install
