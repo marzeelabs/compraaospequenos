@@ -1,7 +1,7 @@
 ---
 templateKey: article
 title: This is a sample article title
-date: 21/04/2020
+date: 2020-04-06T23:00:00.000Z
 image: ../../img/fruit.jpg
 tags:
   - Social networks
