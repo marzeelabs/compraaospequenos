@@ -29,7 +29,7 @@ const CONFIGURATION = {
   }), {}),
   searchableFields: [
     'nome',
-    'produtoOuServi_o',
+    'product',
   ],
 };
 
@@ -52,14 +52,14 @@ const Shops = () => {
         edges {
           node {
             id
-            nome
-            oferta
-            produtoOuServi_o
+            name
+            offer
+            product
             facebook
             instagram
             whatsApp
-            outroContacto__eMail_
-            outroContacto__telefone_
+            email
+            telephone
             site
             location
             businessType

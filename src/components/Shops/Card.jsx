@@ -24,7 +24,7 @@ const ShopsCard = ({ shop }) => {
       >
         <CardContent className={ classes.content }>
           <Typography gutterBottom variant="h5" component="h2" className={ classes.title }>
-            { shop.nome }
+            { shop.name }
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p" className={ classes.location }>
             { shop.location.join(', ') }
@@ -36,15 +36,15 @@ const ShopsCard = ({ shop }) => {
             { shop.offerType.join(', ') }
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p" className={ classes.offer }>
-            { shop.oferta }
+            { shop.offer }
           </Typography>
 
-          <ShopsPhones phones={ shop.outroContacto__telefone_ } />
+          <ShopsPhones phones={ shop.telephone } />
           <ShopsWhatsApp contact={ shop.whatsApp } />
-          <ShopsEmail address={ shop.outroContacto__eMail_ } />
+          <ShopsEmail address={ shop.email } />
           <ShopsWebsite url={ shop.site } />
           <ShopsSocialLinks
-            name={ shop.nome }
+            name={ shop.name }
             facebook={ shop.facebook }
             instagram={ shop.instagram }
           />
