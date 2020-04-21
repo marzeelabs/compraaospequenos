@@ -12,10 +12,10 @@ export default ({ data, location }) => {
 
   return (
     <PageWrapper>
-      <SEO title="Articles" location={ location }/>
+      <SEO title="Articles" location={location} />
       <Section>
         <h1>Articles</h1>
-        <Articles articles={ articles } />
+        <Articles articles={articles} />
       </Section>
     </PageWrapper>
   );
@@ -23,11 +23,17 @@ export default ({ data, location }) => {
 
 export const query = graphql`
   query {
-    allMarkdownRemark(filter: {
-      frontmatter: {
-        templateKey: {eq: "article"},
+    allMarkdownRemark(
+      filter: {
+        frontmatter: {
+          templateKey: {eq: "article"},
+        },
       },
-    }) {
+      sort: {
+        fields: frontmatter___date,
+        order: DESC
+      }
+    ) {
       totalCount
       edges {
         node {
@@ -35,6 +41,7 @@ export const query = graphql`
           frontmatter {
             title
             tags
+            formattedDate: date(formatString: "DD/MM/YYYY")
             image {
               childImageSharp {
                 fluid(maxWidth: 800) {

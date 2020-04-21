@@ -19,7 +19,7 @@ slug:
 collections:
   - name: pages
     label: Page
-    folder: content/pages
+    folder: content/pages/articles
     create: true
     slug: "{{title}}"
     editor:

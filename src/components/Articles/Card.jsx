@@ -29,6 +29,9 @@ const ArticleCard = ({ data }) => {
           { data.frontmatter.title }
         </Typography>
         <Typography variant="body2" color="textSecondary" component="p">
+          { data.frontmatter.formattedDate }
+        </Typography>
+        <Typography variant="body2" color="textSecondary" component="p">
           Posted in:
           { ' ' }
           { data.frontmatter.tags }

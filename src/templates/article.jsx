@@ -36,6 +36,13 @@ export const query = graphql`
         title
         formattedDate: date(formatString: "DD/MM/YYYY")
         tags
+        image {
+          childImageSharp {
+            fluid(maxWidth: 800) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
       }
     }
   }
