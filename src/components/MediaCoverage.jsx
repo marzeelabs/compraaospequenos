@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 
 import { graphql, useStaticQuery } from 'gatsby';
 import Img from 'gatsby-image/withIEPolyfill';
@@ -56,36 +56,41 @@ const MediaCoverage = () => {
     }
   `);
 
-  useEffect(() => {
-    const containerSelector = '.media-coverage-slider';
-    const container = document.querySelector(containerSelector);
+  const container = useRef(null);
 
-    if (container) {
-      tns({
-        container: containerSelector,
-        gutter: 20,
-        controlsPosition: 'top',
-        controlsText: [ '', '' ],
-        navPosition: 'bottom',
-        arrowKeys: true,
-        loop: false,
-        mouseDrag: true,
-        responsive: {
-          320: {
-            items: 1,
-          },
-          768: {
-            items: 2,
-            slideBy: 2,
-          },
-          1024: {
-            items: 3,
-            slideBy: 3,
-          },
-        },
-      });
+  useEffect(() => {
+    if (!container.current) {
+      return () => {};
     }
-  }, []);
+
+    const slider = tns({
+      container: container.current,
+      gutter: 20,
+      controlsPosition: 'top',
+      controlsText: [ '', '' ],
+      navPosition: 'bottom',
+      arrowKeys: true,
+      loop: false,
+      mouseDrag: true,
+      responsive: {
+        320: {
+          items: 1,
+        },
+        768: {
+          items: 2,
+          slideBy: 2,
+        },
+        1024: {
+          items: 3,
+          slideBy: 3,
+        },
+      },
+    });
+
+    return () => {
+      slider.destroy();
+    };
+  }, [ container ]);
 
   return (
     <Section extraClasses={ classes }>
@@ -94,7 +99,7 @@ const MediaCoverage = () => {
       </Typography>
 
       <div className={ classes.sliderWrapper }>
-        <div className="media-coverage-slider">
+        <div className="media-coverage-slider" ref={ container }>
           { Object.keys(featured).map(article => (
             <div key={ `${article}-wrapper` }>
               <a href={ featured[article].url } target="_blank" rel="noopener noreferrer" label="publico" className={ classes.slide } key={ `${article}-link` }>

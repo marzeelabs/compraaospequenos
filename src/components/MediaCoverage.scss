@@ -1,10 +1,10 @@
 .tns-outer {
+  display: flex;
   position: relative;
   z-index: 1;
-  margin: 0 auto;
-  width: 280px;
-  display: flex;
   flex-wrap: wrap;
+  width: 280px;
+  margin: 0 auto;
 
   @media screen and (min-width: 768px) {
     width: calc(100% - 240px);
@@ -32,12 +32,12 @@
   }
 
   @media screen and (min-width: 768px) {
-    justify-content: space-between;
     position: absolute;
     top: calc(50% - 70px);
     left: 50%;
-    transform: translate3d(-50%, -50%, 0);
+    justify-content: space-between;
     width: calc(100% + 120px);
+    transform: translate3d(-50%, -50%, 0);
   }
 
   &:active,
@@ -47,12 +47,12 @@
 
   button {
     display: inline-flex;
+    position: relative;
     align-items: center;
     justify-content: center;
-    position: relative;
-    border: 0;
     width: 40px;
     height: 40px;
+    border: 0;
     border-radius: 40px;
     background-color: #2f5bea;
     color: #fff;
@@ -66,15 +66,15 @@
     }
 
     &::after {
-      position: relative;
       content: '';
-      border-style: solid;
-      border-width: 3px;
-      border-radius: 3px;
       display: inline-block;
+      position: relative;
       padding: 4px;
-      pointer-events: none;
+      border-width: 3px;
+      border-style: solid;
+      border-radius: 3px;
       transform: rotate(45deg);
+      pointer-events: none;
     }
 
     &:disabled {
@@ -83,19 +83,19 @@
   }
 
   button[data-controls='prev']::after {
-    border-color: #2f5bea #2f5bea #fff #fff;
     margin-right: -6px;
+    border-color: #2f5bea #2f5bea #fff #fff;
   }
 
   button[data-controls='next']::after {
-    border-color: #fff #fff #2f5bea #2f5bea;
     margin-left: -6px;
+    border-color: #fff #fff #2f5bea #2f5bea;
   }
 }
 
 .tns-nav {
-  text-align: center;
   width: 100%;
+  text-align: center;
 
   @media screen and (max-width: 767px) {
     order: 3;
@@ -109,10 +109,10 @@
     display: inline-block;
     width: 20px;
     height: 20px;
+    margin: 10px 5px;
+    border: 2px solid #999;
     border-radius: 20px;
     background-color: #fff;
-    border: 2px solid #999;
-    margin: 10px 5px;
 
     &:active,
     &:focus {
@@ -120,8 +120,8 @@
     }
 
     &.tns-nav-active {
-      background-color: #2f5bea;
       border: 2px solid #2f5bea;
+      background-color: #2f5bea;
     }
   }
 }
