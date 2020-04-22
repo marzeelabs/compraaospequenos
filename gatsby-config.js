@@ -108,21 +108,24 @@ module.exports = {
         // transformations directly during node sourcing, the default implementation is to return
         // the node as is:
         // Map based on the fields settings.
-        mapNode: node => Object.keys(FIELDS.filters).reduce((acc, cur) => ({
-          // Keep existing fields unchanged.
-          ...acc,
+        mapNode: node => ({
           // Add translated field names so we can refer to them in Gatsby
-          ...Object.keys(FIELDS.fields).reduce((acc2, cur2) => ({
-            ...acc2,
-            [cur2]: node[FIELDS.fields[cur2].header],
+          ...Object.keys(FIELDS.fields).reduce((acc, cur) => ({
+            ...acc,
+            [cur]: node[FIELDS.fields[cur].header],
           }), {}),
-          // Map new fields for filters based on the data settings for them.
-          // Each filter will be an array of possible values.
-          // NOTE: if the desired filter column has the same name as the
-          // original field, the original will be overwritten; this should be
-          // fine for most cases though.
-          [cur]: node[FIELDS.filters[cur].header].split(',').map(n => n.trim()),
-        }), node),
+
+          ...Object.keys(FIELDS.filters).reduce((acc, cur) => ({
+            // Keep existing fields unchanged.
+            ...acc,
+            // Map new fields for filters based on the data settings for them.
+            // Each filter will be an array of possible values.
+            // NOTE: if the desired filter column has the same name as the
+            // original field, the original will be overwritten; this should be
+            // fine for most cases though.
+            [cur]: node[FIELDS.filters[cur].header].split(',').map(n => n.trim()),
+          }), node),
+        }),
       },
     },
     {
