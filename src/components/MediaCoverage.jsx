@@ -10,7 +10,6 @@ import Section from 'Layouts/Section';
 
 import useStyles from 'Styles/components/mediaCoverage';
 import 'tiny-slider/src/tiny-slider.scss';
-import './MediaCoverage.scss';
 
 import featured from '../data/featured.json';
 
