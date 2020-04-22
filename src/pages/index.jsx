@@ -6,6 +6,7 @@ import About from 'Components/About';
 import Hero from 'Components/Hero';
 import Register from 'Components/Register';
 import SurvivalKit from 'Components/SurvivalKit';
+import MediaCoverage from 'Components/MediaCoverage';
 
 import PageWrapper from 'Layouts/PageWrapper';
 
@@ -28,6 +29,7 @@ const IndexPage = ({ location }) => {
       <About />
       <Register />
       <SurvivalKit />
+      <MediaCoverage />
     </PageWrapper>
   );
 };
