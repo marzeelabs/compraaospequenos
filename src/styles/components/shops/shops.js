@@ -29,4 +29,14 @@ export default makeStyles(theme => ({
   ul: {
     justifyContent: 'center',
   },
+
+  allShops: {
+    display: 'block',
+    marginTop: theme.spacing(1.5),
+    marginBottom: theme.spacing(1.5),
+    textAlign: 'center',
+    fontSize: '16px',
+    lineHeight: '24px',
+    letterSpacing: '2px',
+  },
 }));
