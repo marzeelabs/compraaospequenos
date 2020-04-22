@@ -10,7 +10,7 @@ import Section from 'Layouts/Section';
 
 import useStyles from 'Styles/components/mediaCoverage';
 import 'tiny-slider/src/tiny-slider.scss';
-
+import './MediaCoverage.scss';
 import featured from '../data/featured.json';
 
 const MediaCoverage = () => {
@@ -65,7 +65,7 @@ const MediaCoverage = () => {
         container: containerSelector,
         gutter: 20,
         controlsPosition: 'top',
-        controlsText: [ '<', '>' ],
+        controlsText: [ '', '' ],
         navPosition: 'bottom',
         arrowKeys: true,
         loop: false,
@@ -74,11 +74,7 @@ const MediaCoverage = () => {
           320: {
             items: 1,
           },
-          600: {
-            items: 1,
-            slideBy: 2,
-          },
-          760: {
+          768: {
             items: 2,
             slideBy: 2,
           },

@@ -52,9 +52,9 @@ export default makeStyles(theme => ({
     height: '180px',
     marginBottom: theme.spacing(1),
   },
-  sliderWrapper: {
-    '& .tns-controls': {
-      border: '1px solid red',
-    },
-  },
+  // sliderWrapper: {
+  //   '& .tns-controls': {
+  //     border: '1px solid red',
+  //   },
+  // },
 }));
