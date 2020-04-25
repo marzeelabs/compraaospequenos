@@ -30,10 +30,6 @@ exports.createPages = async ({ graphql, actions }) => {
 
   result.data.allMarkdownRemark.edges
     .forEach(({ node }) => {
-      // const pathName = node.fields.slug;
-      // @todo add better error support if template is not found, or use default template
-      // const component = path.resolve(`src/templates/${String(node.frontmatter.templateKey)}.jsx`);
-      // const { id } = node;
       createPage({
         path: node.fields.slug,
         component: path.resolve(`src/templates/${String(node.frontmatter.templateKey)}.jsx`),
@@ -56,6 +52,21 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
       node,
       name: 'slug',
       value: slug,
+    });
+  }
+};
+
+exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
+  if (stage === 'build-html') {
+    actions.setWebpackConfig({
+      module: {
+        rules: [
+          {
+            test: /tiny-slider/,
+            use: loaders.null(),
+          },
+        ],
+      },
     });
   }
 };
