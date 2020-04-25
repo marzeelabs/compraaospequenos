@@ -149,6 +149,16 @@ const Shops = () => {
     scrollToTop();
   };
 
+  const isFiltered = () => (
+    Object.keys(filters || {}).length
+    && (
+      Object.keys(filters.location || {}).length
+      || Object.keys(filters.businessType || {}).length
+      || Object.keys(filters.offerType || {}).length
+    )
+  )
+  || query;
+
   return (
     <>
       <Section>
@@ -170,6 +180,11 @@ const Shops = () => {
             { shops.data && (
               <>
                 <ShopsSearch onChange={ handleSearchChange } />
+                { !isFiltered() && (
+                  <span className={ classes.allShops }>
+                    { `Todos os Negócios (${shops.pagination.total})` }
+                  </span>
+                ) }
                 <ShopsList
                   shops={ shops }
                 />
