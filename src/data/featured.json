@@ -1,0 +1,47 @@
+{
+  "publico": {
+    "siteName": "Público",
+    "releaseDate": "2020-03-19",
+    "author": "Cristiana Rocha Rodrigues",
+    "title": "#CompraAosPequenos, uma iniciativa para apoiar os pequenos negócios",
+    "description": "São várias as empresas a procurar alternativas para continuar a funcionar, como entrega ao domicílio, masterclasses online ou vouchers. O #CompraAosPequenos pretende ajudar a partilhar e organizar a informação para “apoiar os pequenos negócios”.",
+    "image": "src/assets/publico_2020-03-19.jpeg",
+    "url": "https://www.publico.pt/2020/03/19/local/noticia/compraaospequenos-iniciativa-apoiar-negocios-1908501"
+  },
+  "observador": {
+    "siteName": "Observador",
+    "releaseDate": "2020-03-24",
+    "author": "João Duarte",
+    "title": "A economia não pode morrer - é vital apoiar os pequenos negócios",
+    "description": "Muitos pequenos empreendedores não se podem colocar em lay-off porque não são elegíveis, mas se deixarem de se pagar salário, não podem pedir subsídio...",
+    "image": "/assets/observador_2020-03-24.jpeg",
+    "url": "https://observador.pt/opiniao/a-economia-nao-pode-morrer-e-vital-apoiar-os-pequenos-negocios/"
+  },
+  "jornalDeNegocios": {
+    "siteName": "Jornal de Negócios",
+    "releaseDate": "2020-03-18",
+    "author": "Rui Neves",
+    "title": "Menos Hub lança movimento #compraaospequenos",
+    "description": "A comunidade de apoio ao empreendedorismo avança com um directório onde os pequenos negócios podem divulgar as novas soluções que estão a criar “para fazer face a este momento em que grande parte das pessoas está em casa ou com a vida normal limitada”. - Empresas  , Jornal de Negócios.",
+    "image": "/assets/negocios_2020-03-18.png",
+    "url": "https://www.jornaldenegocios.pt/economia/coronavirus/detalhe/menos-hub-lanca-movimento-compraaospequenos"
+  },
+  "jornalEconomico": {
+    "siteName": "O Jornal Económico",
+    "releaseDate": "2020-03-19",
+    "author": "Mariana Bandeira",
+    "title": "Startup cria plataforma para apoiar pequenos negócios: “É importante reduzir os custos fixos e continuar a vender”",
+    "description": "Empresas que estão a fazer entregas ao domicílio, 'masterclasses' e prestação remota de serviços podem chegar-se à frente. “Temos aconselhado os empreendedores a começar a adaptar os seus produtos para o digital ou áudio”, afirma João Duarte, fundador do Menos Hub, ao Jornal Económico.",
+    "image": "/assets/economico_2020-03-19.jpg",
+    "url": "https://jornaleconomico.sapo.pt/noticias/startup-cria-plataforma-para-apoiar-pequenos-negocios-e-importante-reduzir-os-custos-fixos-e-continuar-a-vender-561952"
+  },
+  "dinheiroVivo": {
+    "siteName": "Dinheiro Vivo",
+    "releaseDate": "2020-03-18",
+    "author": "Dinheiro Vivo",
+    "title": "Comunidade Menos Hub lançou movimento para ajudar os pequenos negócios a sobreviver em tempo de novo coronavírus.",
+    "description": "Nasceu um movimento para reunir os pequenos negócios de Portugal. Compra aos pequenos é uma plataforma lançada esta quarta-feira que agrega as startups e pequenas empresas que tentam sobreviver na era em que o novo coronavírus está a condicionar fortemente a economia.",
+    "image": "/assets/dinheiro-vivo_2020-03-18.jpg",
+    "url": "https://www.dinheirovivo.pt/fazedores/nasceu-plataforma-para-ajudar-pequenos-negocios-de-portugal/"
+  }
+}
