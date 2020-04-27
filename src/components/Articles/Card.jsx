@@ -14,7 +14,7 @@ const useStyles = makeStyles({
     flexGrow: 1,
   },
   media: {
-    height: 250,
+    height: 265,
   },
 });
 
@@ -25,23 +25,23 @@ const ArticleCard = ({ data }) => {
     <Card className={ classes.root }>
       <Img className={ classes.media } fluid={ data.frontmatter.image.childImageSharp.fluid } />
       <CardContent>
-        <Typography gutterBottom variant="h5" component="h2">
-          { data.frontmatter.title }
-        </Typography>
-        <Typography variant="body2" color="textSecondary" component="p">
-          { data.frontmatter.formattedDate }
-        </Typography>
-        <Typography variant="body2" color="textSecondary" component="p">
-          Posted in:
+        <Typography className="article-card__tag" component="p">
           { ' ' }
           { data.frontmatter.tags }
         </Typography>
-        <Typography variant="body2" color="textSecondary" component="p">
+        <Typography className="article-card__title" component="h2">
+          { data.frontmatter.title }
+        </Typography>
+        <Typography className="article-card__date" component="p">
+          { data.frontmatter.formattedDate }
+        </Typography>
+
+        <Typography className="article-card__excerpt" component="p">
           { data.excerpt }
         </Typography>
       </CardContent>
-      <CardActions>
-        <Link to={ data.fields.slug }>
+      <CardActions className="article-card__link__wrapper">
+        <Link to={ data.fields.slug } className="article-card__link">
           Read More
         </Link>
       </CardActions>

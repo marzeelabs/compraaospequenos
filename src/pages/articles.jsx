@@ -12,10 +12,10 @@ export default ({ data, location }) => {
 
   return (
     <PageWrapper>
-      <SEO title="Articles" location={location} />
-      <Section>
-        <h1>Articles</h1>
-        <Articles articles={articles} />
+      <SEO title="Articles" location={ location } />
+      <Section className="articles-page">
+        <h1 className="articles-page__main-title">Articles</h1>
+        <Articles articles={ articles } />
       </Section>
     </PageWrapper>
   );

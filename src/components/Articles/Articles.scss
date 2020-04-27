@@ -1,0 +1,108 @@
+$brand-blue: #2F5BEA;
+$brand-green: #00A09F;
+$brand-dark-grey: #2C2E30;
+
+section.articles-page {
+  margin-top: 100px;
+
+  h1.articles-page__main-title {
+    text-align: center;
+    font-weight: bold;
+    font-size: 46px;
+    line-height: 63px;
+    text-align: center;
+    letter-spacing: 2px;
+    color: #ffffff;
+    margin-bottom: 80px;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 100vw;
+    height: 395px;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: -1;
+    background: linear-gradient(123.69deg, $brand-blue 7.73%, $brand-green 92.27%);
+  }
+}
+
+.articles-card.MuiGrid-root {
+  flex: 0 0 100%;
+  border-radius: 0;
+  padding: 0 0 100px;
+
+  @media screen and (min-width: 768px) {
+    flex: 0 0 50%;
+    padding: 0 0 80px;
+
+    &:nth-child(even) {
+      padding-left: 30px;
+    }
+
+    &:nth-child(odd) {
+      padding-right: 30px;
+    }
+  }
+
+  .MuiPaper-elevation1 {
+    border-radius: 0;
+    box-shadow: none;
+  }
+}
+
+.article-card__tag.MuiTypography-body1 {
+  color: $brand-blue;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 19px;
+  letter-spacing: 2px;
+  margin-bottom: 4px;
+}
+
+.article-card__title.MuiTypography-body1 {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 33px;
+  letter-spacing: 2px;
+  color: $brand-blue;
+}
+
+.article-card__date.MuiTypography-body1 {
+  color: $brand-dark-grey;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 19px;
+  letter-spacing: 2px;
+}
+
+.article-card__excerpt.MuiTypography-body1 {
+  color: $brand-dark-grey;
+  font-size: 16px;
+  line-height: 28px;
+  margin: 8px 0;
+  letter-spacing: 2px;
+}
+
+.article-card__link__wrapper.MuiCardActions-root {
+  padding: 0 8px;
+}
+
+.article-card__link {
+  /* brand_blue */
+  background-color: $brand-blue;
+  border-radius: 100px;
+  padding: 10px 20px;
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 2px;
+  color: #FFFFFF;
+  text-decoration: none;
+  transition: background-color ease .25s;
+
+  &:hover {
+    background-color: $brand-green;
+  }
+}
