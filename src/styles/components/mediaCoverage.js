@@ -49,7 +49,7 @@ export default makeStyles(theme => ({
     color: theme.palette.secondary.main,
   },
   image: {
-    height: '180px',
+    height: '200px',
     marginBottom: theme.spacing(1),
   },
 }));

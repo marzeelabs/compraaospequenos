@@ -31,6 +31,7 @@ export default ({ data, location }) => {
             )) }
           </ul>
         </div>
+        <h3 className="article-social__title">Partilhe</h3>
         <ul className="article-social__list">
           <li className="article-social__item">
             <SocialIcon

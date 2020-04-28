@@ -4,6 +4,7 @@ import { graphql, useStaticQuery } from 'gatsby';
 import Img from 'gatsby-image/withIEPolyfill';
 import { tns } from 'tiny-slider/src/tiny-slider';
 
+
 import Typography from '@material-ui/core/Typography';
 
 import Section from 'Layouts/Section';
@@ -93,7 +94,7 @@ const MediaCoverage = () => {
   }, [ container ]);
 
   return (
-    <Section extraClasses={ classes }>
+    <Section extraClasses={ classes } className="media-coverage-slider__wrapper">
       <Typography variant="h4" marked="center" className={ classes.title }>
         Onde falam de nós
       </Typography>

@@ -34,6 +34,9 @@ const Header = ({ siteTitle }) => {
         <Link to="/#survivalkit" getProps={ isActiveLink } onClick={ event => smoothScroll(event, 'survivalkit') }>
           Kit de sobrevivência
         </Link>
+        <Link to="/articles/" getProps={ isActiveLink }>
+          Dicas e Ferramentas
+        </Link>
       </nav>
     </Section>
   );

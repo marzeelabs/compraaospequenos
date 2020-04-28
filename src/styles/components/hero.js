@@ -10,14 +10,14 @@ export default makeStyles(theme => ({
     textAlign: 'center',
 
     [theme.breakpoints.down('sm')]: {
-      paddingTop: 60,
+      paddingTop: 100,
       paddingBottom: 100,
     },
 
     [theme.breakpoints.up('md')]: {
       height: 1, // For IE to center align the flexbox
       maxHeight: 1300,
-      minHeight: 650,
+      minHeight: 600,
     },
 
     '&::after': {

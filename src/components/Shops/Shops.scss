@@ -1,0 +1,26 @@
+.shops-initialize__wrapper {
+  width: 100%;
+  text-align: center;
+  color: #2F5BEA;
+}
+
+.shops__wrapper {
+
+  div.MuiContainer-maxWidthLg,
+  div.makeStyles-container-7 {
+    max-width: 1680px;
+  }
+}
+
+ul.MuiPagination-ul {
+  margin: 40px auto;
+}
+
+button.MuiPaginationItem-page.Mui-selected {
+  background-color: #2F5BEA;
+  color: #fff;
+
+  &:hover {
+    color: #2F5BEA;
+  }
+}

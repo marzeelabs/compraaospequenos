@@ -14,6 +14,8 @@ import Section from 'Layouts/Section';
 
 import useStyles from 'Styles/components/shops/shops';
 
+import './Shops.scss';
+
 const FILTERS = require('Data/filters');
 
 // itemsjs configuration, built directly from the FILTERS object through each
@@ -94,7 +96,7 @@ const Shops = () => {
   if (isLoading) {
     return (
       <Section>
-        <div>Initializing...</div>
+        <div className="shops-initialize__wrapper">Initializing...</div>
       </Section>
     );
   }
@@ -161,7 +163,7 @@ const Shops = () => {
 
   return (
     <>
-      <Section>
+      <Section className="shops__wrapper">
         <div className={ classes.content }>
 
           <div className={ classes.filters }>
