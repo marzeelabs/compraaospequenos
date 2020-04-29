@@ -1,7 +1,7 @@
 import { makeStyles } from '@material-ui/core/styles';
 
 export default makeStyles({
-  root: {
+  textField: {
     width: '85%',
     maxWidth: 350,
     margin: '0 24px 30px',

@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { shape, string } from 'prop-types';
+import { graphql, useStaticQuery, Link } from 'gatsby';
 
-import { Link } from 'gatsby';
+
 import Typography from '@material-ui/core/Typography';
 
 import MenosLogo from 'Components/MenosLogo';
@@ -17,6 +18,24 @@ const Hero = ({
   className,
 }) => {
   const classes = useStyles();
+
+  const [ totalShops, setTotalShops ] = useState(0);
+
+  const data = useStaticQuery(graphql`
+    query {
+      allGoogleSpreadsheetNegocios {
+        edges {
+          node {
+            id
+          }
+        }
+      }
+    }
+  `);
+
+  useEffect(() => {
+    setTotalShops(data.allGoogleSpreadsheetNegocios.edges.length);
+  }, [ data ]);
 
   return (
     <Section className={ className } extraClasses={ classes }>
@@ -45,7 +64,9 @@ const Hero = ({
 
       <div className={ classes.fold }>
         <div className={ classes.innerFold }>
-          Vamos fazer diferença
+          <span className={ classes.allShops }>
+            { `Todos os Negócios (${totalShops})` }
+          </span>
         </div>
       </div>
 

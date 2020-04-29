@@ -9,7 +9,7 @@ const ShopsSearch = ({ onChange }) => {
 
   return (
     <TextField
-      classes={ classes }
+      className={ classes.textField }
       label={ (
         <span className={ classes.label }>Filtrar...</span>
       ) }

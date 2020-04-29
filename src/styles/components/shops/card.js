@@ -10,12 +10,12 @@ export default makeStyles(theme => ({
     textAlign: 'center',
 
     [theme.breakpoints.up('md')]: {
-      width: 'auto',
-      maxWidth: 'calc(50% - 30px)',
+      width: 'calc(50% - 30px)',
+      maxWidth: 'calc(33% - 30px)',
     },
 
     [theme.breakpoints.up('lg')]: {
-      width: 'auto',
+      width: 'calc(33% - 30px)',
       maxWidth: 'calc(33% - 30px)',
     },
   },
@@ -35,6 +35,7 @@ export default makeStyles(theme => ({
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
+    paddingBottom: 0,
   },
 
   title: {
@@ -69,18 +70,6 @@ export default makeStyles(theme => ({
     lineHeight: '22px',
     letterSpacing: '2px',
     color: theme.palette.text.primary,
-
-    '&::after': {
-      content: '""',
-      display: 'block',
-      width: 24,
-      height: 1,
-      marginTop: theme.spacing(2),
-      marginBottom: theme.spacing(1),
-      marginLeft: 'auto',
-      marginRight: 'auto',
-      backgroundColor: theme.palette.text.hint,
-    },
   },
 
   offer: {
@@ -89,5 +78,17 @@ export default makeStyles(theme => ({
     fontSize: '14px',
     lineHeight: '24px',
     letterSpacing: '2px',
+  },
+
+  expand: {
+    transform: 'rotate(0deg)',
+    margin: '0 auto',
+    padding: 0,
+    transition: theme.transitions.create('transform', {
+      duration: theme.transitions.duration.shortest,
+    }),
+  },
+  expandOpen: {
+    transform: 'rotate(180deg)',
   },
 }));
