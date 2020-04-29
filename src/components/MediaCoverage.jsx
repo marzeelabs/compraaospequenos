@@ -60,12 +60,18 @@ const MediaCoverage = () => {
   const container = useRef(null);
 
   useEffect(() => {
-    if (!container.current) {
+    if (!container.current || !container.current.parentNode) {
+      return () => {};
+    }
+
+    const slideshow = document.querySelector(`.${container.current.className}`);
+
+    if (!slideshow) {
       return () => {};
     }
 
     const slider = tns({
-      container: container.current,
+      container: slideshow,
       gutter: 20,
       controlsPosition: 'top',
       controlsText: [ '', '' ],
@@ -103,7 +109,7 @@ const MediaCoverage = () => {
         <div className="media-coverage-slider" ref={ container }>
           { Object.keys(featured).map(article => (
             <div key={ `${article}-wrapper` }>
-              <a href={ featured[article].url } target="_blank" rel="noopener noreferrer" label="publico" className={ classes.slide } key={ `${article}-link` }>
+              <a href={ featured[article].url } target="_blank" rel="noopener noreferrer" label={ article } className={ classes.slide } key={ `${article}-link` }>
                 <Img fluid={ data[article].childImageSharp.fluid } className={ classes.image } objectFit="cover" />
                 <Typography variant="h4" marked="center" className={ classes.subtitle }>
                   { featured[article].title }
