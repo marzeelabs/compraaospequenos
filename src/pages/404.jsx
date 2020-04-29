@@ -20,17 +20,17 @@ const NotFoundPage = ({ location }) => (
       <ul className="four-oh-four__list">
         <li>
           <Link to="/" className="four-oh-four__link">
-            Get Back Home.
+            Get Back Home
           </Link>
         </li>
         <li>
           <Link to="/shops" className="four-oh-four__link">
-            Check the Shops.
+            Check the Shops
           </Link>
         </li>
         <li>
           <Link to="/articles" className="four-oh-four__link">
-            Read some tips.
+            Read some tips
           </Link>
         </li>
       </ul>
