@@ -1,23 +1,19 @@
 import React from 'react';
-import clsx from 'clsx';
 
-import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 
-import ArticleCard from './Card';
-import './Articles.scss';
+import Section from 'Layouts/Section';
 
-const useStyles = makeStyles(() => ({
-  root: {
-    flexGrow: 1,
-  },
-}));
+import useStyles from 'Styles/components/articles/articles';
+
+import ArticleCard from './Card';
 
 const Articles = ({ articles }) => {
   const classes = useStyles();
 
   return (
-    <div className={ clsx(classes.root, 'articles-pages') }>
+    <Section extraClasses={ classes }>
+      <h1 className={ classes.listTitle }>Articles</h1>
       <Grid
         container
         direction="row"
@@ -25,14 +21,16 @@ const Articles = ({ articles }) => {
         alignItems="flex-start"
         className="articles-list__wrapper"
       >
-        { articles.map(({ node: article }, key) => (
-          // eslint-disable-next-line react/no-array-index-key
-          <Grid className="articles-card">
+        { articles.map(({ node: article }) => (
+          <Grid
+            className={ classes.card }
+            key={ `article-${article.frontmatter.title}` }
+          >
             <ArticleCard data={ article } />
           </Grid>
         )) }
       </Grid>
-    </div>
+    </Section>
   );
 };
 

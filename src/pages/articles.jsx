@@ -4,7 +4,6 @@ import { graphql } from 'gatsby';
 
 import SEO from 'Components/SEO';
 import PageWrapper from 'Layouts/PageWrapper';
-import Section from 'Layouts/Section';
 import Articles from 'Components/Articles/Articles';
 
 export default ({ data, location }) => {
@@ -13,10 +12,7 @@ export default ({ data, location }) => {
   return (
     <PageWrapper>
       <SEO title="Articles" location={ location } />
-      <Section className="articles-page">
-        <h1 className="articles-page__main-title">Articles</h1>
-        <Articles articles={ articles } />
-      </Section>
+      <Articles articles={ articles } />
     </PageWrapper>
   );
 };

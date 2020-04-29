@@ -1,5 +1,4 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
 
 import Card from '@material-ui/core/Card';
 import CardActions from '@material-ui/core/CardActions';
@@ -9,39 +8,39 @@ import Typography from '@material-ui/core/Typography';
 import Img from 'gatsby-image';
 import { Link } from 'gatsby';
 
-const useStyles = makeStyles({
-  root: {
-    flexGrow: 1,
-  },
-  media: {
-    height: 265,
-  },
-});
+import useStyles from 'Styles/components/articles/card';
 
 const ArticleCard = ({ data }) => {
   const classes = useStyles();
 
   return (
-    <Card className={ classes.root }>
-      <Img className={ classes.media } fluid={ data.frontmatter.image.childImageSharp.fluid } />
+    <Card
+      className={ classes.root }
+      elevation={ 0 }
+    >
+      <Img
+        className={ classes.media }
+        fluid={ data.frontmatter.image.childImageSharp.fluid }
+      />
+
       <CardContent>
-        <Typography className="article-card__tag" component="p">
-          { ' ' }
-          { data.frontmatter.tags }
+        <Typography className={ classes.tag } component="p">
+          { ` ${data.frontmatter.tags}` }
         </Typography>
-        <Typography className="article-card__title" component="h2">
+        <Typography className={ classes.title } component="h2">
           { data.frontmatter.title }
         </Typography>
-        <Typography className="article-card__date" component="p">
+        <Typography className={ classes.date } component="p">
           { data.frontmatter.formattedDate }
         </Typography>
 
-        <Typography className="article-card__excerpt" component="p">
+        <Typography className={ classes.excerpt } component="p">
           { data.excerpt }
         </Typography>
       </CardContent>
-      <CardActions className="article-card__link__wrapper">
-        <Link to={ data.fields.slug } className="article-card__link">
+
+      <CardActions className={ classes.actions }>
+        <Link to={ data.fields.slug } className={ classes.link }>
           Read More
         </Link>
       </CardActions>
