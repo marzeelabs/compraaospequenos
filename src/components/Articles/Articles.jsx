@@ -13,7 +13,7 @@ const Articles = ({ articles }) => {
 
   return (
     <Section extraClasses={ classes }>
-      <h1 className={ classes.listTitle }>Articles</h1>
+      <h1 className={ classes.listTitle }>Dicas e Ferramentas</h1>
       <Grid
         container
         direction="row"

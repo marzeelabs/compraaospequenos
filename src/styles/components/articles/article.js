@@ -9,13 +9,13 @@ const tagPseudoElment = theme => ({
   width: 60,
   height: 1,
   pointerEvents: 'none',
-  backgroundColor: theme.palette.text.main,
+  backgroundColor: theme.palette.text.primary,
 });
 
 export default makeStyles(theme => ({
   wrapper: {
     marginTop: 120,
-    padding: '0 20px',
+    padding: '0 20px 40px',
 
     '&::before': {
       content: '""',
@@ -111,7 +111,7 @@ export default makeStyles(theme => ({
 
   socialList: {
     textAlign: 'center',
-    margin: '0 auto 40px',
+    margin: '0 auto',
     padding: 0,
     listStyleType: 'none',
   },

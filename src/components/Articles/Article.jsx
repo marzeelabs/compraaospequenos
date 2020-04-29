@@ -9,6 +9,8 @@ import useStyles from 'Styles/components/articles/article';
 export default ({ article }) => {
   const classes = useStyles();
 
+  const hasSocial = !!(article.frontmatter.facebook || article.frontmatter.twitter || article.frontmatter.instagram);
+
   return (
     <div className={ classes.wrapper }>
       <h1 className={ classes.title }>{ article.frontmatter.title }</h1>
@@ -25,33 +27,46 @@ export default ({ article }) => {
           )) }
         </ul>
       </div>
-      <h3 className={ classes.socialTitle }>Partilhe</h3>
-      <ul className={ classes.socialList }>
-        <li className={ classes.socialItem }>
-          <SocialIcon
-            extraClasses={ { link: classes.socialLink } }
-            icon="faFacebookF"
-            link="#"
-            title="Share on Facebook"
-          />
-        </li>
-        <li className={ classes.socialItem }>
-          <SocialIcon
-            extraClasses={ { link: classes.socialLink } }
-            icon="faTwitter"
-            link="#"
-            title="Share on Twitter"
-          />
-        </li>
-        <li className={ classes.socialItem }>
-          <SocialIcon
-            extraClasses={ { link: classes.socialLink } }
-            icon="faInstagram"
-            link="#"
-            title="Share on Instagram"
-          />
-        </li>
-      </ul>
+
+      { hasSocial && (
+        <>
+          <h3 className={ classes.socialTitle }>Partilhe</h3>
+          <ul className={ classes.socialList }>
+            { !!article.frontmatter.facebook && (
+              <li className={ classes.socialItem }>
+                <SocialIcon
+                  extraClasses={ { link: classes.socialLink } }
+                  icon="faFacebookF"
+                  link={ article.frontmatter.facebook }
+                  title="Partilhar no Facebook"
+                />
+              </li>
+            ) }
+
+            { !!article.frontmatter.twitter && (
+              <li className={ classes.socialItem }>
+                <SocialIcon
+                  extraClasses={ { link: classes.socialLink } }
+                  icon="faTwitter"
+                  link={ article.frontmatter.twitter }
+                  title="Partilhar no Twitter"
+                />
+              </li>
+            ) }
+
+            { !!article.frontmatter.instragram && (
+              <li className={ classes.socialItem }>
+                <SocialIcon
+                  extraClasses={ { link: classes.socialLink } }
+                  icon="faInstagram"
+                  link={ article.frontmatter.instagram }
+                  title="Partilhar no Instagram"
+                />
+              </li>
+            ) }
+          </ul>
+        </>
+      ) }
     </div>
   );
 };

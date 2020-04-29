@@ -6,6 +6,7 @@ image: ../../img/img_0582.jpg
 tags:
   - Beach
   - Social Networks
+twitter: https://marzeelabs.org
 ---
 Em época de quarentena, os lojistas podem sofrer ainda mais com o chargeback por desacordo comercial. Para ajudar você a se proteger dessa situação, montamos este artigo com algumas dicas valiosas para vencer batalhas de chargeback. Vem ler!
 
