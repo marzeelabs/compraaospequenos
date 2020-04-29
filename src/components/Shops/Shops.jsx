@@ -16,22 +16,22 @@ import useStyles from 'Styles/components/shops/shops';
 
 import './Shops.scss';
 
-const FILTERS = require('Data/filters');
+const FIELDS = require('Data/fields');
 
-// itemsjs configuration, built directly from the FILTERS object through each
+// itemsjs configuration, built directly from the FIELDS.filters object through each
 // title and size properties, keyed to the field property.
 const CONFIGURATION = {
-  aggregations: Object.keys(FILTERS).reduce((acc, cur) => ({
+  aggregations: Object.keys(FIELDS.filters).reduce((acc, cur) => ({
     ...acc,
 
     [cur]: {
-      size: FILTERS[cur].size,
-      title: FILTERS[cur].label,
+      size: FIELDS.filters[cur].size,
+      title: FIELDS.filters[cur].label,
     },
   }), {}),
   searchableFields: [
     'nome',
-    'produtoOuServi_o',
+    'product',
   ],
 };
 
@@ -54,14 +54,14 @@ const Shops = () => {
         edges {
           node {
             id
-            nome
-            oferta
-            produtoOuServi_o
+            name
+            offer
+            product
             facebook
             instagram
             whatsApp
-            outroContacto__eMail_
-            outroContacto__telefone_
+            email
+            telephone
             site
             location
             businessType
@@ -167,7 +167,7 @@ const Shops = () => {
         <div className={ classes.content }>
 
           <div className={ classes.filters }>
-            { shops.data && Object.keys(FILTERS).map(filter => (
+            { shops.data && Object.keys(FIELDS.filters).map(filter => (
               <ShopsFilters
                 activeFilters={ filters[filter] }
                 aggregations={ shops.data.aggregations[filter] }

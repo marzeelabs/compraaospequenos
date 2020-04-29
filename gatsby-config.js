@@ -1,6 +1,6 @@
 require('dotenv').config();
 
-const FILTERS = require('./data/filters');
+const FIELDS = require('./data/fields');
 const URL = require('./data/url');
 
 const siteUrl = URL.getBaseUrl();
@@ -109,11 +109,11 @@ module.exports = {
       options: {
         // The `spreadsheetId` is required, it is found in the url of your document:
         // https://docs.google.com/spreadsheets/d/<spreadsheetId>/edit#gid=0
-        spreadsheetId: process.env.GOOGLE_DOC_SPREADSHEET_ID || '1VT6yvROk2V_Z438YdzBHkjeplqOeaTkAR4SfifBsMqg',
+        spreadsheetId: process.env.GOOGLE_DOC_SPREADSHEET_ID || '1i6mNf0uqnBUSiebSWB7YUKAdvokQZpGq-o7rFxbc7Gs',
 
         // If set, the `spreadsheetSheet`  is the only sheet to be considered for mapping.
         // This is an adaptation to how the original plugin works.
-        spreadsheetSheet: 'Negócios',
+        spreadsheetSheet: process.env.GOOGLE_DOC_SPREADSHEET_SHEET,
 
         // The `typePrefix` is optional, default value is "GoogleSpreadsheet"
         // It is used as part of the id's during the node creation, as well as in the generated
@@ -131,10 +131,6 @@ module.exports = {
         //   - https://github.com/googleapis/google-api-nodejs-client#service-to-service-authentication
         //   - https://developers.google.com/identity/protocols/OAuth2ServiceAccount
         //
-        // When you have generated your credentials, it's easiest to refer to them from an
-        // environment variable and parse it directly:
-        // credentials: JSON.parse(GOOGLE_SERVICE_ACCOUNT_CREDENTIALS),
-        // credentials: GOOGLE_SERVICE_ACCOUNT_CREDENTIALS,
         credentials: {
           client_email: process.env.GOOGLE_CLOUD_CLIENT_EMAIL,
           private_key: process.env.GOOGLE_CLOUD_PRIVATE_KEY.replace(/_/gm, '\n'),
@@ -153,17 +149,24 @@ module.exports = {
         // transformations directly during node sourcing, the default implementation is to return
         // the node as is:
         // Map based on the fields settings.
-        mapNode: node => Object.keys(FILTERS).reduce((acc, cur) => ({
-          // Keep existing fields unchanged.
-          ...acc,
+        mapNode: node => ({
+          // Add translated field names so we can refer to them in Gatsby
+          ...Object.keys(FIELDS.fields).reduce((acc, cur) => ({
+            ...acc,
+            [cur]: node[FIELDS.fields[cur].header],
+          }), {}),
 
-          // Map new fields for filters based on the data settings for them.
-          // Each filter will be an array of possible values.
-          // NOTE: if the desired filter column has the same name as the
-          // original field, the original will be overwritten; this should be
-          // fine for most cases though.
-          [cur]: node[FILTERS[cur].field].split(',').map(n => n.trim()),
-        }), node),
+          ...Object.keys(FIELDS.filters).reduce((acc, cur) => ({
+            // Keep existing fields unchanged.
+            ...acc,
+            // Map new fields for filters based on the data settings for them.
+            // Each filter will be an array of possible values.
+            // NOTE: if the desired filter column has the same name as the
+            // original field, the original will be overwritten; this should be
+            // fine for most cases though.
+            [cur]: node[FIELDS.filters[cur].header].split(',').map(n => n.trim()),
+          }), node),
+        }),
       },
     },
     {
