@@ -1,0 +1,37 @@
+{
+  "fields": {
+    "product": {
+      "header": "produtoOuServiço"
+    },
+    "name": {
+      "header": "nome"
+    },
+    "offer": {
+      "header": "oferta"
+    },
+    "telephone": {
+      "header": "outroContacto (telefone)"
+    },
+    "email": {
+      "header": "outroContacto (eMail)"
+    }
+  },
+  "filters": {
+    "location": {
+      "all": "Todo o País",
+      "label": "Localização",
+      "header": "localização (distrito)",
+      "size": 100
+    },
+    "businessType": {
+      "label": "Área de Negócio",
+      "header": "tipoDeNegócio",
+      "size": 100
+    },
+    "offerType": {
+      "label": "Tipo de Oferta",
+      "header": "tipoDeOferta",
+      "size": 100
+    }
+  }
+}
