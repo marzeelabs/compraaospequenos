@@ -186,7 +186,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-netlify-cms',
       options: {
-        modulePath: process.env.NETLIFY_CMS_LOCAL_GIT === 'true' ? `${__dirname}/src/cms/cms-with-local-git.js` : `${__dirname}/src/cms/cms.js`,
+        modulePath: process.env.NODE_ENV === 'development' ? `${__dirname}/src/cms/cms-with-local-git.js` : `${__dirname}/src/cms/cms.js`,
         manualInit: true,
       },
     },
