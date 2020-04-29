@@ -5,6 +5,7 @@ date: 2020-04-06T23:00:00.000Z
 image: ../../img/fruit.jpg
 tags:
   - Social networks
+  - test
 facebook: https://marzeelabs.org
 twitter: https://marzeelabs.org
 instagram: https://marzeelabs.org
