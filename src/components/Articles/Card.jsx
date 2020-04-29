@@ -18,23 +18,43 @@ const ArticleCard = ({ data }) => {
       className={ classes.root }
       elevation={ 0 }
     >
-      <Img
-        className={ classes.media }
-        fluid={ data.frontmatter.image.childImageSharp.fluid }
-      />
+      <Link to={ data.fields.slug }>
+        <Img
+          className={ classes.media }
+          fluid={ data.frontmatter.image.childImageSharp.fluid }
+        />
+      </Link>
 
       <CardContent>
-        <Typography className={ classes.tag } component="p">
-          { ` ${data.frontmatter.tags}` }
+        <Typography
+          className={ classes.tag }
+          component={ Link }
+          to={ data.fields.slug }
+        >
+          { data.frontmatter.tags.join(', ') }
         </Typography>
-        <Typography className={ classes.title } component="h2">
+
+        <Typography
+          className={ classes.title }
+          component={ Link }
+          to={ data.fields.slug }
+        >
           { data.frontmatter.title }
         </Typography>
-        <Typography className={ classes.date } component="p">
+
+        <Typography
+          className={ classes.date }
+          component={ Link }
+          to={ data.fields.slug }
+        >
           { data.frontmatter.formattedDate }
         </Typography>
 
-        <Typography className={ classes.excerpt } component="p">
+        <Typography
+          className={ classes.excerpt }
+          component={ Link }
+          to={ data.fields.slug }
+        >
           { data.excerpt }
         </Typography>
       </CardContent>

@@ -10,36 +10,48 @@ export default makeStyles(theme => ({
   },
 
   tag: {
+    display: 'block',
     marginBottom: 4,
     color: theme.palette.primary.main,
     fontSize: 14,
     fontWeight: 600,
     letterSpacing: 2,
     lineHeight: '19px',
+    textDecoration: 'none',
   },
 
   title: {
+    display: 'block',
     color: theme.palette.primary.main,
     fontSize: 24,
     fontWeight: 700,
     letterSpacing: 2,
     lineHeight: '33px',
+    textDecoration: 'none',
+
+    '&:hover': {
+      textDecoration: 'underline',
+    },
   },
 
   date: {
+    display: 'block',
     color: theme.palette.text.primary,
     fontWeight: 700,
     fontSize: 14,
     letterSpacing: 2,
     lineHeight: '19px',
+    textDecoration: 'none',
   },
 
   excerpt: {
+    display: 'block',
     margin: '8px 0',
     color: theme.palette.text.primary,
     fontSize: 16,
     letterSpacing: 2,
     lineHeight: '28px',
+    textDecoration: 'none',
   },
 
   actions: {
