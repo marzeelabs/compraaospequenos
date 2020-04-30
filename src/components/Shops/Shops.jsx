@@ -94,7 +94,7 @@ const Shops = () => {
   if (isLoading) {
     return (
       <Section>
-        <div>Initializing...</div>
+        <div className={ classes.initializing }>Initializing...</div>
       </Section>
     );
   }
@@ -151,9 +151,8 @@ const Shops = () => {
 
   return (
     <>
-      <Section>
+      <Section extraClasses={ classes }>
         <div className={ classes.content }>
-
           <div className={ classes.filters }>
             { shops.data && Object.keys(FIELDS.filters).map(filter => (
               <ShopsFilters
@@ -182,6 +181,7 @@ const Shops = () => {
       <Section>
         <Pagination
           classes={ { ul: classes.ul } }
+          color="primary"
           count={ Math.ceil(total / MAX_ITEMS_PER_PAGE) }
           page={ page }
           onChange={ handlePageChange }

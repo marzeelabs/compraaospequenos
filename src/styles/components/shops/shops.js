@@ -1,6 +1,10 @@
 import { makeStyles } from '@material-ui/core/styles';
 
 export default makeStyles(theme => ({
+  container: {
+    maxWidth: 1680,
+  },
+
   content: {
     display: 'flex',
     paddingTop: theme.spacing(5),
@@ -28,6 +32,7 @@ export default makeStyles(theme => ({
 
   ul: {
     justifyContent: 'center',
+    margin: '40px auto',
   },
 
   allShops: {
@@ -38,5 +43,12 @@ export default makeStyles(theme => ({
     fontSize: '16px',
     lineHeight: '24px',
     letterSpacing: '2px',
+  },
+
+  initializing: {
+    width: '100%',
+    padding: theme.spacing(4),
+    color: theme.palette.primary.main,
+    textAlign: 'center',
   },
 }));
