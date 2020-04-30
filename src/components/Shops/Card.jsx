@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import clsx from 'clsx';
 
 import Card from '@material-ui/core/Card';
@@ -7,7 +7,6 @@ import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import Collapse from '@material-ui/core/Collapse';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
 
 import ShopsEmail from 'Components/Shops/Email';
@@ -21,6 +20,7 @@ import useStyles from 'Styles/components/shops/card';
 const ShopsCard = ({ shop }) => {
   const classes = useStyles();
 
+  const cardRef = useRef(null);
   const collapsedRef = useRef(null);
   const [ expanded, setExpanded ] = useState(false);
 
@@ -33,11 +33,31 @@ const ShopsCard = ({ shop }) => {
     setExpanded(!expanded);
   };
 
+  useEffect(() => {
+    const handleWindowClick = event => {
+      if (
+        expanded
+        && cardRef.current
+        && !cardRef.current.contains(event.target)
+        && cardRef.current.parentNode.contains(event.target)
+      ) {
+        setExpanded(false);
+      }
+    };
+
+    window.addEventListener('click', handleWindowClick);
+
+    return () => {
+      window.removeEventListener('click', handleWindowClick);
+    };
+  }, [ expanded ]);
+
   return (
     <Card
       className={ clsx(classes.card, {
         [classes.cardActive]: expanded,
       }) }
+      ref={ cardRef }
     >
       <CardActionArea
         classes={ {
@@ -62,7 +82,12 @@ const ShopsCard = ({ shop }) => {
           </Typography>
         </CardContent>
 
-        <CardActions disableSpacing>
+        <CardActions
+          classes={ {
+            root: classes.cardActions,
+          } }
+          disableSpacing
+        >
           <ExpandMoreIcon
             className={ clsx(classes.expand, {
               [classes.expandOpen]: expanded,

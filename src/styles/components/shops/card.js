@@ -102,6 +102,10 @@ export default makeStyles(theme => ({
     letterSpacing: '2px',
   },
 
+  cardActions: {
+    flex: '1 1 auto',
+  },
+
   expand: {
     transform: 'rotate(0deg)',
     zIndex: 5,
