@@ -49,6 +49,10 @@ export default makeStyles(theme => ({
     },
   },
 
+  menosLinkLogo: {
+    marginBottom: theme.spacing(2.5),
+  },
+
   link: {
     backgroundColor: theme.palette.secondary.contrastText,
     minHeight: '20px',
