@@ -1,3 +1,7 @@
+// We have this file because we cannot style tiny-slider using JSS.
+
+$brand-blue: #2f5bea;
+
 .tns-outer {
   display: flex;
   position: relative;
@@ -54,11 +58,16 @@
     height: 40px;
     border: 0;
     border-radius: 40px;
-    background-color: #2f5bea;
-    color: #fff;
+    background: rgba($brand-blue, .1);
+    color: transparent;
+    transition: background-color ease .25s;
 
     @media screen and (max-width: 767px) {
       margin: 20px 10px;
+    }
+
+    &:hover {
+      background: rgba($brand-blue, 1);
     }
 
     &:focus {
@@ -74,22 +83,39 @@
       border-style: solid;
       border-radius: 3px;
       transform: rotate(45deg);
+      transition: border-color ease .25s;
       pointer-events: none;
     }
 
     &:disabled {
-      opacity: .2;
+      opacity: 0;
     }
   }
 
-  button[data-controls='prev']::after {
-    margin-right: -6px;
-    border-color: #2f5bea #2f5bea #fff #fff;
+  button[data-controls='prev'] {
+    &:hover {
+      &::after {
+        border-color: transparent transparent #fff #fff;
+      }
+    }
+
+    &::after {
+      margin-right: -6px;
+      border-color: transparent transparent $brand-blue $brand-blue;
+    }
   }
 
-  button[data-controls='next']::after {
-    margin-left: -6px;
-    border-color: #fff #fff #2f5bea #2f5bea;
+  button[data-controls='next'] {
+    &:hover {
+      &::after {
+        border-color: #fff #fff transparent transparent;
+      }
+    }
+
+    &::after {
+      margin-left: -6px;
+      border-color: $brand-blue $brand-blue transparent transparent;
+    }
   }
 }
 
@@ -110,9 +136,9 @@
     width: 20px;
     height: 20px;
     margin: 10px 5px;
-    border: 2px solid #999;
     border-radius: 20px;
-    background-color: #fff;
+    opacity: .2;
+    background-color: $brand-blue;
 
     &:active,
     &:focus {
@@ -120,8 +146,7 @@
     }
 
     &.tns-nav-active {
-      border: 2px solid #2f5bea;
-      background-color: #2f5bea;
+      opacity: 1;
     }
   }
 }
