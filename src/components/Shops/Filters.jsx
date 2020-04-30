@@ -23,7 +23,7 @@ import { useTheme } from '@material-ui/core/styles';
 
 import useStyles from 'Styles/components/shops/filters';
 
-const FILTERS = require('Data/filters');
+const FIELDS = require('Data/fields');
 
 const sortBuckets = (original, filter) => {
   // Array sorting is done in-place, we don't want to alter the original in this case.
@@ -45,8 +45,8 @@ const sortBuckets = (original, filter) => {
   });
 
   // 'all' item is always first.
-  if (FILTERS[filter].all) {
-    const allItemIdx = buckets.findIndex(item => item.key === FILTERS[filter].all);
+  if (FIELDS.filters[filter].all) {
+    const allItemIdx = buckets.findIndex(item => item.key === FIELDS.filters[filter].all);
     if (allItemIdx !== -1) {
       const removed = buckets.splice(allItemIdx, 1);
       buckets.unshift(removed[0]);
@@ -82,8 +82,8 @@ const ShopsFilters = ({
   }, [ expanded, mb, setExpanded ]);
 
   const summary = mb && !expanded && activeFilters && activeFilters.length
-    ? `${FILTERS[filter].label} - ${activeFilters.join(', ')}`
-    : FILTERS[filter].label;
+    ? `${FIELDS.filters[filter].label} - ${activeFilters.join(', ')}`
+    : FIELDS.filters[filter].label;
 
   return (
     <ExpansionPanel

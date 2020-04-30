@@ -1,0 +1,20 @@
+{
+  "filters": {
+    "location": {
+      "all": "Everywhere",
+      "label": "Location",
+      "header": "location",
+      "size": 100
+    },
+    "businessType": {
+      "label": "Type",
+      "header": "businessType",
+      "size": 100
+    },
+    "offerType": {
+      "label": "Offer",
+      "header": "offerType",
+      "size": 100
+    }
+  }
+}
