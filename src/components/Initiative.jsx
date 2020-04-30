@@ -29,7 +29,9 @@ const Initiative = () => {
         rel="noopener noreferrer"
         title="MenosHub"
       >
-        <MenosLogo />
+        <span className={ classes.menosLinkLogo }>
+          <MenosLogo />
+        </span>
         menoshub.com
       </a>
 
