@@ -6,12 +6,14 @@ export default makeStyles(theme => ({
     width: '100%',
     margin: 15,
     boxShadow: '0 10px 35px rgba(0, 0, 0, 0.1)',
-    borderRadius: '10px',
     textAlign: 'center',
+    position: 'relative',
+    overflow: 'visible',
+    transitionProperty: 'box-shadow, transform',
 
     [theme.breakpoints.up('md')]: {
       width: 'calc(50% - 30px)',
-      maxWidth: 'calc(33% - 30px)',
+      maxWidth: 'calc(50% - 30px)',
     },
 
     [theme.breakpoints.up('lg')]: {
@@ -20,11 +22,31 @@ export default makeStyles(theme => ({
     },
   },
 
+  cardActive: {
+    zIndex: 10,
+    transform: 'scale(1.1)',
+
+    [theme.breakpoints.up('md')]: {
+      transform: 'scale(1.2)',
+    },
+
+    '& .MuiCollapse-wrapper': {
+      opacity: 1,
+    },
+  },
+
   actionArea: {
     display: 'flex',
+    position: 'relative',
     flexDirection: 'column',
     justifyContent: 'flex-start',
     height: '100%',
+    borderRadius: '10px',
+  },
+
+  actionAreaActive: {
+    backgroundColor: theme.palette.background,
+    borderRadius: '10px 10px 0 0',
   },
 
   focusHighlight: {
@@ -82,13 +104,33 @@ export default makeStyles(theme => ({
 
   expand: {
     transform: 'rotate(0deg)',
+    zIndex: 5,
     margin: '0 auto',
     padding: 0,
     transition: theme.transitions.create('transform', {
       duration: theme.transitions.duration.shortest,
     }),
   },
+
   expandOpen: {
     transform: 'rotate(180deg)',
+  },
+
+  collapse: {
+    position: 'absolute',
+    top: '100%',
+    width: '100%',
+    backgroundColor: theme.palette.background,
+    borderRadius: '0 0 10px 10px',
+    boxShadow: '0 10px 35px rgba(0, 0, 0, 0.1)',
+  },
+
+  collapseWrapper: {
+    backgroundColor: 'transparent',
+    opacity: 0,
+
+    transition: theme.transitions.create('background-color, opacity', {
+      duration: theme.transitions.duration.shortest,
+    }),
   },
 }));
