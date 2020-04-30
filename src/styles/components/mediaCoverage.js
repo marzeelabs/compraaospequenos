@@ -15,6 +15,8 @@ export default makeStyles(theme => ({
     maxWidth: 1280,
     marginTop: theme.spacing(12),
     marginBottom: theme.spacing(12),
+    paddingRight: theme.spacing(6),
+    paddingLeft: theme.spacing(6),
   },
 
   title: {
