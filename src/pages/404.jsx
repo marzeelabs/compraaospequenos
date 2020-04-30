@@ -1,18 +1,13 @@
 import React from 'react';
 
-import { Link } from 'gatsby';
-
+import Component404 from 'Components/404';
 import PageWrapper from 'Layouts/PageWrapper';
 import SEO from '../components/SEO';
 
 const NotFoundPage = ({ location }) => (
   <PageWrapper>
     <SEO title="404: Not found" location={ location } />
-    <h1>NOT FOUND</h1>
-    <p>You just hit a route that doesn&#39;t exist....</p>
-    <Link to="/">
-      Press here to go back to the homepage.
-    </Link>
+    <Component404 />
   </PageWrapper>
 );
 
