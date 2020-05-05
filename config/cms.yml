@@ -19,6 +19,9 @@ collections:
     slug: "{{title}}"
     editor:
       preview: false
+    filter:
+      field: "templateKey"
+      value: "article"
     fields:
       - name: "templateKey"
         label: "Template Key"

@@ -21,7 +21,7 @@ const Articles = ({ articles }) => {
         alignItems="flex-start"
         className="articles-list__wrapper"
       >
-        { articles.map(({ node: article }) => (
+        { articles.filter(article => article.templateKey !== 'gatsbysource').map(({ node: article }) => (
           <Grid
             className={ classes.card }
             key={ `article-${article.frontmatter.title}` }

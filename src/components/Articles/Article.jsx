@@ -54,7 +54,7 @@ export default ({ article }) => {
               </li>
             ) }
 
-            { !!article.frontmatter.instragram && (
+            { !!article.frontmatter.instagram && (
               <li className={ classes.socialItem }>
                 <SocialIcon
                   extraClasses={ { link: classes.socialLink } }
