@@ -9,13 +9,10 @@ tags:
   - Marketing Digital
   - Presença online
   - Gestão Financeira
-facebook: https://www.facebook.com/menoshub/
-twitter: ""
-instagram: https://www.instagram.com/compra.aos.pequenos/
 ---
 #### Porquê um Kit de Sobrevivência?
 
-A crise de saúde pública e o isolamento obrigatório trouxeram a quase todos os pequenos negócios enormes quebras de facturação. 
+A crise de saúde pública e o isolamento obrigatório trouxeram a quase todos os pequenos negócios enormes quebras de facturação.
 
 Vivemos tempos de **verdadeiro desafio**, de **necessidade de reinventarmos** o nosso negócio e pensar em operar de formas diferentes – **ou fechar as portas**.
 
@@ -34,8 +31,8 @@ Juntámo-nos às [Mulheres à obra](https://www.mulheresaobra.pt/) e ao [Cacoal 
 
 É fulcral repensar a forma de vender e os custos e trabalhámos para trazer as melhores ferramentas e dicas para te ajudar nesta reinvenção.
 
-Terminamos o [kit de sobrevivência](https://compraaospequenos.us18.list-manage.com/subscribe?u=c09315890493cc21b6f331401&id=aa51cdf03b) com um apanhado das [medidas de apoio do governo](https://covid19estamoson.gov.pt/medidas-de-apoio-emprego-empresas/) (actualizadas à data de lançamento do kit) e ainda mapeando outras iniciativas de apoio que consideramos de elevado interesse. 
+Terminamos o [kit de sobrevivência](https://compraaospequenos.us18.list-manage.com/subscribe?u=c09315890493cc21b6f331401&id=aa51cdf03b) com um apanhado das [medidas de apoio do governo](https://covid19estamoson.gov.pt/medidas-de-apoio-emprego-empresas/) (actualizadas à data de lançamento do kit) e ainda mapeando outras iniciativas de apoio que consideramos de elevado interesse.
 
-Estamos a trabalhar intensivamente para garantir que os negócios têm todas as condições para se adaptarem e prosperarem, mesmo nesta crise. 
+Estamos a trabalhar intensivamente para garantir que os negócios têm todas as condições para se adaptarem e prosperarem, mesmo nesta crise.
 
 Se tiveres dicas especificas, partilha connosco e acompanha as iniciativas de apoio que estamos a lançar para os negócios registados no #compraaospequenos como o [programa de mentoria](https://www.facebook.com/menoshub/photos/a.200129014116524/689825721813515/?type=3&theater) ou o [cabaz de apoio aos pequenos negócios](https://menos.typeform.com/to/LLSBaa).

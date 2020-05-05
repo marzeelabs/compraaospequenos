@@ -6,10 +6,17 @@ import SocialIcon from 'Components/SocialIcon';
 
 import useStyles from 'Styles/components/articles/article';
 
-export default ({ article }) => {
+export default ({ article, location }) => {
   const classes = useStyles();
 
-  const hasSocial = !!(article.frontmatter.facebook || article.frontmatter.twitter || article.frontmatter.instagram);
+  const title = encodeURIComponent(article.frontmatter.title);
+  const url = encodeURIComponent(location.href);
+
+  const urls = {
+    facebook: `https://www.facebook.com/sharer/sharer.php?t=${title}&u=${url}`,
+    linkedin: `https://www.linkedin.com/shareArticle?mini=true&title=${title}&url=${url}`,
+    twitter: `https://twitter.com/intent/tweet?text=${title}%20${url}`,
+  };
 
   return (
     <div className={ classes.wrapper }>
@@ -28,45 +35,35 @@ export default ({ article }) => {
         </ul>
       </div>
 
-      { hasSocial && (
-        <>
-          <h3 className={ classes.socialTitle }>Partilhe</h3>
-          <ul className={ classes.socialList }>
-            { !!article.frontmatter.facebook && (
-              <li className={ classes.socialItem }>
-                <SocialIcon
-                  extraClasses={ { link: classes.socialLink } }
-                  icon="faFacebookF"
-                  link={ article.frontmatter.facebook }
-                  title="Partilhar no Facebook"
-                />
-              </li>
-            ) }
+      <h3 className={ classes.socialTitle }>Partilhe</h3>
+      <ul className={ classes.socialList }>
+        <li className={ classes.socialItem }>
+          <SocialIcon
+            extraClasses={ { link: classes.socialLink } }
+            icon="faFacebookF"
+            link={ urls.facebook }
+            title="Partilhar no Facebook"
+          />
+        </li>
 
-            { !!article.frontmatter.twitter && (
-              <li className={ classes.socialItem }>
-                <SocialIcon
-                  extraClasses={ { link: classes.socialLink } }
-                  icon="faTwitter"
-                  link={ article.frontmatter.twitter }
-                  title="Partilhar no Twitter"
-                />
-              </li>
-            ) }
+        <li className={ classes.socialItem }>
+          <SocialIcon
+            extraClasses={ { link: classes.socialLink } }
+            icon="faLinkedinIn"
+            link={ urls.linkedin }
+            title="Partilhar no LinkedIn"
+          />
+        </li>
 
-            { !!article.frontmatter.instagram && (
-              <li className={ classes.socialItem }>
-                <SocialIcon
-                  extraClasses={ { link: classes.socialLink } }
-                  icon="faInstagram"
-                  link={ article.frontmatter.instagram }
-                  title="Partilhar no Instagram"
-                />
-              </li>
-            ) }
-          </ul>
-        </>
-      ) }
+        <li className={ classes.socialItem }>
+          <SocialIcon
+            extraClasses={ { link: classes.socialLink } }
+            icon="faTwitter"
+            link={ urls.twitter }
+            title="Partilhar no Twitter"
+          />
+        </li>
+      </ul>
     </div>
   );
 };

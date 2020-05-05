@@ -6,8 +6,6 @@ image: ../../img/comerciantes.pt.png
 tags:
   - Ferramentas
   - Iniciativas de Apoio
-facebook: https://www.facebook.com/menoshub/
-instagram: https://www.instagram.com/compra.aos.pequenos/
 ---
 Na nossa missão de trazermos as ferramentas necessárias para a adaptação e reinvenção dos pequenos negócios, iniciámos uma colaboração com a plataforma comerciantes.pt para te ajudar a vender online e teres uma presença digital mais sólida.
 
@@ -29,7 +27,7 @@ A nossa plataforma distingue-se por estar dedicada a comerciantes locais que, à
 
 Além de oferecer uma montra digital em [comerciantes.pt](https://comerciantes.pt/), com carrinho de compras e pagamentos multibanco e MB Way, fazemos toda a consultoria e suporte ao comerciante para a implementação da loja e do seu catálogo.
 
-Começamos pelo comércio lisboeta, por ser a zona de residência da maioria da nossa equipa, mas não queremos ficar por aqui! Assim que atingirmos um mercado diversificado e robusto na capital, planeamos acolher outras localidades por todo o país, permitindo a todos os portugueses a comodidade do comércio online, com a qualidade dos produtos locais que bem conhecem. 
+Começamos pelo comércio lisboeta, por ser a zona de residência da maioria da nossa equipa, mas não queremos ficar por aqui! Assim que atingirmos um mercado diversificado e robusto na capital, planeamos acolher outras localidades por todo o país, permitindo a todos os portugueses a comodidade do comércio online, com a qualidade dos produtos locais que bem conhecem.
 
 
 

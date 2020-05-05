@@ -13,6 +13,7 @@ import { useStaticQuery, graphql } from 'gatsby';
 const SEO = ({
   children,
   description,
+  image,
   lang,
   location,
   title,
@@ -43,7 +44,7 @@ const SEO = ({
   const metaDescription = description || site.siteMetadata.description;
 
   const canonical = `${site.siteMetadata.siteUrl}${location.pathname}`;
-  const metaImage = `${site.siteMetadata.siteUrl}${metaImageDefault.childImageSharp.fixed.src}`;
+  const metaImage = `${site.siteMetadata.siteUrl}${image || metaImageDefault.childImageSharp.fixed.src}`;
 
   return (
     <Helmet titleTemplate={ `%s | ${site.siteMetadata.title}` }>
@@ -69,12 +70,14 @@ const SEO = ({
 SEO.propTypes = {
   children: node,
   description: string,
+  image: string,
   lang: string,
   title: string.isRequired,
 };
 
 SEO.defaultProps = {
   children: null,
+  image: '',
   lang: 'pt',
   description: '',
 };

@@ -5,14 +5,12 @@ date: 2020-05-05T10:40:30.150Z
 image: ../../img/plataforma.png
 tags:
   - Iniciativas de Apoio
-facebook: https://www.facebook.com/menoshub/
-instagram: https://www.instagram.com/compra.aos.pequenos/
 ---
 ### Neste artigo, com atualização regular, listamos todas as iniciativas de apoio a pequenos negócios.
 
 *(*última actualização: 05 de Maio*)*
 
-Em altura de resposta ao Covid-19, as iniciativas para dar resposta aos muitos desafios que enfrentamos multiplicam-se. 
+Em altura de resposta ao Covid-19, as iniciativas para dar resposta aos muitos desafios que enfrentamos multiplicam-se.
 
 A crise que hoje vivemos tem consequências muito graves, principalmente, para micro e pequenos negócios que, de um dia para o outro, viram as suas condições de trabalho alterar drasticamente.
 
@@ -33,7 +31,7 @@ Para apoiar estes negócios que agora lutam pela sobrevivência, no menos hub j�
 
 #### Diretórios:
 
-* [\#compraaospequenos](https://compraaospequenos.pt/) – o diretório que iniciámos em um dia e que agora estamos a transformar em plataforma web, procura partilhar todos os negócios, de Norte a Sul do país, que estão a operar em tempos de crise. Partilhamos todos os sectores e formas de dar resposta. 
+* [\#compraaospequenos](https://compraaospequenos.pt/) – o diretório que iniciámos em um dia e que agora estamos a transformar em plataforma web, procura partilhar todos os negócios, de Norte a Sul do país, que estão a operar em tempos de crise. Partilhamos todos os sectores e formas de dar resposta.
 * [Hora de Encomendar](https://horadeencomendar.com/) – lista de pequenos e médios fornecedores que estão ativamente a entregar encomendas para dar resposta aos atrasos nas entregas de supermercados.
 * [Go Small or Stay Home](https://gosmallstayhome.com/index.html), [Negócios Locais](https://negocioslocais.pt/) e [Na Minha Comunidade](https://naminhacomunidade.pt/) – listas de pequenos negócios locais para compra de alimentos frescos e mantimentos.
 * [Estamos Abertos](https://www.lisboa.pt/covid-19/a-cidade/comercio-e-servicos?fbclid=IwAR30TdfZRlHNpKCQ3xyjFchBQAc5CWarFDIuDX6F1Ul3_SHy1CP-zNbJHaA) – iniciativa da Câmara Municipal de Lisboa com toda a oferta disponível
@@ -41,6 +39,6 @@ Para apoiar estes negócios que agora lutam pela sobrevivência, no menos hub j�
 
 Iniciativas cuja data limite já passou:
 
-* Uber Eats [remove taxas de entrega até dia 3 de Abril](https://eco.sapo.pt/2020/03/19/uber-eats-remove-taxas-de-entrega-ate-3-de-abril/). 
+* Uber Eats [remove taxas de entrega até dia 3 de Abril](https://eco.sapo.pt/2020/03/19/uber-eats-remove-taxas-de-entrega-ate-3-de-abril/).
 * [MyGon](https://www.mygon.com/en) (plataforma de reservas e promoções online) cria [campanha de apoio a comerciantes](https://blog.mygon.com/2020/03/covid-19-ajuda-nos-a-ajudar-e-ganha-ainda-5e-por-cada-15e-em-compras.html) em que não cobra comissões e adianta lhe metade do valor do voucher.
 * [Dott](https://dott.pt/pt/) (o maior shopping online de Portugal) [e Câmara Municipal do Porto lançam parceria](http://www.porto.pt/noticias/comercio-de-rua-do-porto-pode-vender-em-plataforma-online-sem-pagar-comissoes?fbclid=IwAR1-fLein9MoP9yrovbOYlCNaBEcDY75fPItO5HCx4Sh26vaTL3y9ItB6es) em que comerciantes do Porto estão isentos de comissões de venda dos seus produtos até 30 de Abril.

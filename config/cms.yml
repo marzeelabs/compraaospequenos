@@ -19,9 +19,6 @@ collections:
     slug: "{{title}}"
     editor:
       preview: false
-    filter:
-      field: "templateKey"
-      value: "article"
     fields:
       - name: "templateKey"
         label: "Template Key"
@@ -43,16 +40,4 @@ collections:
       - name: body
         label: Body
         widget: "markdown"
-        required: false
-      - name: facebook
-        label: Facebook Link
-        widget: "string"
-        required: false
-      - name: twitter
-        label: Twitter Link
-        widget: "string"
-        required: false
-      - name: instagram
-        label: Instagram Link
-        widget: "string"
         required: false
