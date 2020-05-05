@@ -69,6 +69,14 @@ export default makeStyles(theme => ({
     fontWeight: 'bold',
   },
 
+  product: {
+    margintop: theme.spacing(1.5),
+    marginBottom: theme.spacing(1.5),
+    fontSize: '14px',
+    lineHeight: '24px',
+    letterSpacing: '2px',
+  },
+
   offerType: {
     marginBottom: theme.spacing(1),
     fontSize: '16px',

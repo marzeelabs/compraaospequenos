@@ -33,7 +33,7 @@ const CONFIGURATION = {
   ],
 };
 
-const MAX_ITEMS_PER_PAGE = 27;
+const MAX_ITEMS_PER_PAGE = 21;
 
 const Shops = () => {
   const classes = useStyles();

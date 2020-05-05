@@ -80,6 +80,9 @@ const ShopsCard = ({ shop }) => {
           <Typography variant="body2" color="textSecondary" component="p" className={ classes.businessType }>
             { shop.businessType.join(', ') }
           </Typography>
+          <Typography variant="body2" color="textSecondary" component="p" className={ classes.product }>
+            { shop.product }
+          </Typography>
         </CardContent>
 
         <CardActions
