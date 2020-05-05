@@ -19,13 +19,12 @@ Para ajudar nesta adaptação crítica, e a pensar nos pequenos negócios que es
 
 Juntámo-nos às [Mulheres à obra](https://www.mulheresaobra.pt/) e ao [Cacoal Studio](https://www.instagram.com/cacoalstudio/) de forma a combinarmos conhecimento, experiência, uma vasta rede de empreendedores e a capacidade de expor os conteúdos e ferramentas de forma intuitiva para criar um manual imprescindível. 
 
-Com o apoio de especialistas, focámo-nos em 4 áreas que consideramos críticas para o teu sucesso, em particular nesta altura:         
+Com o apoio de especialistas, focámo-nos em 4 áreas que consideramos críticas para o teu sucesso, em particular nesta altura:       
 
-\    •	vendas, 
-       •	marketing digital, 
-       •	presença online, 
-       •	gestão financeira.
-
+* vendas;
+* marketing digital;
+* presença online;
+* gestão financeira.  
 
 É fulcral repensar a forma de vender e os custos e trabalhámos para trazer as melhores ferramentas e dicas para te ajudar nesta reinvenção.
 
