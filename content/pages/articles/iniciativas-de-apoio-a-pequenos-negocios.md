@@ -4,7 +4,7 @@ title: Iniciativas de Apoio a Pequenos Negócios
 date: 2020-05-05T10:40:30.150Z
 image: ../../img/plataforma.png
 tags:
-  - Iniciativas
+  - Iniciativas de Apoio
 facebook: https://www.facebook.com/menoshub/
 instagram: https://www.instagram.com/compra.aos.pequenos/
 ---
