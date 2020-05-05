@@ -1,6 +1,6 @@
 ---
 templateKey: article
-title: "Montra Digital Comerciantes.pt "
+title: "Constrói uma Montra Digital com a Plataforma Comerciantes.pt "
 date: 2020-05-05T09:28:49.659Z
 image: ../../img/comerciantes.pt.png
 tags:
