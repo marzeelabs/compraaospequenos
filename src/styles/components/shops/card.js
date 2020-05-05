@@ -100,6 +100,15 @@ export default makeStyles(theme => ({
     lineHeight: '22px',
     letterSpacing: '2px',
     color: theme.palette.text.primary,
+
+    '&::after': {
+      content: '""',
+      display: 'block',
+      margin: '20px auto 10px',
+      width: 42,
+      height: 2,
+      backgroundColor: theme.palette.primary.main,
+    },
   },
 
   offer: {
