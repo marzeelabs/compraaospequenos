@@ -74,6 +74,15 @@ export default makeStyles(theme => ({
     '& li': {
       marginBottom: 30,
     },
+
+    '& a': {
+      color: theme.palette.primary.main,
+      textDecoration: 'none',
+
+      '&:hover': {
+        textDecoration: 'underline',
+      },
+    },
   },
 
   tags: {
