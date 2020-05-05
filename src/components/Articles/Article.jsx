@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Img from 'gatsby-image';
+import { useStaticQuery, graphql } from 'gatsby';
 
 import SocialIcon from 'Components/SocialIcon';
 
@@ -9,8 +10,20 @@ import useStyles from 'Styles/components/articles/article';
 export default ({ article, location }) => {
   const classes = useStyles();
 
+  const { site } = useStaticQuery(
+    graphql`
+      query {
+        site {
+          siteMetadata {
+            siteUrl
+          }
+        }
+      }
+    `,
+  );
+
   const title = encodeURIComponent(article.frontmatter.title);
-  const url = encodeURIComponent(location.href);
+  const url = encodeURIComponent(`${site.siteMetadata.siteUrl}${location.pathname}`);
 
   const urls = {
     facebook: `https://www.facebook.com/sharer/sharer.php?t=${title}&u=${url}`,
