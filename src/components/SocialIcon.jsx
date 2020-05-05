@@ -1,4 +1,5 @@
 import React from 'react';
+import { shape, string } from 'prop-types';
 import clsx from 'clsx';
 
 import Fab from '@material-ui/core/Fab';
@@ -30,6 +31,17 @@ const SocialIcon = ({
       />
     </Fab>
   );
+};
+
+SocialIcon.propTypes = {
+  extraClasses: shape({}),
+  icon: string.isRequired,
+  link: string.isRequired,
+  title: string.isRequired,
+};
+
+SocialIcon.defaultProps = {
+  extraClasses: {},
 };
 
 export default SocialIcon;

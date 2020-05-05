@@ -99,7 +99,7 @@ const MediaCoverage = () => {
   }, [ container ]);
 
   return (
-    <Section extraClasses={ classes }>
+    <Section extraClasses={ classes } className="media-coverage-slider__wrapper">
       <Typography variant="h4" marked="center" className={ classes.title }>
         Onde falam de nós
       </Typography>

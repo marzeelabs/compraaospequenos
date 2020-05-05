@@ -73,3 +73,6 @@ compraaospequenos.code-workspace
 marzeelabs-*.json
 # Local Netlify folder
 .netlify
+
+# Generated files
+static/admin/config.yml

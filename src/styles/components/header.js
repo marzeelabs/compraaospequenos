@@ -11,9 +11,9 @@ export default makeStyles(theme => ({
 
     // We're hiding the whole header for now on mobile, which looks redundant with teh hero block.
     // We can implement in the future a proper mobile menu.
-    [theme.breakpoints.down('sm')]: {
-      display: 'none',
-    },
+    // [theme.breakpoints.down('sm')]: {
+    //   display: 'none',
+    // },
   },
 
   container: {
@@ -22,10 +22,16 @@ export default makeStyles(theme => ({
     minHeight: 60,
     display: 'flex',
     alignItems: 'center',
+    justifyContent: 'space-between',
+
+    [theme.breakpoints.down('sm')]: {
+      justifyContent: 'center',
+      padding: 0,
+    },
   },
 
   title: {
-    flex: '1 1 auto',
+
     color: theme.palette.primary.contrastText,
     textDecoration: 'none',
 
@@ -37,6 +43,10 @@ export default makeStyles(theme => ({
     '&:hover': {
       textDecoration: 'underline',
     },
+
+    [theme.breakpoints.down('sm')]: {
+      display: 'none',
+    },
   },
 
   navigationLink: {
@@ -46,21 +56,32 @@ export default makeStyles(theme => ({
     fontSize: 16,
     lineHeight: '22px',
     letterSpacing: 1,
-    marginLeft: 20,
+    padding: '10px 20px',
+    margin: '0 2px',
+    display: 'inline-block',
+
+    [theme.breakpoints.down('sm')]: {
+      padding: '4px 8px',
+      margin: '0 2px 4px',
+      fontSize: 14,
+    },
 
     '&:hover, &:focus': {
-      textDecoration: 'underline',
+      color: theme.palette.secondary.dark,
+      background: theme.palette.primary.contrastText,
+      textDecoration: 'none',
+      border: 1,
+      borderColor: theme.palette.primary.contrastText,
+      borderRadius: 50,
     },
   },
 
   activeLink: {
     color: theme.palette.secondary.dark,
     background: theme.palette.primary.contrastText,
-    fontSize: 16,
     textDecoration: 'none',
     border: 1,
-    boderColor: theme.palette.primary.contrastText,
+    borderColor: theme.palette.primary.contrastText,
     borderRadius: 50,
-    padding: '10px 20px',
   },
 }));

@@ -1,0 +1,76 @@
+$brand-blue: #2F5BEA;
+$brand-green: #00A09F;
+$brand-dark-grey: #2C2E30;
+
+.four-oh-four__wrapper {
+  padding: 200px 20px 120px;
+  color: #ffffff;
+  text-align: center;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 100vw;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: -1;
+    background: linear-gradient(123.69deg, $brand-blue 7.73%, $brand-green 92.27%);
+  }
+}
+
+.four-oh-four__title {
+  font-weight: bold;
+  font-size: 46px;
+  line-height: 63px;
+  text-align: center;
+  letter-spacing: 2px;
+  margin: 0 auto 60px;
+}
+
+.four-oh-four__list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+
+  li {
+    display: inline-block;
+    margin: 0 5px 10px;
+  }
+}
+
+.four-oh-four__link {
+  display: inline-block;
+  background-color: #fff;
+  border-radius: 100px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 26px;
+  letter-spacing: 2px;
+  color: $brand-blue;
+  text-decoration: none;
+  transition: background-color ease .25s;
+
+  &:hover {
+    background-color: $brand-green;
+    color: #ffffff;
+  }
+}
+
+.four-oh-four__img {
+  width: 100%;
+  max-width: 675px;
+  display: inline-block;
+}
+
+p.four-oh-four__list__title {
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 25px;
+  text-align: center;
+  letter-spacing: 2px;
+  margin: 60px auto 30px;
+}
