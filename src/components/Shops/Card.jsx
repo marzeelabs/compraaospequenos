@@ -1,8 +1,12 @@
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
+import clsx from 'clsx';
 
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
+import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
+import Collapse from '@material-ui/core/Collapse';
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import Typography from '@material-ui/core/Typography';
 
 import ShopsEmail from 'Components/Shops/Email';
@@ -16,11 +20,55 @@ import useStyles from 'Styles/components/shops/card';
 const ShopsCard = ({ shop }) => {
   const classes = useStyles();
 
+  const cardRef = useRef(null);
+  const collapsedRef = useRef(null);
+  const [ expanded, setExpanded ] = useState(false);
+
+  const handleExpandClick = event => {
+    if (collapsedRef.current
+    && (collapsedRef.current === event.target || collapsedRef.current.contains(event.target))) {
+      return;
+    }
+
+    setExpanded(!expanded);
+  };
+
+  useEffect(() => {
+    const handleWindowClick = event => {
+      if (
+        expanded
+        && cardRef.current
+        && !cardRef.current.contains(event.target)
+        && cardRef.current.parentNode.contains(event.target)
+      ) {
+        setExpanded(false);
+      }
+    };
+
+    window.addEventListener('click', handleWindowClick);
+
+    return () => {
+      window.removeEventListener('click', handleWindowClick);
+    };
+  }, [ expanded ]);
+
   return (
-    <Card className={ classes.card }>
+    <Card
+      className={ clsx(classes.card, {
+        [classes.cardActive]: expanded,
+      }) }
+      ref={ cardRef }
+    >
       <CardActionArea
-        className={ classes.actionArea }
-        classes={ { focusHighlight: classes.focusHighlight } }
+        classes={ {
+          focusHighlight: classes.focusHighlight,
+          root: classes.actionArea,
+        } }
+        className={ clsx({
+          [classes.actionAreaActive]: expanded,
+        }) }
+        disableRipple
+        onClick={ handleExpandClick }
       >
         <CardContent className={ classes.content }>
           <Typography gutterBottom variant="h5" component="h2" className={ classes.title }>
@@ -32,6 +80,35 @@ const ShopsCard = ({ shop }) => {
           <Typography variant="body2" color="textSecondary" component="p" className={ classes.businessType }>
             { shop.businessType.join(', ') }
           </Typography>
+          <Typography variant="body2" color="textSecondary" component="p" className={ classes.product }>
+            { shop.product }
+          </Typography>
+        </CardContent>
+
+        <CardActions
+          classes={ {
+            root: classes.cardActions,
+          } }
+          disableSpacing
+        >
+          <ExpandMoreIcon
+            className={ clsx(classes.expand, {
+              [classes.expandOpen]: expanded,
+            }) }
+          />
+        </CardActions>
+      </CardActionArea>
+
+      <Collapse
+        classes={ {
+          container: classes.collapse,
+          wrapper: classes.collapseWrapper,
+        } }
+        in={ expanded }
+        ref={ collapsedRef }
+        timeout="auto"
+      >
+        <CardContent>
           <Typography gutterBottom variant="h6" component="h5" color="textSecondary" className={ classes.offerType }>
             { shop.offerType.join(', ') }
           </Typography>
@@ -49,7 +126,7 @@ const ShopsCard = ({ shop }) => {
             instagram={ shop.instagram }
           />
         </CardContent>
-      </CardActionArea>
+      </Collapse>
     </Card>
   );
 };
