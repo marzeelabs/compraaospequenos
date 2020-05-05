@@ -1,11 +1,11 @@
 ---
 templateKey: article
-title: "Ferramentas úteis | Colaboração com Comerciantes.pt "
+title: "Montra Digital Comerciantes.pt "
 date: 2020-05-05T09:28:49.659Z
 image: ../../img/comerciantes.pt.png
 tags:
   - Ferramentas
-  - Colaboração
+  - Iniciativas de Apoio
 facebook: https://www.facebook.com/menoshub/
 instagram: https://www.instagram.com/compra.aos.pequenos/
 ---
