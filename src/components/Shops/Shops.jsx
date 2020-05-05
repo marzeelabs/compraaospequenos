@@ -33,7 +33,7 @@ const CONFIGURATION = {
   ],
 };
 
-const MAX_ITEMS_PER_PAGE = 18;
+const MAX_ITEMS_PER_PAGE = 21;
 
 const Shops = () => {
   const classes = useStyles();
@@ -149,20 +149,10 @@ const Shops = () => {
     scrollToTop();
   };
 
-  const isFiltered = () => (
-    Object.keys(filters || {}).length
-    && (
-      Object.keys(filters.location || {}).length
-      || Object.keys(filters.businessType || {}).length
-      || Object.keys(filters.offerType || {}).length
-    )
-  )
-  || query;
-
   return (
     <>
       <Section extraClasses={ classes }>
-        <div className={ classes.content }>
+        <div className={ classes.content } ref={ containerRef }>
           <div className={ classes.filters }>
             { shops.data && Object.keys(FIELDS.filters).map(filter => (
               <ShopsFilters
@@ -179,11 +169,6 @@ const Shops = () => {
             { shops.data && (
               <>
                 <ShopsSearch onChange={ handleSearchChange } />
-                { !isFiltered() && (
-                  <span className={ classes.allShops }>
-                    { `Todos os Negócios (${shops.pagination.total})` }
-                  </span>
-                ) }
                 <ShopsList
                   shops={ shops }
                 />
