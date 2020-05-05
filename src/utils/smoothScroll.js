@@ -6,12 +6,6 @@ function smoothScroll(event, id) {
 
   event.preventDefault();
 
-  if (!survivalSection) {
-    return;
-  }
-
-  event.preventDefault();
-
   survivalSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 
