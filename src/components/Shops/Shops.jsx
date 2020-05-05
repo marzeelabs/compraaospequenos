@@ -152,7 +152,7 @@ const Shops = () => {
   return (
     <>
       <Section extraClasses={ classes }>
-        <div className={ classes.content }>
+        <div className={ classes.content } ref={ containerRef }>
           <div className={ classes.filters }>
             { shops.data && Object.keys(FIELDS.filters).map(filter => (
               <ShopsFilters
