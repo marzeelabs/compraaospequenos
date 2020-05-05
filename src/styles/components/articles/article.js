@@ -16,14 +16,18 @@ export default makeStyles(theme => ({
   wrapper: {
     marginTop: 120,
     padding: '0 20px 40px',
+  },
+
+  titleWrapper: {
+    position: 'relative',
 
     '&::before': {
       content: '""',
       position: 'absolute',
       width: '100vw',
-      height: 395,
-      top: 0,
-      left: 0,
+      height: '100%',
+      top: -120,
+      left: -20,
       pointerEvents: 'none',
       zIndex: -1,
       background: `linear-gradient(123.69deg, ${theme.palette.primary.main} 7.73%, ${theme.palette.secondary.main} 92.27%)`,
