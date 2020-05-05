@@ -1,5 +1,10 @@
 function smoothScroll(event, id) {
   const survivalSection = document.getElementById(id);
+  if (!survivalSection) {
+    return;
+  }
+
+  event.preventDefault();
 
   if (!survivalSection) {
     return;

@@ -12,9 +12,11 @@ export default makeStyles(theme => ({
     flexDirection: 'column',
     alignItems: 'center',
     position: 'relative',
-    maxWidth: 800,
+    maxWidth: 1280,
     marginTop: theme.spacing(12),
     marginBottom: theme.spacing(12),
+    paddingRight: theme.spacing(6),
+    paddingLeft: theme.spacing(6),
   },
 
   title: {
@@ -26,9 +28,11 @@ export default makeStyles(theme => ({
     fontWeight: 'bold',
     color: theme.palette.primary.main,
   },
+
   slide: {
     textDecoration: 'none',
   },
+
   subtitle: {
     fontSize: '16px',
     lineHeight: '19px',
@@ -41,6 +45,7 @@ export default makeStyles(theme => ({
     '-webkit-box-orient': 'vertical',
     overflow: 'hidden',
   },
+
   siteName: {
     fontSize: '14px',
     lineHeight: '19px',
@@ -48,6 +53,7 @@ export default makeStyles(theme => ({
     textAlign: 'center',
     color: theme.palette.secondary.main,
   },
+
   image: {
     height: '200px',
     marginBottom: theme.spacing(1),

@@ -1,18 +1,17 @@
 import React, { useEffect, useRef } from 'react';
-
 import { graphql, useStaticQuery } from 'gatsby';
-import Img from 'gatsby-image/withIEPolyfill';
 import { tns } from 'tiny-slider/src/tiny-slider';
 
-
+import Img from 'gatsby-image/withIEPolyfill';
 import Typography from '@material-ui/core/Typography';
+
+import featured from 'Data/featured.json';
 
 import Section from 'Layouts/Section';
 
 import useStyles from 'Styles/components/mediaCoverage';
 import 'tiny-slider/src/tiny-slider.scss';
 import './MediaCoverage.scss';
-import featured from '../data/featured.json';
 
 const MediaCoverage = () => {
   const classes = useStyles();
@@ -64,7 +63,7 @@ const MediaCoverage = () => {
       return () => {};
     }
 
-    const slideshow = document.querySelector(`.${container.current.className}`);
+    const slideshow = document.querySelector('.media-coverage-slider');
 
     if (!slideshow) {
       return () => {};
