@@ -33,10 +33,12 @@ export default ({ article, location }) => {
 
   return (
     <div className={ classes.wrapper }>
-      <h1 className={ classes.title }>{ article.frontmatter.title }</h1>
-      <h2 className={ classes.date }>{ article.frontmatter.formattedDate }</h2>
+      <div className={ classes.titleWrapper }>
+        <h1 className={ classes.title }>{ article.frontmatter.title }</h1>
+        <h2 className={ classes.date }>{ article.frontmatter.formattedDate }</h2>
 
-      <Img className={ classes.hero } fluid={ article.frontmatter.image.childImageSharp.fluid } />
+        <Img className={ classes.hero } fluid={ article.frontmatter.image.childImageSharp.fluid } />
+      </div>
 
       { /* eslint-disable-next-line react/no-danger */ }
       <div className={ classes.copy } dangerouslySetInnerHTML={ { __html: article.html } } />
