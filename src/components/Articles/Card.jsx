@@ -61,7 +61,7 @@ const ArticleCard = ({ data }) => {
 
       <CardActions className={ classes.actions }>
         <Link to={ data.fields.slug } className={ classes.link }>
-          Read More
+          Ler mais
         </Link>
       </CardActions>
     </Card>
