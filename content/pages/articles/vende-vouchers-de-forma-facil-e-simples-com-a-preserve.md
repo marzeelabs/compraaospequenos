@@ -2,7 +2,7 @@
 templateKey: article
 title: Vende Vouchers de forma fácil e simples com a Preserve
 date: 2020-05-15T09:22:34.696Z
-image: ../../img/preserve.jpg
+image: ../../img/preserve.png
 tags:
   - Ferramentas
   - Iniciativas de Apoio
