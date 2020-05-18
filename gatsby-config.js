@@ -180,7 +180,25 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-google-analytics',
       options: {
-        trackingId: 'UA-162021632-1',
+        // trackingId: 'UA-162021632-1',
+        trackingId: 'UA-166369673-1', // I put my account just to test the tagmanager
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-google-tagmanager',
+      options: {
+        id: 'GTM-52RL5N9', // I put my account just to test the tagmanager
+
+        // Include GTM in development.
+        // Defaults to false meaning GTM will only be loaded in production.
+        includeInDevelopment: true,
+
+        // datalayer to be set before GTM is loaded
+        // should be an object or a function that is executed in the browser
+        // Defaults to null
+        defaultDataLayer: {
+          platform: 'gatsby',
+        },
       },
     },
     {
