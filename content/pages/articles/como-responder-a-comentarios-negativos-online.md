@@ -5,7 +5,6 @@ date: 2020-05-19T15:48:37.365Z
 image: ../../img/tim-bennett-owvrb-m3gwe-unsplash.jpg
 tags:
   - dicas
-  - digital
 ---
 # A interacção com os clientes, actuais ou potenciais, que seguem o pequeno negócio é essencial para criar uma ligação forte e apelar a outros.
 
