@@ -7,7 +7,7 @@ tags:
   - dicas
   - digital
 ---
-# A interacção com a comunidade que segue e apoia o nosso negócio é muito importante para criar uma ligação forte entre o negócio e os seus clientes: actuais ou potenciais.
+# A interacção com os clientes, actuais ou potenciais, que seguem o pequeno negócio é essencial para criar uma ligação forte e apelar a outros.
 
 ### Responder aos comentários é importante, e quando eles são negativos precisamos de saber como o fazer para que não prejudiquem a imagem do nosso negócio!
 
@@ -19,20 +19,21 @@ Uma resposta mal construída pode explodir na internet e prejudicar o teu negóc
 
 A verdade é que mesmo tu, com certeza, já viste respostas a críticas nestas plataformas que te deixaram de boca aberta. Podias até concordar com a defesa apresentada, por parte do restaurante, mas basta conter 1 ou 2 palavras mais agressivas (ou aquele CAPS LOCK) que sabes que a restante conversa vai correr mal e no final, quem fica sempre mal visto é o negócio por não saber gerir estas situações. Não perde apenas aquele cliente, perde potenciais clientes que não o seguem em mais nenhuma rede e estavam a pesquisar, no geral, e encontraram uma crítica com má resolução.
 
-#### 
-Vamos passar para a prática. Recebeste uma crítica negativa ou agressiva, em qualquer uma das tuas redes online. O que tens de fazer?
+#### Vamos passar para a prática. Recebeste uma crítica negativa ou agressiva, em qualquer uma das tuas redes online. O que tens de fazer?
 
 Depois de perceberes bem o comentário e analisares a experiência que aquela pessoa teve (o que a levou a escrever um comentário tão negativo), responde-lhe. E responde o mais rápido possível. Sê simples e cordial. Responde com a mensagem básica:
 
 *“(Nome da pessoa), agradecemos o teu comentário. Gostaríamos de saber mais sobre o que aconteceu. Podes enviar-nos um email para o (o e mail geral da empresa ou de apoio ao cliente) para que consigamos resolver o problema com a maior brevidade possível?”*
 
+
+
 Com uma resposta deste género estás a mostrar ao cliente insatisfeito que estas solidário com a situação e que realmente te preocupas em fornecer a melhor experiência possível. Se preferires, podes pedir para enviarem a explicação mais concreta do problema por mensagem privada, na tua página oficial. Mas há sempre uma coisa a ter em conta: é muito natural que, se não fores cordial nas mensagens privadas, o cliente acabe por fazer “print screens” e divulgue o conteúdo das mesmas.
 
 Trata-os como seres humanos e não como clientes. Tenta perceber o que sentem e como podes melhorar a sua experiência. “O cliente tem sempre razão”, certo? Por vezes, pode parecer muito injusto receber críticas negativas e agressivas a algo que te custou tanto a conseguir mas é importante para o teu negócio aprender com as mesmas para crescer.
 
-
-
 A conversa com um cliente indignado deve terminar, sempre, com o cliente satisfeito. Os cliente, por incrível que pareça, não procuram perfeição online. Procuram humanidade, conexão e genuinidade. 
+
+
 
 Há um exemplo fantástico disto: a forma como a Netflix (em qualquer país) responde aos comentários. Claro que o target dele será, provavelmente, diferente do teu e a comunicação é adaptada ao mesmo. Mas este trabalho foi tão incrível que tornou a marca ainda mais viral, não só devido à qualidade do serviço mas, também, à qualidade do serviço ao cliente.
 
