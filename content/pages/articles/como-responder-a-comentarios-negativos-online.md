@@ -4,8 +4,8 @@ title: Como responder a comentários negativos online
 date: 2020-05-19T15:48:37.365Z
 image: ../../img/lidya-nada-_0akqa9gr4s-unsplash.jpg
 tags:
-  - dicas
-  - presença digital
+  - Dicas
+  - Presença Digital
 ---
 # A interacção com os clientes, actuais ou potenciais, que seguem o pequeno negócio é essencial para criar uma ligação forte e apelar a outros.
 
