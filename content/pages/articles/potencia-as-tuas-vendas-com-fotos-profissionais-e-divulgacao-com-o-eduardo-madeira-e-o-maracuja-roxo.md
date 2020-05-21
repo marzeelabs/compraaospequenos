@@ -1,7 +1,7 @@
 ---
 templateKey: article
 title: Potencia as tuas vendas com fotos profissionais e divulgação com o
-  Eduardo Madeira e o Maracujá Roxo
+  Eduardo Almeida e o Maracujá Roxo
 date: 2020-05-21T15:41:10.033Z
 image: ../../img/anotacao-2020-05-21-173907.png
 tags:
