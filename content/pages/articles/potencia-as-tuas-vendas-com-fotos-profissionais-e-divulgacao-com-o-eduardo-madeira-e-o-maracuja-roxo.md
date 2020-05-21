@@ -25,12 +25,4 @@ No Brasil, trabalhou na área editorial, atendendo revistas como "Prazeres da Me
 \
 Juntos, acreditam que podem ajudar o teu negócio a partir de ***uma sessão gratuita fotográfica de uma refeição (que inclui entrada, prato principal e sobremesa)*** para impulsionar as tuas vendas e para que sintas a diferença na valorização do teu produto. Em troca, ambos pedem pela divulgação dos seus trabalhos sempre que utilizados, uma vez que também são trabalhadores independentes e apreciam o conhecimento dos seus trabalhos. ***Para os negócios que forem ao encontro dos valores da plataforma do Maracujá Roxo, haverá a divulgação também em suas redes sociais.***\
 \
-No Porto e com um negócio de comida? Estás preparado(a) para valorizar ainda mais o teu produto, com uma fotografia atraente e uma comunicação adequada? Basta preencheres <a href="<<https://forms.gle/hWQ3VFut3arpWiDy5>" target="_blank">este formulário</a> aguardar o contacto dos profissionais!
-
-
-
-<!--StartFragment-->
-
-<https://forms.gle/hWQ3VFut3arpWiDy5>
-
-<!--EndFragment-->
+No Porto e com um negócio de comida? Estás preparado(a) para valorizar ainda mais o teu produto, com uma fotografia atraente e uma comunicação adequada? Basta preencheres [este formulário](https://forms.gle/hWQ3VFut3arpWiDy5) e aguardar o contacto dos profissionais!
