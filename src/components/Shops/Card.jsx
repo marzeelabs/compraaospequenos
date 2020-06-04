@@ -69,29 +69,35 @@ const ShopsCard = ({ shop }) => {
         }) }
         disableRipple
         onClick={ handleExpandClick }
+        id={ `click-tracker__${shop.name}__action-area` }
+        data-shop={ shop.name }
       >
-        <CardContent className={ classes.content }>
-          <Typography gutterBottom variant="h5" component="h2" className={ classes.title }>
+        <CardContent className={ classes.content } id={ `click-tracker__${shop.name}__card-content` } data-shop={ shop.name }>
+          <Typography gutterBottom variant="h5" component="h2" className={ classes.title } id={ `click-tracker__${shop.name}__name` } data-shop={ shop.name }>
             { shop.name }
           </Typography>
-          <Typography variant="body2" color="textSecondary" component="p" className={ classes.location }>
+          <Typography variant="body2" color="textSecondary" component="p" className={ classes.location } id={ `click-tracker__${shop.name}__location` } data-shop={ shop.name }>
             { shop.location.join(', ') }
           </Typography>
-          <Typography variant="body2" color="textSecondary" component="p" className={ classes.businessType }>
+          <Typography variant="body2" color="textSecondary" component="p" className={ classes.businessType } id={ `click-tracker__${shop.name}__business-type` } data-shop={ shop.name }>
             { shop.businessType.join(', ') }
           </Typography>
-          <Typography variant="body2" color="textSecondary" component="p" className={ classes.product }>
+          <Typography variant="body2" color="textSecondary" component="p" className={ classes.product } id={ `click-tracker__${shop.name}__product` } data-shop={ shop.name }>
             { shop.product }
           </Typography>
         </CardContent>
 
         <CardActions
-          classes={ {
+          id={ `click-tracker__${shop.name}__card-actions` }
+          data-shop={ shop.name }
+          classes={ clsx({
             root: classes.cardActions,
-          } }
+          }) }
           disableSpacing
         >
           <ExpandMoreIcon
+            id={ `click-tracker__${shop.name}__expand-icon` }
+            data-shop={ shop.name }
             className={ clsx(classes.expand, {
               [classes.expandOpen]: expanded,
             }) }
