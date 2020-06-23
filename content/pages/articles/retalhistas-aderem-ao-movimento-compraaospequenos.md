@@ -32,10 +32,9 @@ Apostam na simplicidade, na comunidade e só vendem produtos que realmente gosta
 > *“Temos de sentir algo, envolvermo-nos. Para nós é essencial que os nossos clientes sintam confiança em nós, nos nossos produtos e nas nossas sugestões. Por isso, visitem-nos, descubram-nos. ”* 
 
 \
-A <a href="http://www.merceariacriativa.com/" target="_blank">**Mercearia Criativa**</a> #compraaospequenos.  Visite! Morada: Av. Guerra Junqueiro 4A, 1000-167 Lisboa
-Horário de funcionamento: 2ª e 3ª feira, das 11h às 20h.
+A <a href="http://www.merceariacriativa.com/" target="_blank">**Mercearia Criativa**</a> #compraaospequenos.  Visite! Morada: Av. Guerra Junqueiro 4A, 1000-167 Lisboa Horário de funcionamento: 2ª e 3ª feira, das 11h às 20h.
 
-![](../../img/mc3.jpg)
+![](../../img/mercearia-criativa-capa.jpg)
 
 #### Quer fazer parte desta iniciativa?
 
