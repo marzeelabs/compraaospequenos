@@ -2,7 +2,7 @@
 templateKey: article
 title: "Retalhistas aderem ao movimento #compraaospequenos"
 date: 2020-06-23T15:19:09.359Z
-image: ../../img/mercearia-criativa-capa.jpg
+image: ../../img/mc-capa.jpg
 tags:
   - Iniciativas de Apoio
   - Vendas
@@ -29,11 +29,10 @@ Para a Mercearia Criativa, estas parcerias fortes e assentes na confiança e na 
 
 Apostam na simplicidade, na comunidade e só vendem produtos que realmente gostam e acreditam. Esta é a sua forma de valorizarem a comunidade envolvente e de fazer com que os seus clientes tenham acesso a produtos inovadores e de qualidade superior.
 
-> “Temos de sentir algo, envolvermo-nos. Para nós é essencial que os nossos clientes sintam confiança em nós, nos nossos produtos e nas nossas sugestões. Por isso, visitem-nos, descubram-nos. ” 
+> *“Temos de sentir algo, envolvermo-nos. Para nós é essencial que os nossos clientes sintam confiança em nós, nos nossos produtos e nas nossas sugestões. Por isso, visitem-nos, descubram-nos. ”* 
 
 \
-A <a href="http://www.merceariacriativa.com/" target="_blank">**Mercearia Criativa**</a>.#compraaospequenos.  Visite!
-Morada: Av. Guerra Junqueiro 4A, 1000-167 Lisboa
+A <a href="http://www.merceariacriativa.com/" target="_blank">**Mercearia Criativa**</a> #compraaospequenos.  Visite! Morada: Av. Guerra Junqueiro 4A, 1000-167 Lisboa
 Horário de funcionamento: 2ª e 3ª feira, das 11h às 20h.
 
 ![](../../img/mc3.jpg)
