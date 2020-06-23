@@ -2,7 +2,7 @@
 templateKey: article
 title: "Retalhistas aderem ao movimento #compraaospequenos"
 date: 2020-06-23T15:19:09.359Z
-image: ../../img/mc-capa.jpg
+image: ../../img/mc_capa_2.png
 tags:
   - Iniciativas de Apoio
   - Vendas
