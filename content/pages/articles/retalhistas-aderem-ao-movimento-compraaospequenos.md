@@ -42,4 +42,4 @@ No #compraaospequenos acreditamos que a pequena economia de amanhã depende de t
 
 Tem um espaço comercial, uma loja ou uma mercearia? Gostaria de atrair potenciais novos clientes enquanto apoia a sobrevivência de pequenas empresas locais? 
 
-Contacte-nos e fique a par de todas as nossas iniciativas!
+Contacte-nos através do email sonia.branco@menoshub.com ou do telefone 913614689 e fique a par de todas as nossas iniciativas!
