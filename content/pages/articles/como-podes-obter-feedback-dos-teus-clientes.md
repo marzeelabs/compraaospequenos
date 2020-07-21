@@ -4,7 +4,7 @@ title: Como podes obter feedback dos teus clientes?
 date: 2020-07-21T16:47:31.556Z
 image: ../../img/adam-jang-8potatyd_mc-unsplash.jpg
 tags:
-  - Ferramentas
+  - Dicas
   - Vendas
   - Clientes
 ---
