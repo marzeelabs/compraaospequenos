@@ -3,6 +3,8 @@ templateKey: article
 title: "A nossa recomendação: Livros de negócios"
 date: 2020-08-12T12:37:18.130Z
 image: ../../img/untitled-design.png
+tags:
+  - Dicas
 ---
 Pedimos ao João, da nossa equipa, para organizar uma pequena lista com os livros que mais recomenda, neste momento, para todos aqueles com pequenos negócios que querem aprender mais ou aqueles que querem alavancar a sua ideia!
 
