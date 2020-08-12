@@ -44,7 +44,7 @@ export default ({ article, location }) => {
       <div className={ classes.copy } dangerouslySetInnerHTML={ { __html: article.html } } />
       <div className={ classes.tags }>
         <ul className={ classes.tagsList }>
-          { article.frontmatter.tags.map(tag => (
+          { article.frontmatter.tags && article.frontmatter.tags.map(tag => (
             <li className={ classes.tag } key={ tag }>{ tag }</li>
           )) }
         </ul>
