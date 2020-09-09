@@ -4,7 +4,7 @@ title: "A nossa recomendação: Podcasts de negócios"
 date: 2020-08-26T18:43:40.309Z
 image: ../../img/jonathan-farber-gjhmip_lmg4-unsplash.jpg
 tags:
-  - dicas
+  - Dicas
 ---
 Os podcasts parece que vieram para ficar, e ainda bem! Dizemos nós e dizem os milhões de pessoas pelo mundo que diariamente os utilizam para se informar sobre o mundo, distrair, aprender, acalmar ou inspirar. Hoje em dia há podcasts sobre os mais variados temas e em diferentes línguas. E nós acreditamos que podem ser poderosas ferramentas para pequenos negócios e os empreendedores que lhes dão vida.
 
