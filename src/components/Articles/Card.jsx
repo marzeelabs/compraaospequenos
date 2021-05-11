@@ -21,7 +21,7 @@ const ArticleCard = ({ data }) => {
       <Link to={ data.fields.slug }>
         <Img
           className={ classes.media }
-          fluid={ data.frontmatter.image.childImageSharp.fluid }
+          fluid={ data?.frontmatter?.image?.childImageSharp?.fluid }
         />
       </Link>
 
