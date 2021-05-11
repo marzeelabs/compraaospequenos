@@ -2,7 +2,7 @@ import React from 'react';
 
 import Typography from '@material-ui/core/Typography';
 
-import MenosLogo from 'Components/MenosLogo';
+import ImpulsoLogo from 'Assets/impulso-logo.svg';
 import SocialIcon from 'Components/SocialIcon';
 
 import Section from 'Layouts/Section';
@@ -24,35 +24,35 @@ const Initiative = () => {
 
       <a
         className={ classes.menosLink }
-        href="https://menoshub.com/"
+        href="https://impulso.site/"
         target="_blank"
         rel="noopener noreferrer"
         title="MenosHub"
       >
         <span className={ classes.menosLinkLogo }>
-          <MenosLogo />
+          <ImpulsoLogo />
         </span>
-        menoshub.com
+        impulso.site
       </a>
 
       <div>
         <SocialIcon
           extraClasses={ classes }
           icon="faFacebookF"
-          link="https://www.facebook.com/menoshub/"
-          title="Menos Facebook Page"
+          link="https://www.facebook.com/organizacaoimpulso/"
+          title="Impulso Facebook Page"
         />
         <SocialIcon
           extraClasses={ classes }
           icon="faLinkedinIn"
-          link="https://www.linkedin.com/company/menos/"
-          title="Menos LinkedIn Page"
+          link="https://www.linkedin.com/company/impulsoempreendedor/"
+          title="Impulso LinkedIn Page"
         />
         <SocialIcon
           extraClasses={ classes }
           icon="faInstagram"
-          link="https://www.instagram.com/menoshub/"
-          title="Menos Instragram Page"
+          link="https://www.instagram.com/impulso.site/"
+          title="Impulso Instragram Page"
         />
       </div>
     </Section>

@@ -5,7 +5,7 @@ import { graphql, useStaticQuery, Link } from 'gatsby';
 
 import Typography from '@material-ui/core/Typography';
 
-import MenosLogo from 'Components/MenosLogo';
+import ImpulsoLogo from 'Assets/impulso-logo.svg';
 
 import Section from 'Layouts/Section';
 import SectionBackground from 'Layouts/SectionBackground';
@@ -49,7 +49,7 @@ const Hero = ({
         </Typography>
 
         <div>
-          <MenosLogo />
+          <ImpulsoLogo />
         </div>
 
         { callToAction && (
