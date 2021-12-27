@@ -1,6 +1,6 @@
 ---
 templateKey: article
-title: "#compraaospequenos - comunicação da equipa"
+title: "#compraaospequenos - comunicado"
 date: 2021-12-27T16:44:10.485Z
 image: ../../img/untitled-design-7-.png
 ---
