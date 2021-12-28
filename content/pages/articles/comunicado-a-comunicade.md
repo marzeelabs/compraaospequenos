@@ -1,6 +1,6 @@
 ---
 templateKey: article
-title: Comunicado à comunicade
+title: Comunicado à comunidade
 date: 2021-12-28T12:30:10.788Z
 image: ../../img/untitled-design-7-.png
 ---
