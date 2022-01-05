@@ -7,7 +7,7 @@ import SocialIcon from 'Components/SocialIcon';
 
 import useStyles from 'Styles/components/articles/article';
 
-export default ({ article, location }) => {
+const Article = ({ article, location }) => {
   const classes = useStyles();
 
   const { site } = useStaticQuery(
@@ -82,3 +82,5 @@ export default ({ article, location }) => {
     </div>
   );
 };
+
+export default Article;

@@ -6,7 +6,7 @@ import SEO from 'Components/SEO';
 import PageWrapper from 'Layouts/PageWrapper';
 import Articles from 'Components/Articles/Articles';
 
-export default ({ data, location }) => {
+const ArticlePage = ({ data, location }) => {
   const { edges: articles } = data.allMarkdownRemark;
 
   return (
@@ -16,6 +16,8 @@ export default ({ data, location }) => {
     </PageWrapper>
   );
 };
+
+export default ArticlePage;
 
 export const query = graphql`
   query {

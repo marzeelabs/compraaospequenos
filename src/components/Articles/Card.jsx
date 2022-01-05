@@ -31,7 +31,7 @@ const ArticleCard = ({ data }) => {
           component={ Link }
           to={ data.fields.slug }
         >
-          { data.frontmatter.tags.join(', ') }
+          { data.frontmatter.tags?.join(', ') }
         </Typography>
 
         <Typography

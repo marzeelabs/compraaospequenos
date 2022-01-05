@@ -90,7 +90,7 @@ const ShopsCard = ({ shop }) => {
         <CardActions
           id={ `click-tracker__${shop.name}__card-actions` }
           data-shop={ shop.name }
-          classes={ clsx({
+          className={ clsx({
             root: classes.cardActions,
           }) }
           disableSpacing
