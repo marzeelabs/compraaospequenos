@@ -21,7 +21,7 @@ const Register = () => {
 
         <div className={ clsx(classes.description, 'ie-fix') }>
           <Typography variant="body1">
-            Qualquer pequeno negócio, ou um seu apoiante, pode submeter uma candidatura desde que
+            Qualquer pequeno negócio pode submeter uma candidatura desde que
             cumpra os dois requisitos seguintes:
           </Typography>
 
@@ -31,8 +31,7 @@ const Register = () => {
                 Ser um micro ou pequeno negócio
               </li>
               <li>
-                Ter uma oferta (produtos ou serviços) que, de alguma forma, se adapta à situação
-                actual
+                Operar em Portugal, presencial ou digitalmente
               </li>
             </ol>
           </Typography>
