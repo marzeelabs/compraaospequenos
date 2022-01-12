@@ -23,18 +23,15 @@ const About = () => {
 
       <div className={ classes.descriptionWrapper }>
         <Typography className={ classes.description } variant="body1">
-          A maior parte dos pequenos negócios, devido à situação actual, enfrentam enormes desafios
-          para sobreviver.
-        </Typography>
-
-        <Typography className={ classes.description } variant="body1">
-          Muitos destes negócios estão a reinventar-se e começaram a mudar a sua forma de funcionar
-          para se adaptarem às nossas necessidades.
+          Os micro e pequenos negócios representam 99% das empresas em Portugal e,
+          devido aos muitos desafios que enfrentam, precisam do apoio de todos nós
+          para sobreviver, e crescer!
         </Typography>
 
         <Typography className={ classes.description } variant="body1">
           Porque a pequena economia de amanhã depende de nós hoje, nasceu o movimento
-          #compraaospequenos, como um apelo a todos.
+          #compraaospequenos, como um apelo a todos para apoiarem os pequenos negócios
+          de todo o país.
         </Typography>
 
         <Grid container spacing={ 5 } className={ classes.itemsWrapper }>
@@ -43,9 +40,6 @@ const About = () => {
             <Typography variant="h5" className={ classes.sectionHeading }>
               Pequenos negócios
             </Typography>
-            <Typography variant="body1" className={ classes.sectionDescription }>
-              com soluções adaptadas
-            </Typography>
           </Grid>
 
           <ArrowsIcon className={ classes.arrows } />
@@ -53,18 +47,14 @@ const About = () => {
           <Grid className={ classes.item } item xs={ 12 } md={ 6 }>
             <ClientsIcon className={ classes.icon } />
             <Typography variant="h5" className={ classes.sectionHeading }>
-              Clientes
-            </Typography>
-            <Typography variant="body1" className={ classes.sectionDescription }>
-              limitados ao isolamento
+              Consumidores conscientes
             </Typography>
           </Grid>
         </Grid>
 
         <Typography className={ classes.description } variant="body1">
-          Como sabemos que, às vezes, o desafio é saber onde estão, o que oferecem e como apoiar,
-          criámos uma lista onde mapeamos os pequenos negócios que têm ofertas adaptadas à nossa
-          situação de isolamento.
+          Como sabemos que, às vezes, o desafio é saber onde estão, o que oferecem e como comprar,
+          mapeamos e partilhamos pequenos negócios por todo o país.
         </Typography>
       </div>
 
